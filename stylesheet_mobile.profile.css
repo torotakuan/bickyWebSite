@@ -1,0 +1,110 @@
+
+
+UTF-8
+ 
+CR/LF
+    
+@media all and (max-width: 750px){
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing:border-box;
+    }
+.profile{
+    width:100%;
+    width:750px;
+    
+}
+
+.profile-top{
+    width:100%;
+    position:relative;
+    
+    
+}
+.profile-top h1{
+
+    width:50%;
+}
+.menu-icon{
+    display:block;
+    position:absolute;
+    width: 50px;
+     float:right;
+     top: 0px;
+     right: 30px;
+     font-size: 15px;
+     
+    
+}
+.bar-icon{
+    left: 5%;
+        top:5%;
+    
+        float:right;
+        color:rgba(235,235,235,0.9);
+        z-index:2;
+    
+    
+    
+}
+.profile-contents{
+    width:750px;
+    height:533px;
+}
+    .profile-right-contents {
+        width:100%;
+        
+        
+    }
+
+    .profile-right-contents p{
+
+        font-size:23px;
+        letter-spacing:5px;
+        height:533px;
+        padding:10px;
+        
+}
+.profile-left-contents{
+    width:100%;
+   
+    height:100%;
+    background-image:URl("profile_photo.JPG");
+ 
+}
+
+.menu{
+    display:none;
+}
+.add-cotents{
+    width:750px;
+    
+}
+.contents{
+    width:100%; 
+    margin:0 auto;
+}
+
+
+   
+
+.add-contents{
+  width:750px;
+ height:1000px;
+   padding:30px 50px;
+  
+} 
+.contents{
+    padding-top:10px;
+
+   width:100%;
+  
+    
+}
+.contents-box a{
+    width:25%;
+    box-sizing:border-box;
+}
+
+}
