@@ -3,7 +3,6 @@
 UTF-8
  
 CR/LF
-   <?--テスト--> 
 *{
     margin:0px;
     padding:0px;
@@ -65,7 +64,7 @@ html{
     display:inline-block;
     width: 50%;
     height:100%;
-    background-image:url("top-photo.JPG") ;
+    background-image:url("./top-photo.JPG") ;
     background-size:cover;
  background-repeat:no-repeat; 
 　　background-position:center top;
