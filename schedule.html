@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet"  href="schedule.css">
+    <link rel="stylesheet" href="schedule_mobile.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    
+    <!--fullcalender用-->
+    <link href='/fullcal/core/main.css' rel='stylesheet' />
+    <link href='/fullcal/daygrid/main.css' rel='stylesheet' />
+    <link href='/fullcal/timegrid/main.css' rel='stylesheet' />
+    <link href='/fullcal/list/main.css' rel='stylesheet' />
+    <script src='/fullcal/core/main.js'></script>
+    <script src='/fullcal/core/locales/ja.js'></script>
+    <script src='/fullcal/daygrid/main.js'></script>
+    <script src='/fullcal/google-calendar/main.js'></script>
+    <script src='fullcal/list/main.js'></script>
+    <script src='fullcal/timegrid/main.js'></script>
+    <script>
+        //Full Calendar
+        document.addEventListener('DOMContentLoaded', function() {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                },
+                navLinks: true,
+                editable: true,
+                businessHours: true, 
+            　  locale: 'ja',
+            　  plugins: [ 'interaction', 'dayGrid','googleCalendar', 'timeGrid', 'list' ],
+                googleCalendarApiKey:'AIzaSyAKvf5G5XQteQHixZC44sgBagTOTuzkayE',
+                events:'n7f0ghpdkaduv6e24d9m4ke3oo@group.calendar.google.com'
+            });
+            calendar.render();
+        });
+    </script>
+
+   
+  
+</head>
+<body>
+    <a href="#"  id="side-menu-btn2">
+        <span class="fa fa-bars fa-4x " id = "bar-icon2"></span>
+    </a>
+    <div class="menu">
+        <div class="menu-box">
+            <a href="top.html" > <p>Top</p> <span class="fas fa-home icon"></span> </a>
+            <a href="profile.html" > <p>Profile</p> <span class="far fa-id-card icon" ></span> </a>
+            <a href="https://twitter.com/messages/1375296955476180994-1429320775723454469" target="_blank" rel="noopener noreferrer" ><p>Contact</p> <span class="fa fa-comments icon"></span> </a>
+            <a href="#" > <p>Photos</p> <span class="fas fa-images icon"></span> </a>
+            <a href="#"> <p>News</p> <span class="far fa-newspaper icon"></span> </a>
+            <a href="schedule.html" class="now" > <p>Schedule</p> <span class="far fa-calendar-alt icon"></span> </a>
+        </div> 
+    </div>
+    <div class="side-menu">
+        <div class="side-menu-top">
+          <p class="side-menu-text">
+            <span class="fas fa-caret-left close-icon"></span>
+            menu
+          </p>
+        </div>
+        <div class="side-menu-box">
+          <a href="top.html"> <p>Top</p> <span class="fas fa-home icon"></span> </a>
+          <a href="profile.html" > <p>Profile</p> <span class="far fa-id-card icon"></span> </a>
+          <a href="https://twitter.com/messages/1375296955476180994-1429320775723454469" target="_blank" rel="noopener noreferrer"><p>Contact</p> <span class="fa fa-comments icon"></span> </a>
+          <a href="#" > <p>Photos</p> <span class="fas fa-images icon"></span> </a>
+          <a href="#"> <p>News</p> <span class="far fa-newspaper icon"></span> </a>
+          <a href="schedule.html"  class="now side"> <p>Schedule</p> <span class="far fa-calendar-alt icon"></span> </a>
+        </div>
+      </div>
+    <div class="schedule">
+        <div class="calender-top">
+      <p>※下記の予定にない場合もメールをいただければ対応可能です。（前日でも可）</p>
+            
+        </div>
+        <div id="calendar"></div>
+
+    </div>
+    
+
+<script type="text/javascript" src="jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</body>
+</html>
