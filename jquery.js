@@ -7,18 +7,56 @@ $(function(){
 
 });
 
-$.getJSON("php/instagram.php", function(instagram_data){
+<script>
+  // 取得した情報をHTMLに反映
+  function DomEdit(_fbObj) {
+    var elmText = document.querySelector('#app-text') || false
+    var elmImg = document.querySelector('#app-img') || false
+    var noImgSrc = 'https://www.rakumachi.jp/images/frontend/smartphone/nophoto_thumbnail.png'
+    if (_fbObj) {
+      if (elmText) {
+        var text = _fbObj.posts.data[0].message || false
+        if (text) {
+          elmText.textContent = text
+        } else {
+          elmText.textContent = '本文が無いです。'
+        }
+      }
+      if (elmImg) {
+        var src = _fbObj.posts.data[0].full_picture || false
+        if (src) {
+          elmImg.setAttribute('src', src)
+        } else {
+          elmImg.setAttribute('src', noImgSrc)
+        }
+      }
+    }
+  }
 
-const gallery_data = instagram_data["business_discovery"]["media"]["data"];
-let photos = "";
-const photo_length = 9;
-
-for(let i = 0; i < photo_length ;i++){
-photos += '<li class="gallery-item"><img src="' + gallery_data[i].media_url + '"></li>';
-}
-$("#gallery").append(photos);
-
-});
+  // AjaxとAPIで情報を取得
+  function GetFacebook() {
+    var data;
+    var graph_api = 'https://graph.facebook.com/v7.0/me';
+    var param = '?fields=posts{message, full_picture}';
+    var token = 'トークンをここに入力';
+    $.ajax({
+        url: graph_api + param + '&access_token=' + token
+      })
+      .done(function (res) {
+        data = res.data;
+      })
+      .fail(function (jqXHR, status) {
+        console.log(status)
+      })
+      .always(function (res) {
+        console.log(res)
+        DomEdit(res)
+      });
+  }
+  window.addEventListener('load', () => {
+    GetFacebook()
+  })
+</script>
 
 $(function(){
   setTimeout('stopload()',3000);
