@@ -7,28 +7,30 @@ $(function(){
 
 });
 
-$.ajax({
-type: 'GET',
-url: 'https://graph.facebook.com/v8.0/17841434273658865?fields=name%2Cmedia.limit(5)%7Bcaption%2Clike_count%2Cmedia_url%2Cpermalink%2Cthumbnail_url%7D&access_token=EAAVeXxsR9D8BADxFfQJ2zC1wqdUmWpyv6IBhX00ZCQ1X8MNReOAzkhJHNeWTGD32srpnOv7M1OgZCXJiORNzgDSiZCliObsXPViP6I8X7K0Rvo1Ujf8hBqoZB8sf2EbXyVKtgsJPNVrJcOmBuZChrDniQV9x3fVf2gK54Gadv9Vb3FAQmFPfN',
-dataType: 'json',
- success: function(json) {
-var ig = json.media.data;
-var html = "";
-for (var i = 0; i < ig.length; i++) {
-var link = ig[i].permalink;
-var image
-if(!ig[i].thumbnail_url) {
-// 動画の場合はこちら
-image = ig[i].media_url;}
-else {
-// 写真の場合はこちら
-image = ig[i].thumbnail_url;
-}
-html += '<div><a href="' + link + '" target="_blank"><img src="' + image + '"></a></div>'
-}
-$(".instagram").append(html);
-}
-});
+axios.get("instagram.php").then(instagram_data=>{
+  console.log(instagram_data);// 検証ツールのConsoleを覗くと取得したデータの全容が確認できます。
+    
+  //
+  //他のInstagramビジネスアカウントの投稿情報も取得したい場合
+  
+  const gallery_data = instagram_data["data"]["business_discovery"]["media"]["data"];
+
+  //
+  //自分のInstagramビジネスアカウントの投稿情報が取得できればOKな場合は
+  //const gallery_dataを下記にする。
+
+  // const gallery_data = instagram_data["data"]["media"]["data"];
+
+  let photos = "";
+  const photo_length = 9;
+
+  for(let i = 0; i < photo_length ;i++){
+    photos += '<li class="gallery-item"><img src="' + gallery_data[i].media_url + '"></li>';
+  } 
+  document.querySelector("#gallery").innerHTML = photos;
+}).catch(error=>{
+  console.log(error);
+})
 
 $(function(){
   setTimeout('stopload()',3000);
