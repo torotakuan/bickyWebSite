@@ -9,7 +9,7 @@ $(function(){
 
 $.ajax({
 type: 'GET',
-url: 'https://graph.facebook.com/v8.0/【InstagramビジネスアカウントID】?fields=name%2Cmedia.limit(【表示したい画像数】)%7Bcaption%2Clike_count%2Cmedia_url%2Cpermalink%2Cthumbnail_url%7D&access_token=【アクセストークン】',
+url: 'https://graph.facebook.com/v8.0/17841434273658865?fields=name%2Cmedia.limit(5)%7Bcaption%2Clike_count%2Cmedia_url%2Cpermalink%2Cthumbnail_url%7D&access_token=EAAVeXxsR9D8BADxFfQJ2zC1wqdUmWpyv6IBhX00ZCQ1X8MNReOAzkhJHNeWTGD32srpnOv7M1OgZCXJiORNzgDSiZCliObsXPViP6I8X7K0Rvo1Ujf8hBqoZB8sf2EbXyVKtgsJPNVrJcOmBuZChrDniQV9x3fVf2gK54Gadv9Vb3FAQmFPfN',
 dataType: 'json',
  success: function(json) {
 var ig = json.media.data;
