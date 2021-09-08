@@ -134,3 +134,9 @@
 .now.side :hover{
     color:rgba(34, 49, 52, 0.9) !important;
 }
+
+
+.instagram img{
+    width:200px;
+    height:200px;
+}
