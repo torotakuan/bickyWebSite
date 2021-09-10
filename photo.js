@@ -19,4 +19,4 @@ window.addEventListener('DOMContentLoaded', ajax({
   }
   $(".instagram").append(html);
   }
-});
+}) );
