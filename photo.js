@@ -25,7 +25,7 @@ FB.api(
         }
         $(".instagram").append(html);
         }
-        });
+        });jk
   }
 );
 
