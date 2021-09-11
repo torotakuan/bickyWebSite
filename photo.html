@@ -14,16 +14,23 @@
   
 </head>
 <body>
-   <!-- HTML -->
-<h2>最新の投稿の本文 ↓</h2>
-<p id="app-text"></p>
-<br>
-<h2>最新の投稿の画像 ↓</h2>
-<div><img src="" alt="" id="app-img"></div>
+
 
 <!-- jQuery読み込み（バージョンはajaxが使えれば何でも大丈夫です） -->
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
+<script src="./FCInstagram.js"></script>
+<script>
+  jQuery.fn.FCInstagram.accessData = {
+      accessToken: "IGQVJWWVN0cXYyb01CVDB2Qng3eEw3QU4ybEYwcm90ZA0Rid2liMFhyLTUyRzhZAeFpyX25ydXJJd2NjSC1JSnBpckV1QWFPY2RSRXFRWUVOQnJFYWROMGRvbXJHR0hsQktmWmNueEExaERJNXJGRWowQzdOeWFjNEUyVEY4", // Token
+  };
+  $('#instafeed').FCInstagram({
+      max: 9, // A number between 1 and 25 of photos to show. Default: 9
+      autoplay: true, // Set autoplay video: true/false. Default: false
+      complete: function () { // A callback function to execute after the display of the photos.
+          console.log('completed');
+      }
+  });
+</script>
     
     
     
@@ -57,8 +64,8 @@
         </div>
       </div>
     <div class="photo">
-      <div class="instagram"></div>
-      <p>test push test2</p>
+      <div id="instafeed" class="instagram-gallery-medium"></div>
+      <p>test push test3</p>
     </div>
     
 
