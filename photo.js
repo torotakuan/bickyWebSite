@@ -25,9 +25,9 @@ FB.api(
         }
         $(".instagram").append(html);
         }
-        });jk
+        });
   }
 );
 
  
-https://graph.facebook.com/v10.0/17841434273658865?fields=name%2Cmedia.limit(18)%7Bcaption%2Cmedia_url%2Cthumbnail_url%2Cpermalink%7D&access_token=EAAVeXxsR9D8BAOj6c1ZCTv5pD9XQXUvhGALrM8RRcQh892fEk54PougvZBtQk1ad2qnbrdnO67CTkxFSd6BZAign0m2jgprvGwmZCIGhpQv0YZCyw9QNVaHuUhVEFvphwTfZC8rK6QihbHTqi1RFSfWOYZBnsW8s5bfTEWjtZCazY5w66ri2jq79
+https://graph.facebook.com/v10.0/17841434273658865?fields=name%2Cmedia.limit(18)%7Bcaption%2Cmedia_url%2Cthumbnail_url%2Cpermalink%7D&access_token=EAAVeXxsR9D8BANL1ZA1asjZAs5Cqq6Ds0BxtjWuhyRDazZC8cFoChTwSZBdzVZCJHuPnGGBJ9NGXylEJcXwVO1AsFv4bNIBZAy3H9ZAxt1b6hPzX6ZCgvVM1xhY30ZCIDzxClEkkc4ItwqD8XxgWk7GzVXnwA2zqZA0vjFvDznZAfmI4pL1XCKhoil1YRunyYZCX8F1tZCk0ZAJrxUxgZDZD_
