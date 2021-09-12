@@ -141,9 +141,7 @@
 .news{
 width:1000px;
 }
-.contents-box{
-    width:1000px;
-}
+
 .box {
     width: 30%;                /* 横幅を200pxに指定 */
     height: 500px;               /* 横幅を200pxに指定 */
@@ -151,6 +149,6 @@ width:1000px;
     overflow-y: scroll;          /* 縦方向にスクロール可能にする */
     
     float:left;
-   
+   margin:10px;
     
   }
