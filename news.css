@@ -148,6 +148,7 @@ width:1000px;
 .instagram-contents{
     display:inline-block;
     width:40%;
+    float:left;
     box-sizing:border-box;
     vertical-align:bottom;
 }
