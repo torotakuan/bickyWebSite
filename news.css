@@ -148,5 +148,5 @@ width:1000px;
     overflow-y: scroll;          /* 縦方向にスクロール可能にする */
     display:inline-block;
     float:left;
-    margin:0px 30px;
+    margin-right: 30px;
   }
