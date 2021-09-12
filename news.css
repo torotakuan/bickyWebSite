@@ -1,4 +1,8 @@
-
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
 .menu{
     display:inline-block;
     width:100%;
