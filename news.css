@@ -143,7 +143,7 @@ width:1000px;
 }
 
 .box {
-    width: 50%;                /* 横幅を200pxに指定 */
+    width: 45%;                /* 横幅を200pxに指定 */
     height: 500px;               /* 横幅を200pxに指定 */
     border: 1px solid #000;      /* わかりやすくボーダーを引く */
     overflow-y: scroll;          /* 縦方向にスクロール可能にする */
