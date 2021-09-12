@@ -138,9 +138,7 @@
 .now.side :hover{
     color:rgba(34, 49, 52, 0.9) !important;
 }
-.news{
-width:1000px;
-}
+
 
 .box {
     width: 45%;                /* 横幅を200pxに指定 */
