@@ -2,5 +2,5 @@ $.get('https://graph.instagram.com/me/media?fields=id,caption&access_token=IGQVJ
 .done(function(data) {
  
     console.log( data );
- 
+    $('.instagram').html( data );
 })
