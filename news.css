@@ -146,6 +146,7 @@ width:1000px;
 }
 .instagram-contents{
     display:inline-block;
+    float:right;
     width:40%;
     box-sizing:border-box;
     vertical-align:bottom;
