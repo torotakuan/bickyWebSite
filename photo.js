@@ -1,19 +1,78 @@
+var urls = [];
 $(function(){
-  /*$('.photo p').load('https://graph.instagram.com/me/media?fields=id,caption&access_token=IGQVJWcGZARR0ZA2Y0xZAU1JfSHU2bW1mZA25PUjJVT0w5VjY4ZAlBlZAkdjYzV5dkxDTWpzU181TUZAsMGhOVmcwZAUdZARGNfaXNwR1Ewdjh2SGl0UkhuOTNKNEl0bUhfOGJXblM5cHYzc2N3');
-  */
+  //$('.photo p').load('https://graph.instagram.com/me/media?fields=id,media_type&access_token=IGQVJWcGZARR0ZA2Y0xZAU1JfSHU2bW1mZA25PUjJVT0w5VjY4ZAlBlZAkdjYzV5dkxDTWpzU181TUZAsMGhOVmcwZAUdZARGNfaXNwR1Ewdjh2SGl0UkhuOTNKNEl0bUhfOGJXblM5cHYzc2N3');
+  
 });
-$.get('https://graph.instagram.com/17892478835276429?&access_token=IGQVJWcGZARR0ZA2Y0xZAU1JfSHU2bW1mZA25PUjJVT0w5VjY4ZAlBlZAkdjYzV5dkxDTWpzU181TUZAsMGhOVmcwZAUdZARGNfaXNwR1Ewdjh2SGl0UkhuOTNKNEl0bUhfOGJXblM5cHYzc2N3', getFunc);
+
+/* instagramAPIでメディアのURLをもってきてimage要素としてhtmlを追加 */
+
+//instagram上の全メディアのid,url,media_typeなどを貰ってくる
+$.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url&access_token=IGQVJWcGZARR0ZA2Y0xZAU1JfSHU2bW1mZA25PUjJVT0w5VjY4ZAlBlZAkdjYzV5dkxDTWpzU181TUZAsMGhOVmcwZAUdZARGNfaXNwR1Ewdjh2SGl0UkhuOTNKNEl0bUhfOGJXblM5cHYzc2N3', getFunc);
+//GETリクエストが成功したら下の関数getFuncが実行される（貰ってきたデータは変数myDataに格納されてる）
 function getFunc(myData){
-  var text = JSON.stringify( myData );
-  var id = text.replace('{"id":"','').replace('"}','')
-	$('.photo p').html(id);
+  //jsonデータは配列として扱えるので、普段通り配列の要素を一つ一ついじっていく
+  for (let i = 0; i < myData.data.length; ++i) {
+
+    //メディアが写真の時の処理 :jsonからmedia_url（写真のURL）を抜き出してurls(画像のURLをまとめておく配列)に入れる
+    if(myData.data[i].media_type == 'IMAGE'){
+      urls.push(myData.data[i].media_url);
+
+    //メディアがビデオの時の処理 :jsonからthumbnail_url（ビデオのサムネ画像のURL）を抜き出してurls(画像のurlをまとめておく配列)に入れる
+    }else if(myData.data[i].media_type == 'VIDEO'){
+      urls.push(myData.data[i].thumbnail_url);
+
+    //メディアがアルバムの時の処理　:アルバムは追加でidとURLを貰う必要があるので追加でGET、非同期通信だと実行順がややこしいからこっちは同期通信。
+    }else if(myData.data[i].media_type == 'CAROUSEL_ALBUM'){
+
+      //ここからhttpsでGETリクエストを送るためのおまじない〜
+      let request = new XMLHttpRequest();
+      request.open('GET', 'https://graph.instagram.com/' + myData.data[i].id + '/children?access_token=IGQVJWcGZARR0ZA2Y0xZAU1JfSHU2bW1mZA25PUjJVT0w5VjY4ZAlBlZAkdjYzV5dkxDTWpzU181TUZAsMGhOVmcwZAUdZARGNfaXNwR1Ewdjh2SGl0UkhuOTNKNEl0bUhfOGJXblM5cHYzc2N3', false);
+      request.send(null);
+      if (request.status == 200){
+        //〜ここまでおまじない
+
+        var childrenText = JSON.parse( request.response );// request.responseに帰ってきたデータが格納されてる。　text形式になってるこれを扱いやすいようにjsonに変換　データの中身は（data:{ id:〜〜〜〜〜 id:〜〜〜〜〜 id:〜〜〜〜〜 id:〜〜〜〜〜}）こんな感じでアルバム内の各写真のidが入ってる
+        
+        //アルバムの写真のid一つ一つから画像を取得してurls配列に格納
+        for(let j = 0; j < childrenText.data.length; ++j){
+          var url = getUrl(childrenText.data[j].id);//getUrl(): idからurlを取得する関数（中身は下の行の方に書いてある）
+          urls.push(url);
+        }
+      }
+    }
+    
+  }
+  console.log(urls);
+  for(let i = 0; i < urls.length; ++i){
+    displayImage(urls[i]);
+  }
 };
-$.get('https://graph.instagram.com/17892478835276429?fields=media_url&access_token=IGQVJWcGZARR0ZA2Y0xZAU1JfSHU2bW1mZA25PUjJVT0w5VjY4ZAlBlZAkdjYzV5dkxDTWpzU181TUZAsMGhOVmcwZAUdZARGNfaXNwR1Ewdjh2SGl0UkhuOTNKNEl0bUhfOGJXblM5cHYzc2N3',photoFunc)
-function photoFunc(myData){
-  var text = JSON.stringify( myData );
-  var start = text.indexOf('"media_url":"')+13
-  var end = text.indexOf('","id"')
-  var id = text.substring(start,end)
-  var htmlText = '<img src=" ' + id + ' ">'
-  $('.instagram').html(htmlText);
+
+
+
+function clearId(id){
+  return id.substr(6,17);
 }
+function clearDataText(text){
+  return text.split('{"data":[')[1].split(']')[0];
+}
+function getUrl(id){
+  var url;
+  let request = new XMLHttpRequest();
+  request.open('GET', 'https://graph.instagram.com/' + id + '?fields=media_url&access_token=IGQVJWcGZARR0ZA2Y0xZAU1JfSHU2bW1mZA25PUjJVT0w5VjY4ZAlBlZAkdjYzV5dkxDTWpzU181TUZAsMGhOVmcwZAUdZARGNfaXNwR1Ewdjh2SGl0UkhuOTNKNEl0bUhfOGJXblM5cHYzc2N3', false);
+  request.send(null);
+  if (request.status == 200){
+    console.log(request.responseText);
+    var text = JSON.parse( request.responseText );
+    url = text.media_url;
+    console.log(url);
+  }
+  return url;
+}
+
+function displayImage(url){
+  var htmlText = '<img src=" ' + url + ' ">'
+  $('.instagram').append(htmlText);
+}
+
+
