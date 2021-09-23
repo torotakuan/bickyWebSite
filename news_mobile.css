@@ -1,11 +1,27 @@
 @media(max-width:750px){
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing:border-box;
+    }
 .menu{
 display:none;
+}
+#bar-icon2{
+    display:block;
+    color:white;
+    font-size:50px;
+    margin-left:20px;
+    padding-top:15px;
 }
 
 .box{
 width: 100%;
 margin-left:0px;
+
+}
+.instagram-title{
+margin-bottom:30px;
 
 }
 .contents-cover{
