@@ -1,0 +1,1 @@
+$(".instagram-title h1").hide();
