@@ -169,7 +169,7 @@ height:3000px;
   .box::-webkit-scrollbar {  /* Chrome, Safari 対応 */
     display:none;
   }
-  .box p{
+  .date{
     font-family: 'Old Standard TT', serif;
     color:white;
     font-size: 20px;
