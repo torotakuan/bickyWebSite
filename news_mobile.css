@@ -14,7 +14,9 @@ display:none;
     margin-left:20px;
     padding-top:15px;
 }
-
+.conetents-cover{
+    height:100%;
+}
 .instagram-title{
 margin-bottom:30px;
 
