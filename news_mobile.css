@@ -23,7 +23,7 @@ margin-bottom:30px;
 width: 100%;
 margin-left:0px;
 margin-bottom:60px;
-padding:0px 30px;
+padding-left:45px;
 }
 .box p{
     display:none;
@@ -31,7 +31,7 @@ padding:0px 30px;
 }
 .date{
     display: block;
-padding-left:30px;
+padding-left:45px;
 font-family: 'Old Standard TT', serif;
 color:white;
 font-size: 20px;
