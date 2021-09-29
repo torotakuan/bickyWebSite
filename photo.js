@@ -24,7 +24,7 @@ function getFunc(myData){
     //メディアがアルバムの時の処理　:アルバムは追加でidとURLを貰う必要があるので追加でGET、非同期通信だと実行順がややこしいからこっちは同期通信。
     }else if(myData.data[i].media_type == 'CAROUSEL_ALBUM'){
 
-      //ここからhttpsでGETリクエストを送るためのおまじない〜
+      //ここからinstagramAPIからアルバム内の写真達のidを貰ってくるおまじない〜
       let request = new XMLHttpRequest();
       request.open('GET', 'https://graph.instagram.com/' + myData.data[i].id + '/children?access_token=IGQVJWcGZARR0ZA2Y0xZAU1JfSHU2bW1mZA25PUjJVT0w5VjY4ZAlBlZAkdjYzV5dkxDTWpzU181TUZAsMGhOVmcwZAUdZARGNfaXNwR1Ewdjh2SGl0UkhuOTNKNEl0bUhfOGJXblM5cHYzc2N3', false);
       request.send(null);
@@ -50,28 +50,25 @@ function getFunc(myData){
 
 
 
-function clearId(id){
-  return id.substr(6,17);
-}
-function clearDataText(text){
-  return text.split('{"data":[')[1].split(']')[0];
-}
+//メディアidからメディアのURLを貰ってくる関数
 function getUrl(id){
   var url;
+  //ここからinstagramAPIからURLを貰ってくるおまじない〜
   let request = new XMLHttpRequest();
   request.open('GET', 'https://graph.instagram.com/' + id + '?fields=media_url&access_token=IGQVJWcGZARR0ZA2Y0xZAU1JfSHU2bW1mZA25PUjJVT0w5VjY4ZAlBlZAkdjYzV5dkxDTWpzU181TUZAsMGhOVmcwZAUdZARGNfaXNwR1Ewdjh2SGl0UkhuOTNKNEl0bUhfOGJXblM5cHYzc2N3', false);
   request.send(null);
   if (request.status == 200){
+    //〜ここまでおまじない
     console.log(request.responseText);
-    var text = JSON.parse( request.responseText );
-    url = text.media_url;
+    var text = JSON.parse( request.responseText );//stringからJSONに変換
+    url = text.media_url;//JSON内のmedia_urlにURLが格納されてるので　変数urlに代入
     console.log(url);
   }
   return url;
 }
 
 function displayImage(url){
-  var htmlText = '<img src=" ' + url + ' ">'
+  var htmlText = '<div class="imgBox"><img src=" ' + url + ' "></div>'
   $('.instagram').append(htmlText);
 }
 
