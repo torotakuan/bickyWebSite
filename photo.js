@@ -66,7 +66,7 @@ function getUrl(id){
   }
   return url;
 }
-
+//画像のurlを引数に渡すと、html上に画像として表示する関数
 function displayImage(url){
   var htmlText = '<div class="imgBox"><img src=" ' + url + ' "></div>'
   $('.instagram').append(htmlText);

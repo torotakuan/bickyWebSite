@@ -1,6 +1,13 @@
 :root{ 
-    --shadow-color:700;
+    --shadow-color:60;
 }
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
 html body{
     font-size:0;
     padding:0;
@@ -8,10 +15,16 @@ html body{
 .imgBox{
     display:inline-block;
     float:left;
-    width:29%;
+    width:31%;
     height:22vw;
-    margin:2% 1% 0 2% ;
+    margin:0% 1% 2% 1% ;
     text-align:center;
+    filter: drop-shadow(0.5vw 1vw 1vw hsl(0deg 0% 0% /0.25));
+
+}
+.imgBox img{
+    object-fit: cover;
+    max-width:100%;
 }
 .topBox a{
     display: table-cell;
@@ -21,7 +34,7 @@ html body{
     font-size:1.5vw;
 }
 .topBox{
-    margin-bottom:0vw ;
+    margin:2vw;
     width:100%;
 
     overflow: auto;
@@ -39,11 +52,12 @@ html body{
     border-radius: 50%;
 }
 .instagram{
-    padding:1%;
     margin:2% 5%;
     background-color:rgba(34, 49, 52, 0.05);
     overflow: auto;
-    box-shadow: 0.4vw 0.8vw 0.8vw hsl(230deg 0% 0% /0.25);
+    box-shadow: 0.7vw 0.7vw 2vw hsl(0deg 0% 0% /0.25);
+    z-index:100;
+    padding:0 2vw;
 }
 .instagram img{
     height:100%;
@@ -61,52 +75,37 @@ span#bar-icon2 {
     width:100%;
     text-align:center;
     font-size:0px;
-    /*
-    border-bottom:0.2vw solid gray;
-    */
-    box-shadow:
-        4.5px 4.5px 3.6px rgba(var(--shadow-color), 0, 0, 0.038),
-        12.5px 12.5px 10px rgba(var(--shadow-color), 0, 0, 0.055),
-        30.1px 30.1px 24.1px rgba(var(--shadow-color), 0, 0, 0.072),
-        100px 100px 80px rgba(var(--shadow-color), 0, 0, 0.11)
-    ;
-    padding:0px !important;
-    line-height: 0;
+    box-shadow: 0.1vw 0.2vw 0.2vw hsl(0deg 0% 0% /0.25);
 }
 .menu-box{
     display:inline-block;
     width:100%;
+    max-width:1000px;
     text-align:center;
     font-size:0px;
-    max-width:1000px;
-    padding:0px;
-    margin:0px;
-    line-height: 0;
 }
 .menu a{
     display:inline-block;
-    width:16.6%;
-    padding:0px 0px 0.5vw 0px;
+    width:16%;
+    padding:8px 0px;
     float:left;
-    font-size: 1.7vw;
+    font-size: 20px;
     color:rgba(34, 49, 52, 0.7);
     text-decoration: none;
     font-family:Helvetica;
     text-align:center;
     box-sizing: border-box;
-    padding:0px;
-    margin:0px;
 }
 .menu p{
+    margin:10px 0px;
 }
 .icon{
     margin-bottom: 10px;
 }
 
-
 .now {
     color:rgba(34, 49, 52, 0.9) !important;
-    border-bottom: solid 0.2vw rgba(34, 49, 52, 0.9) !important;
+    border-bottom: solid 3px rgba(34, 49, 52, 0.9);
 }
 .now :hover{
     color:rgba(34, 49, 52, 0.9) !important;
