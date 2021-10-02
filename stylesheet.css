@@ -158,6 +158,9 @@ html{
 #bar-icon2{
     display:none;
 }
+#close-icon{
+    display:none;
+}
 .container{
     text-align:center;
     display:none;
@@ -221,71 +224,6 @@ html{
 
 .side-menu {
     display:none;
-    background-color: white;
-    width:180px;
-    height:100%;
-    position:fixed;
-    top:0px;
-    left:0px;
-    text-align: center;
-    border-right:solid 1px grey;
-    z-index:2;
-}
-.side-menu-box{
-    display:inline-block;
-}
-.close-icon{
-    
-    font-size: 20px;
-}
-.side-menu-box p:hover{
-    color:rgba(34, 49, 52, 0.9) !important;
-}
-.side-menu-box a:hover{
-    color:rgba(34, 49, 52, 0.9) !important;
-}
-
-
-.side-menu a{
-    display:block;
-    width:150px;
-    padding:10px 0px;
-    margin:10px 0px;
-    font-size: 20px;
-    color:rgba(34, 49, 52, 0.7);
-    text-decoration: none;
-    font-family:Helvetica;
-    text-align:center;
-    border-bottom:solid 1px rgb(206, 206, 206);
-}
-
-.side-menu-text{
-    margin:0px auto;
-    text-align:left;
-    width:170px;
-    margin-top:10px;
-    color:rgba(34, 49, 52, 1);
-    font-size:30px;
-    border-bottom:solid 2px rgba(34, 49, 52, 1);
-
-}
-.side-menu-top :hover{
-    color:rgba(34, 49, 52, 0.5);
-
-}
-.side-menu p :hover {
-    color:rgba(34, 49, 52, 0.9) !important;
-}
-
-
-.now.side{
-    color:rgba(34, 49, 52, 0.9) !important;
-    border-right: solid 3px rgba(34, 49, 52, 0.9) !important;
-    border-bottom:solid 1px rgb(206, 206, 206);
-    margin-left:-3px;
-}
-.now.side :hover{
-    color:rgba(34, 49, 52, 0.9) !important;
 }
 
 
