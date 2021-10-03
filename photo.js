@@ -1,8 +1,20 @@
 
 var urls = [];
 $(function(){
-  //$('.photo p').load('https://graph.instagram.com/me/media?fields=id,media_type&access_token=IGQVJWcGZARR0ZA2Y0xZAU1JfSHU2bW1mZA25PUjJVT0w5VjY4ZAlBlZAkdjYzV5dkxDTWpzU181TUZAsMGhOVmcwZAUdZARGNfaXNwR1Ewdjh2SGl0UkhuOTNKNEl0bUhfOGJXblM5cHYzc2N3');
-  
+  var open = false;
+  $(".openbtn").click(function () {
+    if(!open){
+      $(this).toggleClass('active');
+      $(".side-menu").fadeIn();
+      open = true;
+    }else{
+      $(this).toggleClass('active');
+      $(".side-menu").fadeOut();
+      open = false;
+
+    }
+    
+  });
 });
 
 /* instagramAPIでメディアのURLをもってきてimage要素としてhtmlを追加 */
@@ -73,5 +85,3 @@ function displayImage(url){
   $('.instagram').append(htmlText);
 }
 
-
->>>>>>> origin/self_api

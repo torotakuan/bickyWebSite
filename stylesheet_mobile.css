@@ -192,24 +192,6 @@
         width:0%;
         
     }
-    #bar-icon2{
-        right: 5%;
-        top:3%;
-        position:absolute;
-        float:right;
-        color:rgba(235,235,235,0.9);
-        z-index:2;
-        display:block;
-    }
-    #close-icon{
-        right: 5%;
-        top:3%;
-        position:absolute;
-        float:right;
-        color:rgba(35,35,35,0.9);
-        z-index:2;
-        display:block;
-    }
     
     
     

@@ -1,14 +1,11 @@
 @media all and (max-width: 750px){
+    :root{
+        --menu-icon-size:0.3;
+    }
     *{
         margin:0px;
         padding:0px;
         box-sizing:border-box;
-    }
-    .menu{
-        display:none;
-    }
-    .bar-icon2{
-        font-size:30px;
     }
     .topBox{
         margin:3vw 1vw;
@@ -23,6 +20,7 @@
         font-size:5.5vw;
     }
     .instagram{
+        margin-top:20vw;
         padding:0 2vw;
     }
     .imgBox{
@@ -34,4 +32,158 @@
         object-fit: cover;
         max-width:100%;
     }
+
+
+    /*こっからmenu*/
+    .menu{
+        display:none;
+    }
+    .side-menu {
+     display:none;
+     background-color: white;
+     width:155px;
+     height:100%;
+     position:fixed;
+     top:0px;
+     right:0px;
+     text-align: center;
+     box-shadow: -1vw -1vw 2vw hsl(0deg 0% 0% /0.25);
+     z-index:2;
+     }
+     .side-menu-top{
+         height:20vw;
+         width:100%;
+         box-shadow: 0.5vw 0.5vw 1vw hsl(0deg 0% 0% /0.25);
+ 
+ 
+     }
+     .side-menu-box{
+         display:inline-block;
+     }
+     .close-icon{
+         
+         font-size: 20px;
+     }
+     .side-menu-box p:hover{
+         color:rgba(34, 49, 52, 0.9) !important;
+     }
+     .side-menu-box a:hover{
+         color:rgba(34, 49, 52, 0.9) !important;
+     }
+ 
+ 
+     .side-menu a{
+         display:block;
+         width:150px;
+         padding:10px 0px;
+         margin:10px 0px;
+         font-size: 20px;
+         color:rgba(34, 49, 52, 0.7);
+         text-decoration: none;
+         font-family:Helvetica;
+         text-align:center;
+         border-bottom:solid 1px rgb(206, 206, 206);
+     }
+ 
+     }
+     .side-menu p :hover {
+         color:rgba(34, 49, 52, 0.9) !important;
+     }
+ 
+ 
+     .now.side{
+         color:rgba(34, 49, 52, 0.9) !important;
+         border-left: solid 5px rgba(34, 49, 52, 0.9) !important;
+         border-bottom:solid 1px rgb(206, 206, 206);
+         margin-left:-3px;
+     }
+     .now.side :hover{
+         color:rgba(34, 49, 52, 0.9) !important;
+     }
+     /*ここまでmenu*/
+
+
+     /*==================================================
+    　5-2-4 MENUがCLOSEに
+    ===================================*/
+
+    /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+    .openbtn{
+        /*ボタン内側の基点となるためrelativeを指定。
+    追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+        position: fixed;
+        top: calc(10vw * var(--menu-icon-size));
+        right:calc(10vw * var(--menu-icon-size));
+        background:none;
+        cursor: pointer;
+        width: calc(50vw * var(--menu-icon-size));
+        height:calc(50vw * var(--menu-icon-size));
+        border-radius: calc(5vw * var(--menu-icon-size));
+        z-index:3;
+    }
+
+    /*ボタン内側*/
+    .openbtn span{
+        display: inline-block;
+        transition: all .4s;/*アニメーションの設定*/
+        
+        position: absolute;
+        left: calc(5vw * var(--menu-icon-size));
+        height: calc(3vw * var(--menu-icon-size));
+        background: #000;
+        width: 70%;
+    }
+
+
+    .openbtn span:nth-of-type(1) {
+        top:calc(13vw * var(--menu-icon-size));
+    }
+
+    .openbtn span:nth-of-type(2) {
+        top:calc(25vw * var(--menu-icon-size));
+    }
+
+    .openbtn span:nth-of-type(3) {
+        top:calc(37vw * var(--menu-icon-size));
+    }
+
+    .openbtn span:nth-of-type(3)::after {
+        /*content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
+        position: absolute;
+        top:calc(5vw * var(--menu-icon-size));
+        left:calc(-2vw * var(--menu-icon-size));
+        color: #fff;
+        font-size: calc(0.6rem * var(--menu-icon-size));
+        text-transform: uppercase;
+    }
+
+    /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+
+    .openbtn.active span:nth-of-type(1) {
+        top: calc(16vw * var(--menu-icon-size));
+        left: calc(11vw * var(--menu-icon-size));
+        transform: translateY(calc(6vw * var(--menu-icon-size))) rotate(-45deg);
+        width: 60%;
+        background-color:black;
+    }
+
+    .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .openbtn.active span:nth-of-type(3){
+        top: calc(28vw * var(--menu-icon-size));
+        left: calc(11vw * var(--menu-icon-size));
+        transform: translateY(calc(-6vw * var(--menu-icon-size))) rotate(45deg);
+        width: 60%;
+        background-color:black;
+    }
+
+    .openbtn.active span:nth-of-type(3)::after {
+        /*content:"Close";/*3つ目の要素のafterにClose表示を指定*/
+        transform: translateY(0) rotate(-45deg);
+        top:calc(5vw * var(--menu-icon-size));
+        left:calc(4vw * var(--menu-icon-size));
+    }
+ 
 }   

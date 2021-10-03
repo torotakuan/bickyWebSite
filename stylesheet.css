@@ -149,18 +149,6 @@ html{
 }
 
 
-
-.menu-icon{
-    display:none;
-    margin:20px;
-    float:right;
-}
-#bar-icon2{
-    display:none;
-}
-#close-icon{
-    display:none;
-}
 .container{
     text-align:center;
     display:none;
@@ -178,6 +166,11 @@ html{
 .container a{
     font-size:2vw;
 }
+
+
+
+
+
 .menu{
     display:inline-block;
       width:100%;
