@@ -11,7 +11,7 @@
     width:100%;
     text-align:center;
     font-size:0px;
-    border-bottom:2px solid gray;
+    box-shadow: 0.1vw 0.2vw 0.2vw hsl(0deg 0% 0% /0.25);
 }
 .menu-box{
     display:inline-block;

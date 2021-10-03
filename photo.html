@@ -7,19 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./photo.css">
-    
-    
-
-   
+    <link rel="stylesheet" href="./photo_mobile.css">
+    <!--font-awesome-->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   
 </head>
 <body>
-   <!-- HTML -->
-<h2>最新の投稿の本文 ↓</h2>
-<p id="app-text"></p>
-<br>
-<h2>最新の投稿の画像 ↓</h2>
-<div><img src="" alt="" id="app-img"></div>
+
 
 <!-- jQuery読み込み（バージョンはajaxが使えれば何でも大丈夫です） -->
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -36,7 +30,7 @@
             <a href="./profile.html" > <p>Profile</p> <span class="far fa-id-card icon" ></span> </a>
             <a href="./https://twitter.com/messages/1375296955476180994-1429320775723454469" target="_blank" rel="noopener noreferrer" ><p>Contact</p> <span class="fa fa-comments icon"></span> </a>
             <a href="./photo.html" class="now" > <p>Photos</p> <span class="fas fa-images icon"></span> </a>
-            <a href="./index.html"> <p>News</p> <span class="far fa-newspaper icon"></span> </a>
+            <a href="./news.html"> <p>News</p> <span class="far fa-newspaper icon"></span> </a>
             <a href="./schedule.html" > <p>Schedule</p> <span class="far fa-calendar-alt icon"></span> </a>
         </div> 
     </div>
@@ -57,13 +51,19 @@
         </div>
       </div>
     <div class="photo">
-      <div class="instagram"></div>
-      <p>test push test2</p>
+      <div class="instagram">
+        <div class = 'topBox'>
+          <div class = "icon-box">
+            <span class="fab fa-instagram "></span>
+          </div>
+          <a href="https://www.instagram.com/torotakuan/" >Bickymusicstudio</a>
+        </div>
+      </div>
     </div>
     
 
-<script type="text/javascript" src="./photo.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="./photo.js"></script>
 
 </body>
 </html>

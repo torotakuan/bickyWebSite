@@ -1,0 +1,37 @@
+@media all and (max-width: 750px){
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing:border-box;
+    }
+    .menu{
+        display:none;
+    }
+    .bar-icon2{
+        font-size:30px;
+    }
+    .topBox{
+        margin:3vw 1vw;
+    }
+    .topBox a{
+        font-size:5vw;
+    }
+    .icon-box{
+        
+        width:11vw;
+        height:11vw;
+        font-size:5.5vw;
+    }
+    .instagram{
+        padding:0 2vw;
+    }
+    .imgBox{
+        width:46%;
+        height:32vw;
+        margin:1% 2% 1% 2% ;
+    }
+    .imgBox img{
+        object-fit: cover;
+        max-width:100%;
+    }
+}   
