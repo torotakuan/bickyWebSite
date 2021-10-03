@@ -4,9 +4,9 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
+    <meta name="theme-color" content="#0f0f0f">
     <title>ビッキーホームページ</title>
-    <link rel="stylesheet" type="text/css"  href="./stylesheet.css"/>
-    <link rel="stylesheet" type="text/css"  href="./stylesheet_mobile.css"/>
+    
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,11 +19,14 @@
     <meta name="viewport" content="width=device-width,">
     <link rel="stylesheet" href="./stylesheet_mobile.css">
     <script src="./jquery.js"></script>
-  
+    
+
+    <link rel="stylesheet" type="text/css"  href="./stylesheet.css"/>
+    <link rel="stylesheet" type="text/css"  href="./stylesheet_mobile.css"/>
   </head>
   
   <body>
-
+    <div class="openbtn"><span></span><span></span><span></span></div>
     <div id="loader-bg">
       <div id="loader">
         <img src="img-loading.gif" width="80" height="80" alt="Now Loading..." />
@@ -73,9 +76,8 @@
         <div class="top-wrapper-box">
 
           <div class="bicky-left-wrapper" id="center">
-              <a href="#" class="side-menu-btn2">
-                <span class="fa fa-bars fa-4x " id = "bar-icon2"></span>
-              </a>
+             
+              
 
             <div class="bicky-left-wrapper-contents">
               <div class="texts">
@@ -104,11 +106,7 @@
           </div>
           
           <div class="bicly-right-wrapper">
-            <div class="menu-icon">
-              <a href="#" class="btn" id="side-menu-btn">
-                <span class="fa fa-bars fa-4x"></span>
-              </a>
-            </div>
+            
             
             <div class="container">
               <h1>星野響</h1>
@@ -133,23 +131,18 @@
           <a href="./profile.html" > <p>Profile</p> <span class="far fa-id-card icon" ></span> </a>
           <a href="mailto:lucky.bicky.island@gmail.com" target="_blank" rel="noopener noreferrer"><p>Contact</p> <span class="fa fa-comments icon"></span> </a>
           <a href="./photo.html" > <p>Photos</p> <span class="fas fa-images icon"></span> </a>
-          <a href="./news"> <p>News</p> <span class="far fa-newspaper icon"></span> </a>
+          <a href="./news.html"> <p>News</p> <span class="far fa-newspaper icon"></span> </a>
           <a href="./schedule.html" > <p>Schedule</p> <span class="far fa-calendar-alt icon"></span> </a>
       </div> 
       </div>
       <div class="side-menu">
-        <div class="side-menu-top">
-          <p class="side-menu-text">
-            <span class="fas fa-caret-left close-icon"></span>
-            menu
-          </p>
-        </div>
+        <div class = "side-menu-top"></div>
         <div class="side-menu-box">
           <a href="./index.html" class="now side"> <p>Top</p> <span class="fas fa-home icon"></span> </a>
           <a href="./profile.html" > <p>Profile</p> <span class="far fa-id-card icon"></span> </a>
           <a href="mailto:lucky.bicky.island@gmail.com" target="_blank" rel="noopener noreferrer"><p>Contact</p> <span class="fa fa-comments icon"></span> </a>
           <a href="./photo.html" > <p>Photos</p> <span class="fas fa-images icon"></span> </a>
-          <a href="./news"> <p>News</p> <span class="far fa-newspaper icon"></span> </a>
+          <a href="./news.html"> <p>News</p> <span class="far fa-newspaper icon"></span> </a>
           <a href="./schedule.html" > <p>Schedule</p> <span class="far fa-calendar-alt icon"></span> </a>
         </div>
       </div>
@@ -164,7 +157,7 @@
       </div>  
       </div>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     </div>
   </body>  
