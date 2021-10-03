@@ -143,7 +143,7 @@
 }
 .contents-cover{
 background-image:URL("old-wood.png");
-height:3000px;
+overflow:auto;
 }
 .instagram-title{
     color:white;
