@@ -1,4 +1,8 @@
-
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
 .menu{
     display:inline-block;
     width:100%;
@@ -134,3 +138,46 @@
 .now.side :hover{
     color:rgba(34, 49, 52, 0.9) !important;
 }
+#bar-icon2{
+    display:none;
+}
+.contents-cover{
+background-image:URL("old-wood.png");
+overflow:auto;
+}
+.instagram-title{
+    color:white;
+    text-align: center;
+    font-family: 'Old Standard TT', serif;
+    color:white;
+    margin-bottom:30px;
+  
+}
+
+.box {
+    width: 35%;                /* 横幅を200pxに指定 */
+    height: 800px;               /* 横幅を200pxに指定 */
+        /* わかりやすくボーダーを引く */
+    overflow-y: scroll;          /* 縦方向にスクロール可能にする */
+    
+    float:left;
+   margin-left:140px;
+   margin-bottom:30px;
+   -ms-overflow-style: none;    /* IE, Edge 対応 */
+   scrollbar-width: none;       /* Firefox 対応 */
+  }
+  .box::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+  }
+
+  .box p{
+    font-family: 'Old Standard TT', serif;
+    color:white;
+    font-size: 20px;
+    touch-action:none !important;
+   
+  }
+  .date{
+      display:none;
+  }
+ 
