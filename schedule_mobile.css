@@ -16,5 +16,11 @@
     .schedule{
         margin-top:12vw;
     }
+    .fc-left{
+        display:none;
+    }
+    .fc-right{
+        width:40%;
+    }
     
 }

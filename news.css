@@ -155,13 +155,13 @@ height:3000px;
 }
 
 .box {
-    width: 45%;                /* 横幅を200pxに指定 */
+    width: 35%;                /* 横幅を200pxに指定 */
     height: 800px;               /* 横幅を200pxに指定 */
         /* わかりやすくボーダーを引く */
     overflow-y: scroll;          /* 縦方向にスクロール可能にする */
     
     float:left;
-   margin-left:70px;
+   margin-left:140px;
    margin-bottom:30px;
    -ms-overflow-style: none;    /* IE, Edge 対応 */
    scrollbar-width: none;       /* Firefox 対応 */

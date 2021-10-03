@@ -1,4 +1,4 @@
-   
+   $(function()}
     $("#side-menu-btn").click(function(){
 
         $(".side-menu").fadeIn();
@@ -11,4 +11,5 @@
         $(".side-menu").fadeOut();
   
   
+      });
       });
