@@ -68,6 +68,7 @@ $(window).load(function () { //全ての読み込みが完了したら実行
     
   }
 });
-
+var msg = 'hello world';
+console.log(msg);
 
   
