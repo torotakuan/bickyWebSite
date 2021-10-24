@@ -20,12 +20,21 @@ function stopload(){
 }
 
 $(window).load(function () { //全ての読み込みが完了したら実行
+  var pw;
+
+  
   var open = false;
   var animateTime = 2000;
   var animateSpeed = 1;
   $('#loader-bg').delay(900*animateSpeed).fadeOut(800*animateSpeed);
   $('#loader').delay(600*animateSpeed).fadeOut(300*animateSpeed);
   $('#wrap').css('display', 'block');
+  pw = prompt("パスワードを入れて下さい。","");
+  if (pw == "bicky"){
+    $(".filter").fadeOut();
+  }else{
+    alert("パスワードが違います！");
+  }
   if($(window).innerWidth()<= 750){
     $(".texts").delay(900*animateSpeed).fadeIn(3500);
     $('#firstLine hr').delay(900*animateSpeed).animate({width:'100%'},animateTime);

@@ -2,6 +2,15 @@
     clear:left;
     clear:right;
 }
+.filter{
+    background-color:black;
+    width:100vw;
+    height:100vw;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:99;
+}
 #bar-icon2{
     display:none;
 }
