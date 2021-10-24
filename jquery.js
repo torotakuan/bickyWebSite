@@ -32,9 +32,9 @@ $(window).load(function () { //全ての読み込みが完了したら実行
   if(document.cookie == "open"){
     $(".filter").fadeOut();
   }else{
-    pw = prompt("パスワードを入れて下さい。","");
+    pw = prompt("パスワードを入れて下さい。" + document.cookie,"");
     if (pw == "bicky"){
-      document.cookie = "open; path=/bickymusic.com/;";
+      document.cookie = "open";
       $(".filter").fadeOut();
     }else{
       alert("パスワードが違います！");
