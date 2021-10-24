@@ -1,6 +1,20 @@
 
 var urls = [];
 $(function(){
+  //こっからパスワード関連--------------------------------------------------------------------------------------
+  var pw;
+  if(document.cookie == "open"){
+    $(".filter").fadeOut();
+  }else{
+    pw = prompt("パスワードを入れて下さい。","");
+    if (pw == "bicky"){
+      document.cookie = "open";
+      $(".filter").fadeOut();
+    }else{
+      alert("パスワードが違います！");
+    }
+  }
+  //ここまでパスワード関連--------------------------------------------------------------------------------------
   var open = false;
   $(".openbtn").click(function () {
     if(!open){
