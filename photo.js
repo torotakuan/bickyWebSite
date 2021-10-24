@@ -8,7 +8,7 @@ $(function(){
   }else{
     pw = prompt("パスワードを入れて下さい。","");
     if (pw == "bicky"){
-      document.cookie = "open";
+      document.cookie = "open; path=/bickymusic.com/;";
       $(".filter").fadeOut();
     }else{
       alert("パスワードが違います！");
