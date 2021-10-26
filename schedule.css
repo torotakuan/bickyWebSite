@@ -2,6 +2,14 @@
     clear:left;
     clear:right;
 }
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+.body,html{
+    font-size:0px
+}
 .filter{
     background-color:#9f9f9f;
     width:100%;
