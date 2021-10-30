@@ -7,31 +7,6 @@
         padding:0px;
         box-sizing:border-box;
     }
-    .topBox{
-        margin:3vw 1vw;
-    }
-    .topBox a{
-        font-size:5vw;
-    }
-    .icon-box{
-        
-        width:11vw;
-        height:11vw;
-        font-size:5.5vw;
-    }
-    .instagram{
-        column-count: 5;
-        column-width: 300px;
-    }
-    .imgBox{
-        width:46%;
-        height:32vw;
-        margin:1% 2% 1% 2% ;
-    }
-    .imgBox img{
-        object-fit: cover;
-        max-width:100%;
-    }
 
 
     /*こっからmenu*/
