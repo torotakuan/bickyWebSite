@@ -105,7 +105,7 @@
         position: absolute;
         left: calc(5vw * var(--menu-icon-size));
         height: calc(3vw * var(--menu-icon-size));
-        background: #000;
+        background: #FFF;
         width: 70%;
     }
 
