@@ -20,8 +20,8 @@
         font-size:5.5vw;
     }
     .instagram{
-        margin-top:20vw;
-        padding:0 2vw;
+        column-count: 5;
+        column-width: 300px;
     }
     .imgBox{
         width:46%;

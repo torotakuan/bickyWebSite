@@ -5,7 +5,6 @@
 *{
     margin:0px;
     padding:0px;
-    box-sizing:border-box;
 }
 .filter{
     background-color:#9f9f9f;
@@ -21,55 +20,22 @@ html body{
     font-size:0;
     padding:0;
 }
+
+.instagram{
+    padding-top:15px;
+    background: #333;
+    column-count: 5;
+    column-width: 300px;
+  
+}
 .imgBox{
-    display:inline-block;
-    float:left;
-    width:31%;
-    height:22vw;
-    margin:0% 1% 2% 1% ;
-    text-align:center;
-    filter: drop-shadow(0.5vw 1vw 1vw hsl(0deg 0% 0% /0.25));
+    margin: 0 auto 15px;
+    max-width: 292.5px;
+    width: 100%;
 
 }
 .imgBox img{
-    object-fit: cover;
-    max-width:100%;
-}
-.topBox a{
-    display: table-cell;
-    vertical-align: middle;
-    color:#F2B366;
-    padding-left:1vw;
-    font-size:1.5vw;
-}
-.topBox{
-    margin:2vw;
-    width:100%;
-
-    overflow: auto;
-}
-
-.icon-box{
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    width:4vw;
-    height:4vw;
-    font-size:2vw;
-    color:white;
-    background-color:#F2B366;
-    border-radius: 50%;
-}
-.instagram{
-    margin:2% 5%;
-    background-color:rgba(34, 49, 52, 0.05);
-    overflow: auto;
-    box-shadow: 0.7vw 0.7vw 2vw hsl(0deg 0% 0% /0.25);
-    z-index:100;
-    padding:0 2vw;
-}
-.instagram img{
-    height:100%;
+  width: 100%;
 }
 .white{
     color:white;
@@ -80,6 +46,7 @@ span#bar-icon2 {
 }
 
 .menu{
+    position:relative;
     display:inline-block;
     width:100%;
     text-align:center;
@@ -121,5 +88,8 @@ span#bar-icon2 {
 }
 .menu :hover{
     color:rgba(34, 49, 52, 0.5);
+}
+.side-menu-box{
+    display:none;
 }
 
