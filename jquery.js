@@ -27,6 +27,13 @@ $(window).load(function () { //全ての読み込みが完了したら実行
   $('#loader').delay(600*animateSpeed).fadeOut(300*animateSpeed);
   $('#wrap').css('display', 'block');
 
+
+  
+
+
+
+
+
   //こっからパスワード関連--------------------------------------------------------------------------------------
   var pw;
   if(document.cookie == "key=open"){
