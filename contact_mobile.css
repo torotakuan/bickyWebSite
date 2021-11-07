@@ -1,4 +1,4 @@
-@media all and (max-width: 750px){
+@media(max-width:750px){
     :root{
         --menu-icon-size:0.3;
     }
@@ -9,7 +9,8 @@
     }
 
 
-    /*こっからmenu*/
+    /*ーーーここからmenu関連ーーーーーーーーーーーーーーーーーーーーーーー*/
+
     .menu{
         display:none;
     }
@@ -33,53 +34,59 @@
  
      }
      .side-menu-box{
-         display:inline-block;
+        display:inline-block;
      }
      .close-icon{
          
-         font-size: 20px;
+        font-size: 20px;
      }
      .side-menu-box p:hover{
-         color:rgba(34, 49, 52, 0.9) !important;
+        color:rgba(34, 49, 52, 0.9) !important;
      }
      .side-menu-box a:hover{
-         color:rgba(34, 49, 52, 0.9) !important;
+        color:rgba(34, 49, 52, 0.9) !important;
      }
  
  
      .side-menu a{
-         display:block;
-         width:150px;
-         padding:10px 0px;
-         margin:10px 0px;
-         font-size: 20px;
-         color:rgba(34, 49, 52, 0.7);
-         text-decoration: none;
-         font-family:Helvetica;
-         text-align:center;
-         border-bottom:solid 1px rgb(206, 206, 206);
+        display:block;
+        width:150px;
+        padding:10px 0px;
+        margin:10px 0px;
+        font-size: 20px;
+        color:rgba(34, 49, 52, 0.7);
+        text-decoration: none;
+        font-family:Helvetica;
+        text-align:center;
+        border-bottom:solid 1px rgb(206, 206, 206);
      }
  
-     }
+     
      .side-menu p :hover {
-         color:rgba(34, 49, 52, 0.9) !important;
+        color:rgba(34, 49, 52, 0.9) !important;
      }
  
  
      .now.side{
-         color:rgba(34, 49, 52, 0.9) !important;
-         border-left: solid 5px rgba(34, 49, 52, 0.9) !important;
-         border-bottom:solid 1px rgb(206, 206, 206);
-         margin-left:-3px;
+        color:rgba(34, 49, 52, 0.9) !important;
+        border-left: solid 5px rgba(34, 49, 52, 0.9) !important;
+        border-bottom:solid 1px rgb(206, 206, 206);
+        margin-left:-3px;
      }
      .now.side :hover{
-         color:rgba(34, 49, 52, 0.9) !important;
+        color:rgba(34, 49, 52, 0.9) !important;
      }
-     /*ここまでmenu*/
+    /*ーーーここまでmenu関連ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+    
 
 
-     /*==================================================
-    　5-2-4 MENUがCLOSEに
+
+
+
+
+    /*==================================================
+    　MENUボタン関連
     ===================================*/
 
     /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
@@ -105,7 +112,7 @@
         position: absolute;
         left: calc(5vw * var(--menu-icon-size));
         height: calc(3vw * var(--menu-icon-size));
-        background: #FFF;
+        background: #000;
         width: 70%;
     }
 
@@ -160,5 +167,8 @@
         top:calc(5vw * var(--menu-icon-size));
         left:calc(4vw * var(--menu-icon-size));
     }
- 
-}   
+    /*ーーーここまでmenuボタン関連ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+}
+    
+

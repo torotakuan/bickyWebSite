@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet"  href="./contact.css">
+    <link rel="stylesheet" href="./contact_mobile.css">
+    <script src="https://apis.google.com/js/client.js?onload=onLoadCallbackFunction"></script>
+    <!--font-awesome-->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./contact.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+
+  
+</head>
+<body>
+    <div class = "filter"></div>
+    <div class="openbtn"><span></span><span></span><span></span></div>
+    <div class="menu">
+        <div class="menu-box">
+            <a href="./index.html" > <p>Top</p> <span class="fas fa-home icon"></span> </a>
+            <a href="./profile.html" > <p>Profile</p> <span class="far fa-id-card icon" ></span> </a>
+            <a href="./contact.html" class="now"  ><p>Contact</p> <span class="fa fa-comments icon"></span> </a>
+            <a href="./photo.html" > <p>Photos</p> <span class="fas fa-images icon"></span> </a>
+            <a href="./news.html"> <p>News</p> <span class="far fa-newspaper icon"></span> </a>
+            <a href="./schedule.html" > <p>Schedule</p> <span class="far fa-calendar-alt icon"></span> </a>
+        </div> 
+    </div>
+    <div class="side-menu">
+        <div class="side-menu-top"></div>
+        <div class="side-menu-box">
+          <a href="./index.html"> <p>Top</p> <span class="fas fa-home icon"></span> </a>
+          <a href="./profile.html" > <p>Profile</p> <span class="far fa-id-card icon"></span> </a>
+          <a href="./contact.html"  class="now side"><p>Contact</p> <span class="fa fa-comments icon"></span> </a>
+          <a href="./photo.html" > <p>Photos</p> <span class="fas fa-images icon"></span> </a>
+          <a href="./news.html"> <p>News</p> <span class="far fa-newspaper icon"></span> </a>
+          <a href="./schedule.html" > <p>Schedule</p> <span class="far fa-calendar-alt icon"></span> </a>
+        </div>
+      </div>
+    
+    <div class="contact">
+        <p>contact with</p>
+        <div class="mail">
+            <a href="mailto:lucky.bicky.island@gmail.com" class="btn mail" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i>mail</a>
+        </div>
+        <div class="twitter">
+            <a href="https://twitter.com/messages/compose?recipient_id=1375296955476180994 " class="btn twitter" target="_blank" rel="noopener noreferrer"><span class="fab fa-twitter"></span>twitter</a>
+        </div>
+        <div class="instagram">
+            <a href="https://www.instagram.com/bickyhoshino/" class="btn instagram" target="_blank" rel="noopener noreferrer">
+                <span class="fab fa-instagram "></span>instagram
+            </a>
+        </div>
+
+
+        <!--こっからお問い合わせフォーム----------------------------------------------------------------------------------------------------------------------------------------------->
+        
+        <input name="name" id="name" type="text" onkeyup='window.contact.checkValidation()' placeholder="お名前" >
+        <input name="email" id="email" type="email" onkeyup='window.contact.checkValidation()' placeholder="お客様のメールアドレス" >
+        <textarea name="message" id="message"  onkeyup='window.contact.checkValidation()' placeholder="メッセージ"></textarea>
+        <input type="submit" id="submit" name="send" onclick='window.contact.send(this)' value="Send">
+        
+        <!--ここまでお問い合わせフォーム----------------------------------------------------------------------------------------------------------------------------------------------->
+    </div>
+
+
+</body>
+<script>
+    $(function() {
+        window.contact.checkValidation()
+    });
+</script>
+</html>

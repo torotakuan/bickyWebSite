@@ -7,7 +7,48 @@
         padding:0px;
         box-sizing:border-box;
     }
-    
+ 
+    .schedule{
+        margin-top:15vw;
+    }
+    .calender-top p{
+        width:98%;
+        font-size:3.5vw;
+        margin:0 auto;
+        padding:2vw 2vw;
+        background-color: #2C3E50;
+        color:white;
+        border-radius: 1vw;
+    }
+
+
+    /*ーーーここからfullcalendarーーーーーーーーーーーーーーーーーーーーーーーー*/
+    #calendar{
+        width:90%;
+    }
+    .fc-day-grid-container{
+        height: 384px !important;
+    }
+    .fc-today-button {
+        margin-left: 0em !important;
+    }
+    .fc-center{
+        text-align: center;
+        font-size:3.5vw
+    }
+    .fc-left{
+        text-align: center;
+    }
+    .fc-day-header{
+        font-size: 0.4em !important;;
+    }
+    /*ーーーここまでfullcalendarーーーーーーーーーーーーーーーーーーーーー*/
+
+
+
+
+    /*ーーーここからmenu関連ーーーーーーーーーーーーーーーーーーーーーーー*/
+
     .menu{
         display:none;
     }
@@ -31,56 +72,59 @@
  
      }
      .side-menu-box{
-         display:inline-block;
+        display:inline-block;
      }
      .close-icon{
          
-         font-size: 20px;
+        font-size: 20px;
      }
      .side-menu-box p:hover{
-         color:rgba(34, 49, 52, 0.9) !important;
+        color:rgba(34, 49, 52, 0.9) !important;
      }
      .side-menu-box a:hover{
-         color:rgba(34, 49, 52, 0.9) !important;
+        color:rgba(34, 49, 52, 0.9) !important;
      }
  
  
      .side-menu a{
-         display:block;
-         width:150px;
-         padding:10px 0px;
-         margin:10px 0px;
-         font-size: 20px;
-         color:rgba(34, 49, 52, 0.7);
-         text-decoration: none;
-         font-family:Helvetica;
-         text-align:center;
-         border-bottom:solid 1px rgb(206, 206, 206);
+        display:block;
+        width:150px;
+        padding:10px 0px;
+        margin:10px 0px;
+        font-size: 20px;
+        color:rgba(34, 49, 52, 0.7);
+        text-decoration: none;
+        font-family:Helvetica;
+        text-align:center;
+        border-bottom:solid 1px rgb(206, 206, 206);
      }
  
-     }
+     
      .side-menu p :hover {
-         color:rgba(34, 49, 52, 0.9) !important;
+        color:rgba(34, 49, 52, 0.9) !important;
      }
  
  
      .now.side{
-         color:rgba(34, 49, 52, 0.9) !important;
-         border-left: solid 5px rgba(34, 49, 52, 0.9) !important;
-         border-bottom:solid 1px rgb(206, 206, 206);
-         margin-left:-3px;
+        color:rgba(34, 49, 52, 0.9) !important;
+        border-left: solid 5px rgba(34, 49, 52, 0.9) !important;
+        border-bottom:solid 1px rgb(206, 206, 206);
+        margin-left:-3px;
      }
      .now.side :hover{
-         color:rgba(34, 49, 52, 0.9) !important;
+        color:rgba(34, 49, 52, 0.9) !important;
      }
- 
-    .schedule{
-        margin-top:12vw;
-    }
+    /*ーーーここまでmenu関連ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+    
+
+
+
+
 
 
     /*==================================================
-    　5-2-4 MENUがCLOSEに
+    　MENUボタン関連
     ===================================*/
 
     /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
@@ -161,7 +205,7 @@
         top:calc(5vw * var(--menu-icon-size));
         left:calc(4vw * var(--menu-icon-size));
     }
+    /*ーーーここまでmenuボタン関連ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
 }
     
-}
