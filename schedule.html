@@ -31,13 +31,13 @@
                 header: {
                     left: 'prev,next today',
                     center: 'title',
-                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
                 },
                 navLinks: true,
                 editable: true,
                 businessHours: true, 
             　  locale: 'ja',
-            　  plugins: [ 'interaction', 'dayGrid','googleCalendar', 'timeGrid', 'list' ],
+            　  plugins: [ 'interaction', 'dayGrid','googleCalendar', 'timeGrid' ],
                 googleCalendarApiKey:'AIzaSyAKvf5G5XQteQHixZC44sgBagTOTuzkayE',
                 events:'n7f0ghpdkaduv6e24d9m4ke3oo@group.calendar.google.com'
             });
@@ -74,9 +74,9 @@
       </div>
     <div class="schedule">
         <div class="calender-top">
-      <p>※下記の予定にない場合はメールから（前日でも可）</p>
-            
+            <p>※下記の予定にない場合はメールから（前日でも可）</p>
         </div>
+
         <div id="calendar"></div>
 
     </div>
