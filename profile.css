@@ -12,6 +12,11 @@
     width:100%;
    font-size:0px;
 }
+.profile-right-contents p{
+    font-size: 10px;
+}
+
+
 
 .profile-top{
     width:100%;
@@ -100,8 +105,11 @@ height:533px;
 .profile-right-contents p{
     color:white;
     letter-spacing: 3px;
-    font-size: 18px;
+    font-size: 13px;
     padding-top:  60px;
+    padding:0px 80px;
+
+
 
 
 
