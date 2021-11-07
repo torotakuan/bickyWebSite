@@ -26,6 +26,7 @@ html body{
     background: #222;
     column-count: 5;
     column-width: 300px;
+    min-height:100vw;
   
 }
 .imgBox{

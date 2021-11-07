@@ -35,8 +35,9 @@ $(function(){
 
 /* instagramAPIでメディアのURLをもってきてimage要素としてhtmlを追加 */
 
+var accessToken = "IGQVJVd3hDQUhHMDVLZA1hOMTlvR3YxUnotZAl9zRV9hSTVVcE9uYmRxWFhsZAGZAwWlgtdUpaOEJRcnFNWnYwYWU3RE84QldrQkNfM1hCUW1VWW5hejVlTEpib3Rud1RTNjV2VEdmLV93";
 //instagram上の全メディアのid,url,media_typeなどを貰ってくる
-$.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url&access_token=IGQVJWcGZARR0ZA2Y0xZAU1JfSHU2bW1mZA25PUjJVT0w5VjY4ZAlBlZAkdjYzV5dkxDTWpzU181TUZAsMGhOVmcwZAUdZARGNfaXNwR1Ewdjh2SGl0UkhuOTNKNEl0bUhfOGJXblM5cHYzc2N3', getFunc);
+$.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url&access_token=' + accessToken, getFunc);
 //GETリクエストが成功したら下の関数getFuncが実行される（貰ってきたデータは変数myDataに格納されてる）
 function getFunc(myData){
   //jsonデータは配列として扱えるので、普段通り配列の要素を一つ一ついじっていく
