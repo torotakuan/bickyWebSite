@@ -25,7 +25,7 @@
     <div class="openbtn"><span></span><span></span><span></span></div>
     <div class="menu">
         <div class="menu-box">
-            <a href="./index.html" > <p>Top</p> <span class="fas fa-home icon"></span> </a>
+            <a href="./index.html" > <p>Top</p> <span class="fas fa-home icon"></span></a>
             <a href="./profile.html" > <p>Profile</p> <span class="far fa-id-card icon" ></span> </a>
             <a href="./contact.html" class="now"  ><p>Contact</p> <span class="fa fa-comments icon"></span> </a>
             <a href="./photo.html" > <p>Photos</p> <span class="fas fa-images icon"></span> </a>
@@ -58,7 +58,7 @@
                 <span class="fab fa-instagram "></span>instagram
             </a>
         </div>
-        
+    </div>  
        
        
         <div class="conduct-contents">
@@ -75,18 +75,17 @@
             </div>
             <div class="conduct-main-contents">
                
-                    <div class="name"><span class="red">※</span>名前を入力してください</div>
-                    <input name="name" id="name" type="text" onkeyup="window.contact.checkValidation()" placeholder="name" >
-                    
+                    <div class="name"><a>名前を入力してください</a></div>
+                    <input name="name" id="name" type="text" onkeyup="window.contact.checkValidation()" placeholder="name" required >
                     <div class="e-mail"><span class="red">※</span>メールアドレスを入力してください</div>
-                    <input name="email" id="email" type="email" onkeyup="window.contact.checkValidation()" placeholder="e-mail" >
+                    <input name="email" id="email" type="email" onkeyup="window.contact.checkValidation()" placeholder="e-mail" required>
                     <div class="gender"><span class="red">※</span>性別を選択してください</div>
                     <input name="gender" id="gender" type="radio" onkeyup="window.contact.checkValidation()">男性
                     <input name="gender" id="gender" type="radio" onkeyup="window.contact.checkValidation()">女性
-                    <div class="age"><span class="red" >※</span>年齢を選択してください</div>
-                    <input name="age" id="age" type="text" onkeyup="window.contact.checkValidation()" placeholder="年齢を入力してください">
+                    <div class="age">年齢を入力してください</div>
+                    <input name="age" id="age" type="text" onkeyup="window.contact.checkValidation()" placeholder="年齢を入力してください" required>
                     <div class="conduct-contents">星野響を知ったきっかけ</div>
-                    <select name="conduct-contents" id="conduct-contents" onkeyup="window.contact.checkValidation()">
+                    <select name="conduct-contents" id="conduct-contents" onkeyup="window.contact.checkValidation()" required>
                        <option>音楽衆院</option>
                        <option>YouTube</option>
                        <option>Instagram</option>
@@ -94,7 +93,7 @@
                        </select>
                        <div class="free-form"><span class="red">※</span>お問い合わせ内容</div>      
                        <textarea name="message" id="message" onkeyup="window.contact.checkValidation()" placeholder="message"></textarea> 
-                       <input type="submit" id="submit" name="send" onclick="window.contact.send(this)" value="Send">         
+                       <input type="submit" id="submit" name="send" onclick="window.contact.send(this)" value="送信">         
                
              </div>
             </div>
@@ -103,7 +102,7 @@
         </div>
 
 
-    </div>
+   
 
 
 </body>

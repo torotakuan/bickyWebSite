@@ -1,6 +1,6 @@
 window.contact = window.contact || {};
 window.contact.checkValidation = function(){
-    if(!$('input[id="name"]').val() || !$('input[id="email"]').val() || !$('input[id="age"]').val() ||!$('input[id="Female"]').val() ||!$('input[id="Male"]').val() ||!$('select[id="conduct-contents"]').val() ||!$('textarea[id="message"]').val()){
+    if(!$('input[id="name"]').val() || !$('input[id="email"]').val() || !$('input[id="age"]').val() ||!$('input[id="gender"]').val() ||!$('select[id="conduct-contents"]').val() ||!$('textarea[id="message"]').val()){
         $('input[id=submit]').attr('disabled', 'disabled');
         return false;
     }
@@ -13,16 +13,14 @@ window.contact.send = function(){
     var name = $('input[id="name"]').val() 
     var email = $('input[id="email"]').val() 
     var age=$('input[id="age"]').val() 
-    var Male = $('input[id="Male"]').val()
-    var Female=$('input[id="Female"]').val() 
+    var gender=$('input[id="gender"]').val() 
     var conduct=$('select[id="conduct-contents"]').val() 
     var message = $('textarea[id="message"]').val()
     data = {
         name: name,
         email: email,
         age:age,
-        Female: Female,
-        Male:Male,
+        gender:gender,
         conduct:conduct,
         message: message,
     }
