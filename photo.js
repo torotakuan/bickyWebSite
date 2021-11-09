@@ -1,5 +1,6 @@
 
 var urls = [];
+var accessToken ;
 $(function(){
   //こっからパスワード関連--------------------------------------------------------------------------------------
   var pw;
@@ -31,11 +32,10 @@ $(function(){
     
   });
   //ここまでメニューボタン関連--------------------------------------------------------------------------------------
+
 });
 
-/* instagramAPIでメディアのURLをもってきてimage要素としてhtmlを追加 */
-
-var accessToken = "IGQVJVd3hDQUhHMDVLZA1hOMTlvR3YxUnotZAl9zRV9hSTVVcE9uYmRxWFhsZAGZAwWlgtdUpaOEJRcnFNWnYwYWU3RE84QldrQkNfM1hCUW1VWW5hejVlTEpib3Rud1RTNjV2VEdmLV93";
+var accessToken = "IGQVJYdHpSbEhOZAFp2Si1sQ3JmSTgxV1A0X2YxMGJLNVhkb2kzT3FKY2doX0NyaTF1MWU3QVNUSTBLcFNMM3F5WFZAJSFg5TVBKUnl5SXpiRVdIeEJTMjk3WlBzUV94LXZAMNVZAFbEhR";
 //instagram上の全メディアのid,url,media_typeなどを貰ってくる
 $.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url&access_token=' + accessToken, getFunc);
 //GETリクエストが成功したら下の関数getFuncが実行される（貰ってきたデータは変数myDataに格納されてる）
