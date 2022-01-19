@@ -32,22 +32,6 @@ $(window).load(function () { //全ての読み込みが完了したら実行
 
 
 
-
-
-  //こっからパスワード関連--------------------------------------------------------------------------------------
-  var pw;
-  if(document.cookie == "key=open"){
-    $(".filter").fadeOut();
-  }else{
-    pw = prompt("パスワードを入れて下さい。" + document.cookie,"");
-    if (pw == "bicky"){
-      document.cookie = "key=open";
-      $(".filter").fadeOut();
-    }else{
-      alert("パスワードが違います！");
-    }
-  }
-  //ここまでパスワード関連--------------------------------------------------------------------------------------
   
   if($(window).innerWidth()<= 750){
     $(".texts").delay(900*animateSpeed).fadeIn(3500);
