@@ -24,7 +24,7 @@ $(function(){
   if(document.cookie == "key=open"){
     $(".filter").fadeOut();
   }else{
-    pw = prompt("パスワードを入れて下さい。" + document.cookie,"");
+    pw = prompt("このページは工事中です。パスワードを入れて下さい。" + document.cookie,"");
     if (pw == "bicky"){
       document.cookie = "key=open";
       $(".filter").fadeOut();
