@@ -19,6 +19,21 @@ $(function(){
   });
   //ここまでメニューボタン関連--------------------------------------------------------------------------------------
 
+  //こっからパスワード関連--------------------------------------------------------------------------------------
+  var pw;
+  if(document.cookie == "key=open"){
+    $(".filter").fadeOut();
+  }else{
+    pw = prompt("パスワードを入れて下さい。" + document.cookie,"");
+    if (pw == "bicky"){
+      document.cookie = "key=open";
+      $(".filter").fadeOut();
+    }else{
+      alert("パスワードが違います！");
+    }
+  }
+  //ここまでパスワード関連--------------------------------------------------------------------------------------
+  
 });
 
 var accessToken = "IGQVJYUXhxaDR4T19wa3prYnl5OE90NTFSbzZARcXZAMZAzZA5cXdRaW8xTU9QbHhFblNwdlZA2SGZAGcG9xOU9OXy1HQnUxVDFlUXUxRGhSaFZA3WGVBVnFBSWhFV3dBNHZAhSDBUZA0wxek13";
