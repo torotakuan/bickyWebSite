@@ -16,17 +16,17 @@
     z-index: 3;
 }
 #loader {
-display: none;
-position: fixed;
-top: 50%;
-left: 50%;
-width: 200px;
-height: 200px;
-margin-top: -100px;
-margin-left: -100px;
-text-align: center;
-color: #fff;
-z-index: 4;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    text-align: center;
+    color: #fff;
+    z-index: 4;
 }
 
 .filter{
