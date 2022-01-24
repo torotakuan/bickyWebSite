@@ -14,6 +14,7 @@
 }
 .profile-right-contents p{
     font-size: 10px;
+    box-sizing: border-box;
 }
 
 
@@ -78,29 +79,29 @@
 .profile-top{
     color:white;
     padding:15px;
-
-   background-color:black;
-　　
+    background-color:black; 
 }
 .profile-top h1{
-font-family: 'Allison', cursive;
-font-size:80px;
-padding-left:20px;
-padding-top:10px;
+    font-family: 'Allison', cursive;
+    font-size:80px;
+    padding-left:20px;
+    padding-top:10px;
 }
 
 
 .btn{
-display: inline-block;
-float:right;
-margin:20px;
+    display: inline-block;
+    float:right;
+    margin:20px;
 
 }
+.profile-contents{
+    background-color:black;
+}
 .profile-right-contents{
-display:inline-block;
-width:50%;
-background-color:black;
-height:533px;
+    display:inline-block;
+    width:50%;
+    background-color:black;
 }
 .profile-right-contents p{
     color:white;
