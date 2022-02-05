@@ -1,137 +1,16 @@
 *{
-    margin:0px;
-    padding:0px;
-    box-sizing:border-box;
+    padding: 0px;
+    margin: 0px;
 }
-.body,html{
-    font-size:0px
+.br-point{
+    display: none;
 }
-.profile{
-   width: 1000px; 
-    height:141px;
-    width:100%;
-   font-size:0px;
+body{
+    width: 100vw;
+    height: 100vh;
+    color: white;
+   
 }
-.profile-right-contents p{
-    font-size: 10px;
-}
-
-
-
-.profile-top{
-    width:100%;
-    
-  
-}
-
-.menu-icon{
-    display:none;
-}
-
-
-.menu{
-    display:inline-block;
-    width:100%;
-    text-align:center;
-    font-size:0px;
-    box-shadow: 0.1vw 0.2vw 0.2vw hsl(0deg 0% 0% /0.25);
-}
-.menu-box{
-    display:inline-block;
-    width:100%;
-    max-width:1000px;
-    text-align:center;
-    font-size:0px;
-}
-.menu a{
-    display:inline-block;
-    width:16%;
-    padding:8px 0px;
-    float:left;
-    font-size: 20px;
-    color:rgba(34, 49, 52, 0.7);
-    text-decoration: none;
-    font-family:Helvetica;
-    text-align:center;
-    box-sizing: border-box;
-}
-.menu p{
-    margin:10px 0px;
-}
-.icon{
-    margin-bottom: 10px;
-}
-
-.now {
-    color:rgba(34, 49, 52, 0.9) !important;
-    border-bottom: solid 3px rgba(34, 49, 52, 0.9);
-}
-.now :hover{
-    color:rgba(34, 49, 52, 0.9) !important;
-}
-.menu :hover{
-    color:rgba(34, 49, 52, 0.5);
-}
-
-
-
-.profile-top{
-    color:white;
-    padding:15px;
-
-   background-color:black;
-　　
-}
-.profile-top h1{
-font-family: 'Allison', cursive;
-font-size:80px;
-padding-left:20px;
-padding-top:10px;
-}
-
-
-.btn{
-display: inline-block;
-float:right;
-margin:20px;
-
-}
-.profile-right-contents{
-display:inline-block;
-width:50%;
-background-color:black;
-height:533px;
-}
-.profile-right-contents p{
-    color:white;
-    letter-spacing: 3px;
-    font-size: 13px;
-    padding-top:  60px;
-    padding:0px 80px;
-
-
-
-
-
- 
-}
-.profile-left-contents{
-    height:533px;
-    background-image:URl("profile_photo.JPG");
- 
-    display: inline-block;
-    float:right;
-    width:50%;
-}
-.profile-photo{
-float:right;
-
-}
-
-    
-    
-    
-
 .side-menu {
     display:none;
     background-color: white;
@@ -202,21 +81,137 @@ float:right;
 }
 
 
-.add-contents{
-
-padding:30px 50px;
-
-position:relative;
-font-size:0px;
+.menu{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    font-size:0px;
+    box-shadow: 0.1vw 0.2vw 0.2vw hsl(0deg 0% 0% /0.25);
 }
+.menu-box{
+    display:inline-block;
+    width:100%;
+    max-width:1000px;
+    text-align:center;
+    font-size:0px;
+}
+.menu a{
+    display:inline-block;
+    width:16%;
+    padding:8px 0px;
+    float:left;
+    font-size: 20px;
+    color:rgba(34, 49, 52, 0.7);
+    text-decoration: none;
+    font-family:Helvetica;
+    text-align:center;
+    box-sizing: border-box;
+}
+.menu p{
+    margin:10px 0px;
+}
+.icon{
+    margin-bottom: 10px;
+}
+
+.now {
+    color:rgba(34, 49, 52, 0.9) !important;
+    border-bottom: solid 3px rgba(34, 49, 52, 0.9);
+}
+.now :hover{
+    color:rgba(34, 49, 52, 0.9) !important;
+}
+.menu :hover{
+    color:rgba(34, 49, 52, 0.5);
+}
+.menu-icon{
+    display: none;
+}
+.detail{
+    width: 100%;
+    height: 1200px;
+    position: relative;
+    display: flex;
+    background-color: black;
+}
+.profile-section{
+    width: 50%;
+}
+.profile{
+    width: 50%;
+    position: absolute;
+    
+    font-size: 20px;
+   
+}
+.profile h1{
+    padding-left:20px;
+    padding-top:10px;
+    font-size: 80px;
+    font-family: 'Allison', cursive;
+}
+.profile-photo{
+    display:none;
+}
+.main-sentence{
+    width: 40%;
+    position: absolute;
+    top: 240px;
+    font-size: 17px;
+    margin-left: 5%;
+    
+    
+}
+.detail-section{
+    width: 40%;
+    display: none;
+    position: absolute;
+    font-size: 15px;
+    line-height: 30px;
+    top: 180px;
+    padding-top:  60px;
+    margin-left:  5%;
+    /*padding-right: 50px ;
+    padding-left: 150px;*/
+}
+#piascore{
+    color: silver;
+}
+.photo{
+    position: absolute;
+ 
+    margin-top: 180px;
+    margin-right:  5%; 
+    width: 50%;
+    height: 1000px;
+    background-image: url("profile_new.jpg");
+    background-size: cover;
+    right: 0.3%;
+}
+.bokashi{
+    opacity: 0.3;
+}
+.detail-close-btn{
+    opacity: 0.3;
+}
+.detail-open-btn{
+    opacity: 0.3;  
+}
+.add-contents{
+   
+    padding:30px 50px;
+    position:relative;
+    font-size:0px;
+} 
 .contents{
     padding:0px 10px;
     width:25%;
-   
-   
 }
 .contents-box{
     width:100%;
-   
-
 }
+.contents-box a{
+    box-sizing:border-box;
+}
+
+  
