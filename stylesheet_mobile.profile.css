@@ -24,7 +24,11 @@
       .br-point{
           display: block;
       }
-  
+      @media all and (max-height: 667px){
+        .detail{
+            height: 2500px;
+          } 
+      }
   
       /*こっからmenu*/
       .menu{
@@ -179,7 +183,7 @@
       }
       .detail{
           display: block;
-          height: 2000px;
+          height: 2300px;
           overflow: hidden;
         }
       .profile{
@@ -204,12 +208,12 @@
         position: absolute;  
         display:block;
         width: 100%;
-        height: 590px;
+        height: 510px;
        
     } 
     .profile-photo img{
         object-fit: cover;
-        height: 550px;
+        height: 510px;
         width: 100%;
     } 
       .profile-section{
@@ -221,7 +225,7 @@
 
          font-size: 11px;
        
-          top: 700px;
+          top: 610px;
           margin-left: 5%;
          margin-right: 3%;
 
@@ -233,7 +237,7 @@
           width: 90%;
          padding-top: 0px;
         
-          top: 660px;
+          top: 590px;
 
           font-size: 11px;
           margin-left: 5%;
