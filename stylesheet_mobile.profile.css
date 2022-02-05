@@ -24,7 +24,7 @@
       .br-point{
           display: block;
       }
-      @media all and (max-height: 667px){
+      @media all and (max-height: 666px){
         .detail{
             height: 2500px;
           } 
@@ -183,7 +183,7 @@
       }
       .detail{
           display: block;
-          height: 2300px;
+          height: 1800px;
           overflow: hidden;
         }
       .profile{
