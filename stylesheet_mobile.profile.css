@@ -12,17 +12,13 @@
         }*/
                
         }
-        @media all and (max-height: 666px){/*古い携帯ユーザー用*/
-            .detail{
-                height: 2500px;
-              } 
-          }
-          @media all and (max-width: 1000px){/*ipad用*/
+       
+    @media all and (max-width: 1000px){/*ipad用*/
             .detail{
                 height: 2000px;
               } 
           }  
-    @media all and (max-width: 750px){
+    @media (max-width: 750px){
       :root{
           --menu-icon-size:0.3;
       }
@@ -215,12 +211,14 @@
         position: absolute;  
         display:block;
         width: 100%;
-        height: 400px;
+        
+        height: 590px;
        
     } 
     .profile-photo img{
         object-fit: cover;
-        height: 350px;
+        /*height: 350px;*/
+        height: 550px;
         width: 100%;
     } 
       .profile-section{
@@ -232,7 +230,7 @@
 
          font-size: 11px;
        
-          top: 490px;
+         top: 690px;
           margin-left: 5%;
          margin-right: 3%;
 
@@ -244,7 +242,7 @@
           width: 90%;
          padding-top: 0px;
         
-          top: 550px;
+          top: 690px;
 
           font-size: 11px;
           margin-left: 5%;
