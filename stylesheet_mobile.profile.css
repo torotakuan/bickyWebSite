@@ -220,7 +220,7 @@
     } 
     .profile-photo img{
         object-fit: cover;
-        height: 400px;
+        height: 350px;
         width: 100%;
     } 
       .profile-section{
@@ -232,7 +232,7 @@
 
          font-size: 11px;
        
-          top: 490px;
+          top: 440px;
           margin-left: 5%;
          margin-right: 3%;
 
