@@ -211,14 +211,14 @@
         position: absolute;  
         display:block;
         width: 100%;
-        
-        height: 590px;
+        margin-top: 0px;
+        height: 680px;
        
     } 
     .profile-photo img{
         object-fit: cover;
         /*height: 350px;*/
-        height: 550px;
+        height: 640px;
         width: 100%;
     } 
       .profile-section{
@@ -230,7 +230,7 @@
 
          font-size: 11px;
        
-         top: 690px;
+         top: 560px;
           margin-left: 5%;
          margin-right: 3%;
 
