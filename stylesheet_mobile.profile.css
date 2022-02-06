@@ -13,12 +13,17 @@
                
         }
        
-    @media all and (max-width: 1000px){/*ipad用*/
+    @media (min-width: 751px) and (max-width: 1024px){/*ipad用(横持ち)*/
             .detail{
-                height: 2000px;
+                height: 1600px;
               } 
           }  
-    @media (max-width: 750px){
+    @media (min-width: 768px)and (max-width: 1023px){/*ipad mini,ipad Air,ipad (縦持ち)*/
+        .detail{
+            height: 1900px;
+          } 
+          }
+    @media (max-width: 750px){/*スマホ対応*/
       :root{
           --menu-icon-size:0.3;
       }
