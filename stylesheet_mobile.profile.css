@@ -212,13 +212,13 @@
         display:block;
         width: 100%;
         
-        height: 590px;
+        height: 500px;
        
     } 
     .profile-photo img{
         object-fit: cover;
         /*height: 350px;*/
-        height: 550px;
+        height: 440px;
         width: 100%;
     } 
       .profile-section{
@@ -230,7 +230,7 @@
 
          font-size: 11px;
        
-         top: 550px;
+         top: 590px;
           margin-left: 5%;
          margin-right: 3%;
 
