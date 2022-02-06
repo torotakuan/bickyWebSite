@@ -227,10 +227,10 @@
       .main-sentence{
           position: absolute;
           width: 90%;
-
+        font-weight: 500;
          font-size: 11px;
        
-         top: 430px;
+         top: 410px;
           margin-left: 5%;
          margin-right: 3%;
 
@@ -242,8 +242,7 @@
           width: 90%;
          padding-top: 0px;
         
-          top: 690px;
-
+          top: 540px;
           font-size: 11px;
           margin-left: 5%;
           margin-right: 3%;
