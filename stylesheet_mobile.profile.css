@@ -12,18 +12,8 @@
         }*/
                
         }
-       
-    @media (min-width: 751px) and (max-width: 1024px){/*ipad用(横持ち)*/
-            .detail{
-                height: 1600px;
-              } 
-          }  
-    @media (min-width: 768px)and (max-width: 1023px){/*ipad mini,ipad Air,ipad (縦持ち)*/
-        .detail{
-            height: 1900px;
-          } 
-          }
-    @media (max-width: 750px){/*スマホ対応*/
+
+    @media all and (max-width: 750px){
       :root{
           --menu-icon-size:0.3;
       }
@@ -35,99 +25,74 @@
       .br-point{
           display: block;
       }
-      .btn-wrapper{
-        position:absolute;
-        top:87%;
-        right:0%;
-        width:90%;
-        margin:0px 5%;
-        background-color:transparent;
-        text-align:center;
-       
-    }
-    .btn{
-        display:inline-block;
-        color:white;
-        font-size:18px;
-        width:25%;
-    }
-
-
-    
-    
-    .menu{
-       display:none;
-   }
-      .side-menu {
-        display:none;
-        background-color: white;
-        width:155px;
-        height:100%;
-       position: absolute;
-        top:0px;
-        right:0px;
-        text-align: center;
-        box-shadow: -1vw -1vw 2vw hsl(0deg 0% 0% /0.25);
-        z-index:2;
-        }
-        .side-menu-top{
-            height:20vw;
-            width:100%;
-            box-shadow: 0.5vw 0.5vw 1vw hsl(0deg 0% 0% /0.25);
-    
-    
-        }
-        .side-menu-box{
-            display:inline-block;
-        }
-        .close-icon{
-            
-            font-size: 20px;
-        }
-        .side-menu-box p:hover{
-            color:rgba(34, 49, 52, 0.9) !important;
-        }
-        .side-menu-box a:hover{
-            color:rgba(34, 49, 52, 0.9) !important;
-        }
-    
-    
-        .side-menu a{
-            display:block;
-            width:150px;
-            padding:10px 0px;
-            margin:10px 0px;
-            font-size: 20px;
-            color:rgba(34, 49, 52, 0.7);
-            text-decoration: none;
-            font-family:Helvetica;
-            text-align:center;
-            border-bottom:solid 1px rgb(206, 206, 206);
-        }
-    
-        }
-        .side-menu p :hover {
-            color:rgba(34, 49, 52, 0.9) !important;
-        }
-    
-    
-        .now.side{
-            color:rgba(34, 49, 52, 0.9) !important;
-            border-left: solid 5px rgba(34, 49, 52, 0.9) !important;
-            border-bottom:solid 1px rgb(206, 206, 206);
-            margin-left:-3px;
-        }
-        .now.side :hover{
-            color:rgba(34, 49, 52, 0.9) !important;
-        }
-    
-     
+  
   
       /*こっからmenu*/
       .menu{
           display:none;
       }
+      .side-menu {
+       display:none;
+       background-color: white;
+       width:155px;
+       height:100%;
+       position:fixed;
+       top:0px;
+       right:0px;
+       text-align: center;
+       box-shadow: -1vw -1vw 2vw hsl(0deg 0% 0% /0.25);
+       z-index:2;
+       }
+       .side-menu-top{
+           height:20vw;
+           width:100%;
+           box-shadow: 0.5vw 0.5vw 1vw hsl(0deg 0% 0% /0.25);
+   
+   
+       }
+       .side-menu-box{
+           display:inline-block;
+       }
+       .close-icon{
+           
+           font-size: 20px;
+       }
+       .side-menu-box p:hover{
+           color:rgba(34, 49, 52, 0.9) !important;
+       }
+       .side-menu-box a:hover{
+           color:rgba(34, 49, 52, 0.9) !important;
+       }
+   
+   
+       .side-menu a{
+           display:block;
+           width:150px;
+           padding:10px 0px;
+           margin:10px 0px;
+           font-size: 20px;
+           color:rgba(34, 49, 52, 0.7);
+           text-decoration: none;
+           font-family:Helvetica;
+           text-align:center;
+           border-bottom:solid 1px rgb(206, 206, 206);
+       }
+   
       
+       .side-menu p :hover {
+           color:rgba(34, 49, 52, 0.9) !important;
+       }
+   
+   
+       .now.side{
+           color:rgba(34, 49, 52, 0.9) !important;
+           border-left: solid 5px rgba(34, 49, 52, 0.9) !important;
+           border-bottom:solid 1px rgb(206, 206, 206);
+           margin-left:-3px;
+       }
+       .now.side :hover{
+           color:rgba(34, 49, 52, 0.9) !important;
+       }
        /*ここまでmenu*/
   
   
@@ -215,9 +180,8 @@
       }
       .detail{
           display: block;
-          height: 1800px;
+          height: 2000px;
           overflow: hidden;
-         
         }
       .profile{
           width: 100%;
@@ -241,14 +205,12 @@
         position: absolute;  
         display:block;
         width: 100%;
-        
         height: 370px;
        
     } 
     .profile-photo img{
         object-fit: cover;
-        /*height: 350px;*/
-        height: 350px;
+        height: 370px;
         width: 100%;
     } 
       .profile-section{
@@ -257,26 +219,21 @@
       .main-sentence{
           position: absolute;
           width: 90%;
-        font-weight: 500;
-         font-size: 11px;
+         font-size: 10px;
        
-         top: 460px;
-          margin-left: 5%;
-         margin-right: 3%;
-
-
-
+          top: 470px;
+          margin-left: 6%;
+         margin-right: 2%;
       }
       .detail-section{
         position: absolute;
           width: 90%;
          padding-top: 0px;
         
-          top: 460px;
-          font-size: 11px;
-          margin-left: 5%;
-          margin-right: 3%;
-
+          top: 470px;
+          font-size: 10px;
+         margin-left: 6%;
+         margin-right: 2%;
       }
 
       .photo{
@@ -286,7 +243,7 @@
    
         padding:30px 50px;
         position:relative;
-
+        font-size:0px;
     } 
     .contents{
         padding:10px 10px;
@@ -298,5 +255,5 @@
     .contents-box a{
         box-sizing:border-box;
     }
-   
-
+   }
+     
