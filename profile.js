@@ -13,4 +13,16 @@ $(function () {
         $(".main-sentence").show()
    
     })
+    $(".openbtn").click(function () {
+        if ($('.side-menu').css('display') == 'none') {
+            // 表示されている場合の処理
+         $(this).toggleClass('active');
+        $(".side-menu").fadeIn();
+        } else {
+            // 非表示の場合の処理
+            $(this).toggleClass('active');
+        $(".side-menu").fadeOut();
+        }
+        
+    });
 });

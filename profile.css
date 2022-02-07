@@ -151,8 +151,11 @@ body{
     font-family: 'Allison', cursive;
 }
 .profile-photo{
-    display:none;
+   display: none;
 }
+.profile-photo {
+    display: none;
+ }
 .main-sentence{
     width: 40%;
     position: absolute;
