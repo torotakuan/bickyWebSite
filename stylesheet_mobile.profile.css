@@ -22,9 +22,7 @@
           padding:0px;
           box-sizing:border-box;
       }
-      .br-point{
-          display: block;
-      }
+    
   
   
       /*こっからmenu*/
@@ -36,7 +34,7 @@
        background-color: white;
        width:155px;
        height:100%;
-       position:fixed;
+       position: absolute;
        top:0px;
        right:0px;
        text-align: center;
@@ -181,7 +179,8 @@
       .detail{
           display: block;
           height: 2000px;
-          overflow: hidden;
+          position: relative;
+         
         }
       .profile{
           width: 100%;
