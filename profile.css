@@ -9,7 +9,7 @@ body{
   width: 100vw;
   height: 100vh;
   color: white;
- 
+ font-family: Serif、Script;
 }
 .side-menu {
   display:none;
@@ -167,9 +167,8 @@ body{
   display: none;
   position: absolute;
   font-size: 15px;
-  line-height: 30px;
-  top: 180px;
-  padding-top:  60px;
+  line-height: 25px;
+  top: 240px;
   margin-left:  5%;
   /*padding-right: 50px ;
   padding-left: 150px;*/
@@ -189,7 +188,7 @@ body{
   right: 0.3%;
 }
 .bokashi{
-  opacity: 0.3;
+  opacity: 1.0;
 }
 .detail-close-btn{
   opacity: 0.3;
