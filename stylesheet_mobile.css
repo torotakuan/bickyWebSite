@@ -111,6 +111,7 @@
         width:100%;
         background-image:url("bickyTopPhotoMobile.png");
         background-position-x:center;
+        background-size: 90%,90%;
        
    }
 
