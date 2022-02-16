@@ -180,6 +180,8 @@
           display: block;
           height: 2000px;
           position: relative;
+          padding: 0px;
+          width: 100%;
          
         }
       .profile{
