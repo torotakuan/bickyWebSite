@@ -34,9 +34,9 @@
        background-color: white;
        width:155px;
        height:100%;
-       position: absolute;
+       position: fixed;
        top:0px;
-       right:0px;
+       right:0px!important;
        text-align: center;
        box-shadow: -1vw -1vw 2vw hsl(0deg 0% 0% /0.25);
        z-index:2;
