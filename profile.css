@@ -2,9 +2,7 @@
   padding: 0px;
   margin: 0px;
 }
-.br-point{
-  display: none;
-}
+
 body{
   width: 100vw;
   height: 100vh;
@@ -101,10 +99,10 @@ body{
 }
 .menu a{
   display:inline-block;
-  width:16%;
+  width:6%;
+  margin-left: 10%;
   height: 100%;
   padding-top:0.1%;
-  padding-bottom: 3%;
   float:left;
   font-size: 20px;
   color:rgba(255, 255, 255, 0.61);
@@ -112,14 +110,14 @@ body{
   font-family:Helvetica;
   text-align:center;
   box-sizing: border-box;
+  
 }
 .menu p{
   font-size: 15px;
-  margin-top:8%;
-  margin-bottom: 2%;
+  margin-top:25%;
+ 
 }
 .icon{
-  margin-bottom: 10px;
   margin-top: 5px;
 }
 
@@ -160,6 +158,7 @@ body{
 .profile h1{
   padding-left:20px;
   padding-top:10px;
+  padding-bottom:10px;
   font-size: 80px;
   font-family: 'Allison', cursive;
 }
@@ -169,7 +168,7 @@ body{
 .main-sentence{
   width: 40%;
   position: absolute;
-  top: 200px;
+  top: 123px;
   font-size: 17px;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -182,7 +181,7 @@ body{
   position: absolute;
   font-size: 17px;
   line-height: 25px;
-  top: 200px;
+  top: 123px;
   word-wrap: break-word;
   overflow-wrap: break-word;
  
@@ -196,7 +195,7 @@ body{
   
   width: 50%;
   height: 800px;
-  background-image: url("profile_new (5).png");
+  background-image: url("profile_new.jpg");
   background-size: 80%,80%;
   background-repeat: no-repeat;
   right: 0%;
@@ -211,7 +210,7 @@ body{
   opacity: 0.8;  
 }
 .add-contents{
- 
+ background-color: white;
   padding:30px 50px;
   position:relative;
   font-size:0px;
