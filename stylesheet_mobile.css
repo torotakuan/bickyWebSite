@@ -7,7 +7,7 @@
     .contents{
         width:50%;
     }
-@media all and (max-width: 750px){
+@media all and (max-width: 1000px){
     :root{
         --menu-icon-size:0.3;
     }
@@ -103,7 +103,7 @@
     .now.side :hover{
         color:rgba(34, 49, 52, 0.9) !important;
     }
-
+    
 
   
 
@@ -114,9 +114,21 @@
         background-size: 90%,90%;
        
    }
+   .bicky-left-wrapper-contents{
+       width: 60%;
+   }
 
    .texts{
        margin:0vw 10vw;
+   }
+   .texts h1{
+    font-size: 70px;
+   }
+   .texts p{
+       
+}
+   .texts a{
+
    }
 
    .bicky-left-wrapper-contents{
@@ -151,7 +163,10 @@
         top:600px;
         left:250px;
         font-size:25px;*/
+        position: absolute;
+
         font-size:4vw;
+    
         
         
         
