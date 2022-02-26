@@ -30,7 +30,7 @@ window.contact.send = function(){
 }
 
 window.contact.ajax = function(data){
-    var url = 'https://script.google.com/macros/s/AKfycbyrx4euxRNW6kremix8VJ4YXie6H3HKjt87UApihsZuPVlr6kk8wYqNj9kZI_I4a1pu/exec'; // Change here: Your GAS URL here
+    var url = 'https://script.google.com/macros/s/AKfycbxY1qDIvNqJ4RDapPchHsh_WCy9wd_BABqXWCzoOJLG6XtuJ552shfYCaErmQH_YVHy/exec'; // Change here: Your GAS URL here
     $.ajax({
         url: url,
         type:'POST',
@@ -51,10 +51,19 @@ window.contact.ajax = function(data){
 $(function(){
     //こっからパスワード関連--------------------------------------------------------------------------------------
     var pw;
-    if(document.cookie == "key=open"){
+    var keys = new Object();
+
+    //cookieから、パスワードが入力されたかの情報を取り出す
+    var elements = document.cookie.split(";");
+    for ( var element of elements){
+        var val = element.split("=");
+        keys[val[0]] = val[1];
+    }
+
+    if(keys[" key"] == "open"){
         $(".filter").fadeOut();
     }else{
-        pw = prompt("このページは工事中です。パスワードを入れて下さい。"+document.cookie,"");
+        pw = prompt("このページは工事中です パスワードを入れて下さい"  ,"");
         if (pw == "bicky"){
         document.cookie = "key=open";
         $(".filter").fadeOut();

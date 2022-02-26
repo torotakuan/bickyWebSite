@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>doPostのテスト</title>
+</head>
+<body>
+  <h1>doPostのテスト（Form送信）</h1>
+  <form method="post" action="https://script.google.com/macros/s/AKfycbzoXb4XHGE-Z460si2SQhA8ouLGdWvp1hGSDtjtT7YaWGmfCdtiUWiOswkgdpCXX3rv/exec">
+    <p>
+      <label>名前 <input type="text" name="name"></label>
+    </p>
+    <p>
+      <label>email <input type="text" name="email"></label>
+    </p>
+    <p>
+      <label>message <input type="text" name="message"></label>
+    </p>
+    <p>
+      <input type="submit" value="送信">
+    </p>
+  </form>
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./sendMailTest.js"></script>
+    <title>Contact</title>
+</head>
+<body>
+    <input name="name" id="name" type="text" onkeyup='window.contact.checkValidation()' placeholder="name" >
+    <input name="email" id="email" type="email" onkeyup='window.contact.checkValidation()' placeholder="e-mail" >
+    <textarea name="message" id="message"  onkeyup='window.contact.checkValidation()' placeholder="message"></textarea>
+    <input type="submit" id="submit" name="send" onclick='window.contact.send(this)' value="Send">
+
+</body>
+<script>
+    $(function() {
+        window.contact.checkValidation()
+    });
+</script>
+</html>
+
+-->
