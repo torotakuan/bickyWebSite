@@ -1,9 +1,17 @@
+var error;
+error.null = false;//空欄の有る無し
+error.email = false;//メールが使用可能なものか
 window.contact = window.contact || {};
 window.contact.checkValidation = function(){
+    //valの中身がnull、空白の場合実行（.valの中身がないとfalse判定になるため、!をつけて、.valの中身がない場合にtrue判定にさせる）
     if(!$('input[id="name"]').val() || !$('input[id="email"]').val() || !$('input[id="age"]').val() ||!$('input[id="male"]').val() ||!$('input[id="female"]').val() ||!$('select[id="conduct-contents"]').val() ||!$('textarea[id="message"]').val()){
         $('input[id=submit]').attr('disabled', 'disabled');
+        error.null = true;
         return false;
+    }else{
+        error.null = false;
     }
+    
 
     $('input[id="submit"]').removeAttr('disabled');
     return true;
@@ -30,7 +38,7 @@ window.contact.send = function(){
 }
 
 window.contact.ajax = function(data){
-    var url = 'https://script.google.com/macros/s/AKfycbxY1qDIvNqJ4RDapPchHsh_WCy9wd_BABqXWCzoOJLG6XtuJ552shfYCaErmQH_YVHy/exec'; // Change here: Your GAS URL here
+    var url = 'https://script.google.com/macros/s/AKfycbw7qQlD8xtxFXmgLs9BgaxkdGzsRDnYNVPus7GTXGuQ8dQFp858Y8rxyx1JTvn0Zkxj/exec'; // Change here: Your GAS URL here
     $.ajax({
         url: url,
         type:'POST',
