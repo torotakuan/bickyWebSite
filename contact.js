@@ -30,7 +30,7 @@ window.contact.send = function(){
 }
 
 window.contact.ajax = function(data){
-    var url = 'https://script.google.com/macros/s/AKfycbyrx4euxRNW6kremix8VJ4YXie6H3HKjt87UApihsZuPVlr6kk8wYqNj9kZI_I4a1pu/exec'; // Change here: Your GAS URL here
+    var url = 'https://script.google.com/macros/s/AKfycbxY1qDIvNqJ4RDapPchHsh_WCy9wd_BABqXWCzoOJLG6XtuJ552shfYCaErmQH_YVHy/exec'; // Change here: Your GAS URL here
     $.ajax({
         url: url,
         type:'POST',
