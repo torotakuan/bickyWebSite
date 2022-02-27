@@ -1,15 +1,16 @@
-var error;
-error.null = false;//空欄の有る無し
-error.email = false;//メールが使用可能なものか
+const error = {
+    empty : false,//空欄の有る無し
+    email : false//メールが使用可能なものか
+};
 window.contact = window.contact || {};
 window.contact.checkValidation = function(){
     //valの中身がnull、空白の場合実行（.valの中身がないとfalse判定になるため、!をつけて、.valの中身がない場合にtrue判定にさせる）
     if(!$('input[id="name"]').val() || !$('input[id="email"]').val() || !$('input[id="age"]').val() ||!$('input[id="male"]').val() ||!$('input[id="female"]').val() ||!$('select[id="conduct-contents"]').val() ||!$('textarea[id="message"]').val()){
         $('input[id=submit]').attr('disabled', 'disabled');
-        error.null = true;
+        error.empty = true;
         return false;
     }else{
-        error.null = false;
+        error.empty = false;
     }
     
 
