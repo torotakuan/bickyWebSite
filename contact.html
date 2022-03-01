@@ -79,6 +79,7 @@
                     <input name="name" id="name" type="text" onkeyup="window.contact.checkValidation()" placeholder="name" required >
                     <div class="e-mail"><span class="red">※</span>メールアドレスを入力してください</div>
                     <input name="email" id="email" type="email" onkeyup="window.contact.checkValidation()" placeholder="e-mail" required>
+                    <div class = "email-error"></div>
                     <div class="gender"><span class="red">※</span>性別を選択してください</div>
                     <input name="gender" id="male" type="radio" onkeyup="window.contact.checkValidation()">男性
                     <input name="gender" id="female" type="radio" onkeyup="window.contact.checkValidation()">女性
@@ -95,7 +96,7 @@
                     <div class="free-form"><span class="red">※</span>お問い合わせ内容</div>      
                     <textarea name="message" id="message" onkeyup="window.contact.checkValidation()" placeholder="message"></textarea> 
                     <input type="submit" id="submit" name="send" onclick="window.contact.send(this)" value="送信">         
-                    <div class = "error-message"></div>
+                    <div class = "empty-error"></div>
              </div>
             </div>
 
