@@ -2,16 +2,13 @@ const error = {
     empty : false,//空欄の有る無し
     email : false//メールが使用可能なものか
 };
-var afterSubmit = false;//送信ボタンを押した後か前か
 window.contact = window.contact || {};//グローバルのオブジェクトとしてcontactを宣言し、contactの中身が空の場合は中身を空のオブジェクトにしておく
 window.contact.checkValidation = function(){
     //.valの中身に１つでもnull、空白がある場合    （if文の中身: .valの中身がないとfalse判定になる仕様のため、!をつけて、.valの中身がない場合にtrue判定にさせる）
-    if(!$('input[id="name"]').val() || !$('input[id="email"]').val() || !$('input[id="age"]').val() ||!$('input[id="male"]').val() ||!$('input[id="female"]').val() ||!$('select[id="conduct-contents"]').val() ||!$('textarea[id="message"]').val()){
+    if(!$('input[id="name"]').val() || !$('input[id="email"]').val() || !$('input[id="age"]').val() ||!$('input:radio[name="gender"]:checked').val() ||!$('select[id="conduct-contents"]').val() ||!$('textarea[id="message"]').val()){
         $('input[id=submit]').attr('disabled', 'disabled');
         error.empty = true;
-        if(afterSubmit){
-            $(".empty-error").html("未記入の項目があります");
-        }
+        $(".empty-error").html("未記入の項目があります");
     }else{
         $(".empty-error").html("");
         error.empty = false;
@@ -43,24 +40,22 @@ window.contact.send = function(){
     var name = $('input[id="name"]').val() 
     var email = $('input[id="email"]').val() 
     var age=$('input[id="age"]').val() 
-    var male = $('input[id="male"]').val()
-    var female=$('input[id="female"]').val() 
+    var gender = $('input:radio[name="gender"]:checked').val();
     var conduct=$('select[id="conduct-contents"]').val() 
     var message = $('textarea[id="message"]').val()
     data = {
         name: name,
         email: email,
-        age:age,
-        male: male,
-        female: female,
-        conduct:conduct,
+        age: age,
+        gender: gender,
+        conduct: conduct,
         message: message,
     }
     window.contact.ajax(data);
 }
 
 window.contact.ajax = function(data){
-    var url = 'https://script.google.com/macros/s/AKfycbw7qQlD8xtxFXmgLs9BgaxkdGzsRDnYNVPus7GTXGuQ8dQFp858Y8rxyx1JTvn0Zkxj/exec'; // Change here: Your GAS URL here
+    var url = 'https://script.google.com/macros/s/AKfycbzUULTUsdyGfs-3s91jy84TojCM8O1fEd5RmP1cBnIWeRW8amqqkEmpSxQ4RuITbXlY/exec'; // Change here: Your GAS URL here
     $.ajax({
         url: url,
         type:'POST',
