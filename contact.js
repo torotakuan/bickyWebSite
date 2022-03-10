@@ -55,7 +55,7 @@ window.contact.send = function(){
 }
 
 window.contact.ajax = function(data){
-    var url = 'https://script.google.com/macros/s/AKfycbwvMZ8siriU0SUdFLeYx-Jj0JcJOoLg904mmu7hKHoLl2JSPxn9-ylTLmbX9nSFV47M/exec'; // Change here: Your GAS URL here
+    var url = 'https://script.google.com/macros/s/AKfycbx4SaEEjnNtUKUgbyCY3XxPoq0fpBhOxhOm-4bI8ANBeHeaqi1r_tuVC0f0ER8HR2_a/exec'; // Change here: Your GAS URL here
     $.ajax({
         url: url,
         type:'POST',
