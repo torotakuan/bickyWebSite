@@ -45,7 +45,7 @@ $(function(){
   
 });
 
-var accessToken = "IGQVJYUXhxaDR4T19wa3prYnl5OE90NTFSbzZARcXZAMZAzZA5cXdRaW8xTU9QbHhFblNwdlZA2SGZAGcG9xOU9OXy1HQnUxVDFlUXUxRGhSaFZA3WGVBVnFBSWhFV3dBNHZAhSDBUZA0wxek13";
+var accessToken = "IGQVJYUXZAZANFZAIWC1ZAZAnBPSWxZAVjVnTTM4WFQwSkY2Nlk4VU02T2ttN2U0MTlobGlFMkZAqeUVIcDF2aXNQemk4NE1ZAbEs0dDMteEJkUEx3dEJVZA2lTUVJvUGs1eTZAfSFItaHBVMEp3";
 //instagram上の全メディアのid,url,media_typeなどを貰ってくる
 $.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url&access_token=' + accessToken, getFunc);
 //GETリクエストが成功したら下の関数getFuncが実行される（貰ってきたデータは変数myDataに格納されてる）

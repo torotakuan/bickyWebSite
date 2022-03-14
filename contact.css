@@ -62,7 +62,6 @@ span#bar-icon2 {
     width:16.6%;
     padding:8px 0px;
     float:left;
-    font-size: 20px;
     color:rgba(34, 49, 52, 0.7);
     text-decoration: none;
     text-align:center;
@@ -71,8 +70,10 @@ span#bar-icon2 {
 .menu p{
     margin:10px 0px;
     font-family:Helvetica;
+    font-size: 20px;
 }
 .icon{
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
