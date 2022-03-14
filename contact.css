@@ -271,6 +271,8 @@ p.email-error{
     height:35px;
     width:100%;
     text-align:center;
+    font-size:var(--default-text-size);
+    font-weight: 500;
 }
 .input textarea{
     border:1px solid #707070;
@@ -278,6 +280,8 @@ p.email-error{
     background-color: #F5F5F5;
     height:150px;
     width:100%;
+    font-size:var(--default-text-size);
+    font-weight: 500;
 
 }
 .input select{
@@ -287,6 +291,8 @@ p.email-error{
     height:35px;
     width:100%;
     text-align:center;
+    font-size:var(--default-text-size);
+    font-weight: 500;
 }
 input.error{
     border:1.5px solid red;
