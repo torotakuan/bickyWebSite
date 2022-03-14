@@ -2,25 +2,35 @@ const error = {
     empty : false,//空欄の有る無し
     email : false//メールが使用可能なものか
 };
+var submited = false;
 window.contact = window.contact || {};//グローバルのオブジェクトとしてcontactを宣言し、contactの中身が空の場合は中身を空のオブジェクトにしておく
 window.contact.checkValidation = function(){
-    //.valの中身に１つでもnull、空白がある場合    （if文の中身: .valの中身がないとfalse判定になる仕様のため、!をつけて、.valの中身がない場合にtrue判定にさせる）
-    if(!$('input[id="name"]').val() || !$('input[id="email"]').val() || !$('input[id="age"]').val() ||!$('input:radio[name="gender"]:checked').val() ||!$('select[id="conduct-contents"]').val() ||!$('textarea[id="message"]').val()){
-        $('input[id=submit]').attr('disabled', 'disabled');
-        error.empty = true;
-        $(".empty-error").html("未記入の項目があります");
-    }else{
-        $(".empty-error").html("");
-        error.empty = false;
-    }
+    //未記入のinput要素に対してemptyクラスを付与&削除　、１つでも未記入ならerror.emptyをtrueに
+    var $inputs = [$('input[id="name"]'),$('input[id="email"]'),$('textarea[id="message"]')];
 
+    error.empty = false;
+    $(".empty-error").html("");
+    
+    $inputs.forEach(elem => {
+        if(!elem.val()){
+            error.empty = true;
+            $('input[id=submit]').addClass('disabled');
+            if(submited){
+                elem.addClass('error');
+                $(".empty-error").html("未記入の必須項目があります");
+            }
+        }else{
+            elem.removeClass('error');
+        }
+    });
 
     const regex = /^[a-zA-Z0-9_+-]+(\.[a-zA-Z0-9_+-]+)*@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/;//使用可能なメールアドレスかの条件
     const email = $('input[id="email"]').val();
     if(email){//emailに入力がある場合
         if (!regex.test(email)){//使用可能なメールアドレスかチェック
             error.email = true;
-            $(".email-error").html("使用可能なメールアドレスを入力してください");
+            $(".email-error").html("使用不可能なメールアドレスです");
+            $('input[id="email"]').addClass('error');
         }else{
             error.email = false;
             $(".email-error").html("");
@@ -32,27 +42,37 @@ window.contact.checkValidation = function(){
         return false;
     }
 
-    $('input[id="submit"]').removeAttr('disabled');
+    $('input[id="submit"]').removeClass('disabled');
     return true;
 }
 
-window.contact.send = function(){
+1
+2
+3
+$(document).on('click', '.submit',function(){
+    window.contact.checkValidation();
+    if(error.empty || error.email){
+        console.error('error');
+        submited = true;
+        window.contact.checkValidation();
+        return;
+    }
     var name = $('input[id="name"]').val() 
     var email = $('input[id="email"]').val() 
     var age=$('input[id="age"]').val() 
     var gender = $('input:radio[name="gender"]:checked').val();
-    var conduct=$('select[id="conduct-contents"]').val() 
+    var contact=$('select[id="contact-contents"]').val() 
     var message = $('textarea[id="message"]').val()
     data = {
         name: name,
         email: email,
         age: age,
         gender: gender,
-        conduct: conduct,
+        contact: contact,
         message: message,
     }
     window.contact.ajax(data);
-}
+});
 
 window.contact.ajax = function(data){
     var url = 'https://script.google.com/macros/s/AKfycbx4SaEEjnNtUKUgbyCY3XxPoq0fpBhOxhOm-4bI8ANBeHeaqi1r_tuVC0f0ER8HR2_a/exec'; // Change here: Your GAS URL here
