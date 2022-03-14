@@ -7,9 +7,7 @@
     padding:0px;
 }
 
-html body{
-    font-size:0;
-    padding:0;
+html body{ 
 }
 
 .instagram{
@@ -36,7 +34,7 @@ html body{
 span#bar-icon2 {
     display: none;
 }
-
+/*ーーーここからmenu関連ーーーーーーーーーーーーーーーーーーーーーーー*/
 .menu{
     position:relative;
     display:inline-block;
@@ -84,4 +82,5 @@ span#bar-icon2 {
 .side-menu-box{
     display:none;
 }
+/*ーーーここまでmenu関連ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
