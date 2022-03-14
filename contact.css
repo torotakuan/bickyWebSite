@@ -22,6 +22,7 @@
     padding:0px;
     box-sizing:border-box;
     font-family:selif;
+    -webkit-appearance: none;  
 }
 .body,html{
     font-size:0;
