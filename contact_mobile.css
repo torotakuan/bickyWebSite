@@ -99,16 +99,14 @@
         margin:0 auto;
      }
      p.lines-on-sides {
-        font-family:Helvetica;
         margin-top:20vw;
      }
      a.btn{
         margin-top:7vw;
-        padding:2vw 0vw;
+        padding:2.5vw 0vw;
         height:calc(var(--title-text-size) + 8vw);
         width:80vw;
         border-radius:1vw;
-        font-family:Helvetica;
         text-decoration: none;
      }
      hr.line-under-links{
