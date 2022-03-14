@@ -95,11 +95,12 @@
      /*ーーーcontact with関連ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
      /*文字の左右にラインを引く*/
      .lines-on-sides {
-         width:80vw;
-         margin:0 auto;
+        width:80vw;
+        margin:0 auto;
      }
      p.lines-on-sides {
-         margin-top:20vw;
+        font-family:Helvetica;
+        margin-top:20vw;
      }
      a.btn{
         margin-top:7vw;
@@ -107,6 +108,8 @@
         height:calc(var(--title-text-size) + 8vw);
         width:80vw;
         border-radius:1vw;
+        font-family:Helvetica;
+        text-decoration: none;
      }
      hr.line-under-links{
          margin-top:calc(7vw + var(--default-text-size) / 2);
