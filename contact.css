@@ -65,12 +65,12 @@ span#bar-icon2 {
     font-size: 20px;
     color:rgba(34, 49, 52, 0.7);
     text-decoration: none;
-    font-family:Helvetica;
     text-align:center;
     box-sizing: border-box;
 }
 .menu p{
     margin:10px 0px;
+    font-family:Helvetica;
 }
 .icon{
     margin-bottom: 10px;
