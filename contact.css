@@ -32,8 +32,30 @@
     display:none;
 }
 
-
-
+.loader{
+    display: none;
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background-color:rgba(34, 49, 52, 0.3);
+    z-index:5;
+    text-align:center;
+}
+.loader-box{
+    margin-top:40vh;
+}
+.loader i{
+    display:none;
+    color:white;
+    font-size:4vw;
+    z-index:6;
+}
+.loader p{
+    color:white;
+    font-size:1.5vw;
+}
 
 
 /*ーーーmenu関連ーーーーーーーーーーーーーーーーーーーーーーー*/

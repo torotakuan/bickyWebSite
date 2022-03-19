@@ -3,6 +3,7 @@ const error = {
     email : false//メールが使用可能なものか
 };
 var submited = false;
+var loading = false;
 window.contact = window.contact || {};//グローバルのオブジェクトとしてcontactを宣言し、contactの中身が空の場合は中身を空のオブジェクトにしておく
 window.contact.checkValidation = function(){
     //未記入のinput要素に対してemptyクラスを付与&削除　、１つでも未記入ならerror.emptyをtrueに
@@ -46,9 +47,7 @@ window.contact.checkValidation = function(){
     return true;
 }
 
-1
-2
-3
+
 $(document).on('click', '.submit',function(){
     window.contact.checkValidation();
     if(error.empty || error.email){
@@ -57,6 +56,10 @@ $(document).on('click', '.submit',function(){
         window.contact.checkValidation();
         return;
     }
+    loading = true;
+    $('.loader').css("display","inline-block");
+    $('.spinner').css('display','inline-block');
+    $('.loader p').html('送信中');
     var name = $('input[id="name"]').val() 
     var email = $('input[id="email"]').val() 
     var age=$('input[id="age"]').val() 
@@ -71,7 +74,11 @@ $(document).on('click', '.submit',function(){
         contact: contact,
         message: message,
     }
+
     window.contact.ajax(data);
+    $('.exclamation').css('display','none');
+    $('.check').css('display','none');
+
 });
 
 window.contact.ajax = function(data){
@@ -81,19 +88,33 @@ window.contact.ajax = function(data){
         type:'POST',
         data: data
     }).done(function(res){
+        $('.spinner').css('display','none');
         if(res.response != "success") {
             console.log(JSON.stringify(res.error));
-            alert('送信失敗'); 
+            $('.loader p').html('送信失敗');
+            $('.exclamation').css('display','inline-block');
             return;
         }
-        alert('送信完了');
+        $('.loader p').html('送信完了');
+        $('.check').css('display','inline-block');
     }).fail(function(){
-        alert('送信失敗'); 
+        $('.spinner').css('display','none');
+        console.log("flag2");
+        $('.loader p').html('送信失敗');
+        $('.exclamation').css('display','inline-block');
     }).always(function(){
-        location.href="./contact.html";
+        // location.href="./contact.html";
+        loading = false;
     })
 }
 $(function(){
+    $('.loader').click(function(){
+        console.log('clicked')
+        console.log(loading)
+        if(!loading){
+            location.href="./contact.html";
+        }
+    });
     /*
     //こっからパスワード関連--------------------------------------------------------------------------------------
     var pw;
