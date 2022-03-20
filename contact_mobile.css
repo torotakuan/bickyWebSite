@@ -10,6 +10,18 @@
         padding:0px;
         box-sizing:border-box;
     }
+    .loader-box{
+        margin-top:35vh;
+    }
+    .loader i{
+        display:none;
+        color:white;
+        font-size:10vw;
+        z-index:6;
+    }
+    .loader p{
+        font-size:3.5vw;
+    }
 
 
     /*ーーーここからmenu関連ーーーーーーーーーーーーーーーーーーーーーーー*/
