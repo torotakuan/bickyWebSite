@@ -28,13 +28,13 @@ $(function(){
   // var keys = new Object();
 
   // //cookieから、パスワードが入力されたかの情報を取り出す
-  // var elements = document.cookie.split(";");
+  // var elements = document.cookie.split("; ");
   // for ( var element of elements){
   //   var val = element.split("=");
   //   keys[val[0]] = val[1];
   // }
 
-  // if(keys["key"] == "open" ||keys[" key"] == "open"){
+  // if(keys["key"] == "open"){
   //   $(".filter").fadeOut();
   // }else{
   //   pw = prompt("このページは工事中です パスワードを入れて下さい"  ,"");
