@@ -24,7 +24,7 @@ i.spinner{
     background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
     column-count: 5;
     column-width: 300px;
-    min-height:100vw;
+    min-height:100vh;
   
 }
 .imgBox{
