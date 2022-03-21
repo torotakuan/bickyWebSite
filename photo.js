@@ -34,7 +34,7 @@ $(function(){
   //   keys[val[0]] = val[1];
   // }
 
-  // if(keys[" key"] == "open"){
+  // if(keys["key"] == "open" ||keys[" key"] == "open"){
   //   $(".filter").fadeOut();
   // }else{
   //   pw = prompt("このページは工事中です パスワードを入れて下さい"  ,"");
