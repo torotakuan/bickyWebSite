@@ -1,19 +1,10 @@
 
 window.onload = function(){
-console.log("onloaded");
-console.log($(".timeline-Header").css("padding"));
+  console.log('loaded');
+  $('.spinner').css('display','none');
 }
 $(function(){
-  document.body.appendChild(
-      $("<script>").prop(
-          {
-              src: "https://platform.twitter.com/widgets.js"
-          }
-      )[0]
-  );
-  console.log($(".timeline-Header").css("padding"));
-  $(".timeline-Header").css("display" ,"none");
-  
+
   //こっからメニューボタン関連--------------------------------------------------------------------------------------
   var open = false;
   $(".openbtn").click(function () {

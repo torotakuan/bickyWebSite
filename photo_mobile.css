@@ -8,7 +8,10 @@
         box-sizing:border-box;
     }
 
-
+    i.spinner{
+        left:45vw;
+        font-size:10vw;
+    }
     /*ーーーここからmenu関連ーーーーーーーーーーーーーーーーーーーーーーー*/
     .menu{
         display:none;

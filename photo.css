@@ -11,6 +11,14 @@ html body{
     font-size:0px;
 }
 
+
+i.spinner{
+    position:fixed;
+    top:45vh;
+    left:48vw;
+    color:white;
+    font-size:4vw;
+}
 .instagram{
     padding-top:45px;
     background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);

@@ -10,6 +10,14 @@
 html body{ 
     font-size:0px;
 }
+
+i.spinner{
+    position:fixed;
+    top:45vh;
+    left:48vw;
+    color:rgba(34, 49, 52, 1);
+    font-size:4vw;
+}
 .timeline-box {
     margin:93px auto;
     max-width:500px;

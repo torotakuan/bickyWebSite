@@ -1,4 +1,8 @@
 
+window.onload = function(){
+  console.log('loaded');
+  $('.spinner').css('display','none');
+}
 var urls = [];
 var accessToken ;
 $(function(){
@@ -20,27 +24,27 @@ $(function(){
   //ここまでメニューボタン関連--------------------------------------------------------------------------------------
 
   //こっからパスワード関連--------------------------------------------------------------------------------------
-  var pw;
-  var keys = new Object();
+  // var pw;
+  // var keys = new Object();
 
-  //cookieから、パスワードが入力されたかの情報を取り出す
-  var elements = document.cookie.split(";");
-  for ( var element of elements){
-    var val = element.split("=");
-    keys[val[0]] = val[1];
-  }
+  // //cookieから、パスワードが入力されたかの情報を取り出す
+  // var elements = document.cookie.split(";");
+  // for ( var element of elements){
+  //   var val = element.split("=");
+  //   keys[val[0]] = val[1];
+  // }
 
-  if(keys[" key"] == "open"){
-    $(".filter").fadeOut();
-  }else{
-    pw = prompt("このページは工事中です パスワードを入れて下さい"  ,"");
-    if (pw == "bicky"){
-      document.cookie = "key=open";
-      $(".filter").fadeOut();
-    }else{
-      alert("パスワードが違います！");
-    }
-  }
+  // if(keys[" key"] == "open"){
+  //   $(".filter").fadeOut();
+  // }else{
+  //   pw = prompt("このページは工事中です パスワードを入れて下さい"  ,"");
+  //   if (pw == "bicky"){
+  //     document.cookie = "key=open";
+  //     $(".filter").fadeOut();
+  //   }else{
+  //     alert("パスワードが違います！");
+  //   }
+  // }
   //ここまでパスワード関連--------------------------------------------------------------------------------------
   
 });
