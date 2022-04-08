@@ -47,6 +47,11 @@
                 events:'n7f0ghpdkaduv6e24d9m4ke3oo@group.calendar.google.com'
             });
             calendar.render();
+            //htmlとcssの修正
+            let dateText = $(".fc-center h2").html();
+            dateText = dateText.replace("年","年<br>");
+            $(".fc-center h2").html(dateText);
+            $(".fc-today-button").css("display","none");
         });
     </script>
 
@@ -94,7 +99,7 @@
     </div>
     
 
-<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript" src="./schedule.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 </body>
