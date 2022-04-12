@@ -5,6 +5,7 @@
 }
 
 .filter{
+    display:none;
     background-color:#9f9f9f;
     width:100%;
     height:100%;
