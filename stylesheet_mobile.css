@@ -3,7 +3,7 @@
     box-sizing:border-box;
 }
 
-@media (max-width:1000px){
+@media (max-width:770px){
     .contents{
         width:50%;
     }

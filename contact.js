@@ -1,9 +1,11 @@
 window.contact = window.contact || {};
-window.contact.checkValidation = function(){
+window.contact.checkValidation = function () {
+    
     if(!$('input[id="name"]').val() || !$('input[id="email"]').val() || !$('input[id="age"]').val() ||!$('input[id="male"]').val() ||!$('input[id="female"]').val() ||!$('select[id="conduct-contents"]').val() ||!$('textarea[id="message"]').val()){
         $('input[id=submit]').attr('disabled', 'disabled');
+        
         return false;
-    }
+    } 
 
     $('input[id="submit"]').removeAttr('disabled');
     return true;
@@ -17,6 +19,7 @@ window.contact.send = function(){
     var female=$('input[id="female"]').val() 
     var conduct=$('select[id="conduct-contents"]').val() 
     var message = $('textarea[id="message"]').val()
+    
     data = {
         name: name,
         email: email,
@@ -28,6 +31,7 @@ window.contact.send = function(){
     }
     window.contact.ajax(data);
 }
+
 
 window.contact.ajax = function(data){
     var url = 'https://script.google.com/macros/s/AKfycbyrx4euxRNW6kremix8VJ4YXie6H3HKjt87UApihsZuPVlr6kk8wYqNj9kZI_I4a1pu/exec'; // Change here: Your GAS URL here

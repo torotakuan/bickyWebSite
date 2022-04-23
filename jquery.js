@@ -50,7 +50,18 @@ $(window).load(function () { //全ての読み込みが完了したら実行
   $('#loader').delay(600*animateSpeed).fadeOut(300*animateSpeed);
   $('#wrap').css('display', 'block');
 
-
+  $(".openbtn").click(function () {
+    if ($('.side-menu').css('display') == 'none') {
+        // 表示されている場合の処理
+     $(this).toggleClass('active');
+    $(".side-menu").fadeIn();
+    } else {
+        // 非表示の場合の処理
+        $(this).toggleClass('active');
+    $(".side-menu").fadeOut();
+    }
+    
+});
     
     
 
@@ -65,19 +76,7 @@ $(window).load(function () { //全ての読み込みが完了したら実行
     $('#fourthLine hr').delay(900*animateSpeed).animate({width:'35%'},animateTime);
     $('#fifthLine hr').delay(900*animateSpeed).animate({width:'30%'},animateTime);
 
-    $(".openbtn").click(function () {
-      if(!open){
-        $(this).toggleClass('active');
-        $(".side-menu").fadeIn();
-        open = true;
-      }else{
-        $(this).toggleClass('active');
-        $(".side-menu").fadeOut();
-        open = false;
-
-      }
-      
-    });
+ 
 
   }else{
     $(".container").delay(900*animateSpeed).fadeIn(3500);
