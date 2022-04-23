@@ -10,18 +10,25 @@
     <script src="https://apis.google.com/js/client.js?onload=onLoadCallbackFunction"></script>
     <!--font-awesome-->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.css" type="text/css" media="all" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="./contact.js"></script>
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     
 
 
   
 </head>
 <body>
-    <div class = "filter"></div>
+    <div class="loader">
+        <div class="loader-box">
+            <i class="spinner fas fa-spinner faa-spin animated"></i>
+            <i class="exclamation fas fa-exclamation-circle"></i>
+            <i class="check fas fa-check-circle"></i>
+            <p></p>
+        </div>
+    </div>
     <div class="openbtn"><span></span><span></span><span></span></div>
     <div class="menu">
         <div class="menu-box">
@@ -43,27 +50,10 @@
           <a href="./news.html"> <p>News</p> <span class="far fa-newspaper icon"></span> </a>
           <a href="./schedule.html" > <p>Schedule</p> <span class="far fa-calendar-alt icon"></span> </a>
         </div>
-      </div>
+    </div>
     
-    <div class="contact">
-        <p>contact with</p>
-        <div class="mail">
-            <a href="mailto:lucky.bicky.island@gmail.com" class="btn mail" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i>mail</a>
-        </div>
-        <div class="twitter">
-            <a href="https://twitter.com/messages/compose?recipient_id=1375296955476180994 " class="btn twitter" target="_blank" rel="noopener noreferrer"><span class="fab fa-twitter"></span>twitter</a>
-        </div>
-        <div class="instagram">
-            <a href="https://www.instagram.com/bickyhoshino/" class="btn instagram" target="_blank" rel="noopener noreferrer">
-                <span class="fab fa-instagram "></span>instagram
-            </a>
-        </div>
-    </div>  
-       
-       
-        <div class="conduct-contents">
-        
 
+<<<<<<< HEAD
             <div class="conduct-main">
             <a href="#"  id="side-menu-btn2">
             <span class="fa fa-bars fa-4x " id ="bar-icon2"></span>
@@ -99,10 +89,120 @@
                
              </div>
             </div>
+=======
+    <div class = "contact">
+        <div class = "contact-box"> 
+            <div class="contact-contents">
+>>>>>>> c17d2e9965f0a7da7c9638b411fa5b2c4ba16c89
 
+                <p class="lines-on-sides">contact with</p>
+                
+                <div class="instagram">
+                    <a href="https://www.instagram.com/bickyhoshino/" class="btn instagram" target="_blank" rel="noopener noreferrer">
+                        <span class="fab fa-instagram "></span>
+                        <span> instagram</span>
+                    </a>
+                </div>
+                <div class="twitter">
+                    <a href="https://twitter.com/messages/compose?recipient_id=1375296955476180994 " class="btn twitter" target="_blank" rel="noopener noreferrer">
+                        <span class="fab fa-twitter"></span>
+                        <span> twitter</span>
+                    </a>
+                </div>
 
-        </div>
+                <hr class="line-under-links">
+        
+                <div class="contact-main">
+        
+                    <p class = "title">お問い合わせフォーム</p>
+                    <div class="input-box">
+                        <div class="required">必須</div>
+                        <div class="input">
+                            <p>お名前</p>
+                            <input name="name" id="name" type="name" onkeyup="window.contact.checkValidation()"  > 
+                            <p class="example">例）山田　太郎</p>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="required">必須</div>
+                        <div class="input">
+                            <p>メールアドレス</p>
+                            <input name="email" id="email" type="email" onkeyup="window.contact.checkValidation()"  >
+                            <p class="example">例）example@gmail.com</p>
+                            <p class = "email-error"></p>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="input gender">
+                            <p>性別</p>
+                            <div class="radio-box male">
+                                <input name="gender" value="男性" type="radio" id="male" onkeyup="window.contact.checkValidation()">
+                                <label for="male" class="label">
+                                    <div class="check-circle">
+                                        <div class="center-dot"></div>
+                                    </div>
+                                    <p>男性</p>
+                                </label>
+                            </div>
+                            <div class="radio-box female">
+                                <input name="gender" value="女性" type="radio" id ="female" onkeyup="window.contact.checkValidation()">
+                                <label for="female" class="label">
+                                    <div class="check-circle">
+                                        <div class="center-dot"></div>
+                                    </div>
+                                    <p>女性</p>
+                                </label>
+                            </div>
+                            <p class="example"> &nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="input age">
+                            <p>年齢</p>
+                            <input name="age" id="age" type="tel"  onkeyup="window.contact.checkValidation()" >    
+                            <p class="example"> &nbsp;</p>    
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="input select">
+                            <p>星野響を知ったきっかけ</p>
+                            <select name="contact-contents" id="contact-contents" onkeyup="window.contact.checkValidation()" >
+                                <option>選択してください</option>
+                                <option>音楽修院</option>
+                                <option>YouTube</option>
+                                <option>Instagram</option>
+                                <option>実際に演奏しているところを見た</option>
+                            </select>         
+                            <p class="example"> &nbsp;</p>              
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="required">必須</div>
+                        <div class="input">
+                            <p>お問い合わせの内容</p>
+                            <textarea name="message" id="message" onkeyup="window.contact.checkValidation()"  ></textarea> 
+                            <p class="example"> &nbsp;</p>
+                        </p>
+                        </div>
+                    </div>      
 
+                    <div class="input">
+                        <p class = "empty-error"></p>
+                        <p class = "email-error"></p>
+                    </div>
+                       
+                    
+                    <input  type="button" id="submit" name="send" class="submit" value="送信">  
+                     
+                </div>
+        
+        
+            </div>
+        
+    
+        </div>  
+
+    </div>
 
    
 

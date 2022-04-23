@@ -8,8 +8,11 @@
         box-sizing:border-box;
     }
 
-
-    /*こっからmenu*/
+    i.spinner{
+        left:45vw;
+        font-size:10vw;
+    }
+    /*ーーーここからmenu関連ーーーーーーーーーーーーーーーーーーーーーーー*/
     .menu{
         display:none;
     }
@@ -75,7 +78,7 @@
      .now.side :hover{
          color:rgba(34, 49, 52, 0.9) !important;
      }
-     /*ここまでmenu*/
+     /*ーーーここまでmenu関連ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
 
      /*==================================================

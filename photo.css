@@ -7,17 +7,24 @@
     padding:0px;
 }
 
-html body{
-    font-size:0;
-    padding:0;
+html body{ 
+    font-size:0px;
 }
 
+
+i.spinner{
+    position:fixed;
+    top:45vh;
+    left:48vw;
+    color:white;
+    font-size:4vw;
+}
 .instagram{
     padding-top:45px;
     background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
     column-count: 5;
     column-width: 300px;
-    min-height:100vw;
+    min-height:100vh;
   
 }
 .imgBox{
@@ -36,7 +43,7 @@ html body{
 span#bar-icon2 {
     display: none;
 }
-
+/*ーーーここからmenu関連ーーーーーーーーーーーーーーーーーーーーーーー*/
 .menu{
     position:relative;
     display:inline-block;
@@ -54,7 +61,7 @@ span#bar-icon2 {
 }
 .menu a{
     display:inline-block;
-    width:16%;
+    width:16.6%;
     padding:8px 0px;
     float:left;
     font-size: 20px;
@@ -84,4 +91,5 @@ span#bar-icon2 {
 .side-menu-box{
     display:none;
 }
+/*ーーーここまでmenu関連ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 

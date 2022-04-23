@@ -1,11 +1,26 @@
 @media(max-width:750px){
     :root{
         --menu-icon-size:0.3;
+        --title-text-size:6vw;
+        --default-text-size: 4vw;
+        --small-text-size: 3vw;
     }
     *{
         margin:0px;
         padding:0px;
         box-sizing:border-box;
+    }
+    .loader-box{
+        margin-top:35vh;
+    }
+    .loader i{
+        display:none;
+        color:white;
+        font-size:10vw;
+        z-index:6;
+    }
+    .loader p{
+        font-size:3.5vw;
     }
 
 
@@ -79,6 +94,135 @@
     /*ーーーここまでmenu関連ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
     
+     .contact-box {
+         margin:0px;
+         box-shadow:none;
+     }
+     .contact-contents {
+        width:80vw;
+        margin:0 auto;
+     }
+
+
+     /*ーーーcontact with関連ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+     /*文字の左右にラインを引く*/
+     .lines-on-sides {
+        width:80vw;
+        margin:0 auto;
+     }
+     p.lines-on-sides {
+        margin-top:20vw;
+     }
+     a.btn{
+        margin-top:7vw;
+        padding:2.5vw 0vw;
+        height:calc(var(--title-text-size) + 8vw);
+        width:80vw;
+        border-radius:1vw;
+        text-decoration: none;
+     }
+     hr.line-under-links{
+         margin-top:calc(7vw + var(--default-text-size) / 2);
+         color: #707070;
+     }
+     /*ーーーここまでcontact with関連ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+        
+    /*ーーーinput-box関連ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+    .contact-main{
+        margin:17.5vw 0vw;
+    }
+    p.title{
+        font-size:var(--title-text-size);
+        margin-bottom:7vw;
+    }
+    .input-box{
+        margin-top:5.5vw;
+        width:80vw;
+    }
+    .required{
+        padding:1vw 2vw;
+        top:-1vw;
+        right:0vw;
+        left:auto;
+    }
+    .input{
+        width:80vw;
+    }
+    .gender{
+        width:50vw;!important
+    }
+    .age{
+        width:15vw;!important
+    }
+    .input input{
+        border:0.3vw solid #707070;
+        border-radius:0.5vw;
+        height:10vw;
+    }
+    .input textarea{
+        border:0.3vw solid #707070;
+        border-radius:0.5vw;
+        height:40vw;
+    }
+    .input select{
+        border:0.3vw solid #707070;
+        border-radius:0.5vw;
+        height:10vw;
+    }
+    input.error{
+        border:0.5vw solid red;
+    }
+    textarea.error{
+        border:0.5vw solid red;
+    }
+    .input label{
+        width:50vw;
+        padding:3vw 6vw;
+        border-radius:1.5vw;
+    }
+    .input label[for=female]{
+        margin-top:5vw;
+        margin-left:0vw;
+    }
+    input[type="radio"]:checked + label{
+        box-shadow: 0.5vw 1vw 1vw hsl(0deg 0% 0% /0.25);
+    }
+    input[type="radio"]:checked + label .check-circle .center-dot{
+        height:5vw;
+        width:5vw;
+        margin:1.5vw;
+        border-radius: 5vw;
+        box-shadow: 0.5vw 1vw 1vw hsl(0deg 0% 0% /0.25);
+    }
+    .check-circle{
+        float:left;
+        width:8vw;
+        height:8vw;
+        background-color: white;
+        border-radius:8vw;
+    }
+    .label p{
+        margin-top:calc(( 8vw - var(--default-text-size) - 2vw ) / 2);
+        margin-left:7vw;
+    }
+    .name{
+        height: 30px;
+    }
+    .submit{
+        margin-top:7vw;
+        padding:2vw 0vw;
+        height:calc(var(--title-text-size) + 8vw);
+        width:80vw;
+        border-radius:1vw;
+        box-shadow: 0.5vw 1vw 1vw hsl(0deg 0% 0% /0.25);
+    }
+    .submit:active{
+        transform: translateY(1vw);
+        box-shadow:none;
+        background-color: #3c793c;
+    }
+
 
 
 

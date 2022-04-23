@@ -1,4 +1,8 @@
 
+window.onload = function(){
+  console.log('loaded');
+  $('.spinner').css('display','none');
+}
 var urls = [];
 var accessToken ;
 $(function(){
@@ -20,32 +24,32 @@ $(function(){
   //ここまでメニューボタン関連--------------------------------------------------------------------------------------
 
   //こっからパスワード関連--------------------------------------------------------------------------------------
-  var pw;
-  var keys = new Object();
+  // var pw;
+  // var keys = new Object();
 
-  //cookieから、パスワードが入力されたかの情報を取り出す
-  var elements = document.cookie.split(";");
-  for ( var element of elements){
-    var val = element.split("=");
-    keys[val[0]] = val[1];
-  }
+  // //cookieから、パスワードが入力されたかの情報を取り出す
+  // var elements = document.cookie.split("; ");
+  // for ( var element of elements){
+  //   var val = element.split("=");
+  //   keys[val[0]] = val[1];
+  // }
 
-  if(keys[" key"] == "open"){
-    $(".filter").fadeOut();
-  }else{
-    pw = prompt("このページは工事中です パスワードを入れて下さい"  ,"");
-    if (pw == "bicky"){
-      document.cookie = "key=open";
-      $(".filter").fadeOut();
-    }else{
-      alert("パスワードが違います！");
-    }
-  }
+  // if(keys["key"] == "open"){
+  //   $(".filter").fadeOut();
+  // }else{
+  //   pw = prompt("このページは工事中です パスワードを入れて下さい"  ,"");
+  //   if (pw == "bicky"){
+  //     document.cookie = "key=open";
+  //     $(".filter").fadeOut();
+  //   }else{
+  //     alert("パスワードが違います！");
+  //   }
+  // }
   //ここまでパスワード関連--------------------------------------------------------------------------------------
   
 });
 
-var accessToken = "IGQVJYUXhxaDR4T19wa3prYnl5OE90NTFSbzZARcXZAMZAzZA5cXdRaW8xTU9QbHhFblNwdlZA2SGZAGcG9xOU9OXy1HQnUxVDFlUXUxRGhSaFZA3WGVBVnFBSWhFV3dBNHZAhSDBUZA0wxek13";
+var accessToken = "IGQVJWbTRJZAl9XN0p1ZAmR2V1NCR3lmSHk2VUozV0ZAVZAEY0LTBkcjhsZAjRSUy1mb2FUakttYWFLaS1NbDJfWkdadThYVlRoOWFZAVWN5UlJsblR3WWR3M2o5SGw1bG5xQVhZAaklaY3dn";
 //instagram上の全メディアのid,url,media_typeなどを貰ってくる
 $.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url&access_token=' + accessToken, getFunc);
 //GETリクエストが成功したら下の関数getFuncが実行される（貰ってきたデータは変数myDataに格納されてる）

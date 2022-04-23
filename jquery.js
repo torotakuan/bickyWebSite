@@ -21,17 +21,19 @@ function stopload(){
 
 $(window).load(function () { //全ての読み込みが完了したら実行
   //こっからパスワード関連--------------------------------------------------------------------------------------
+  /*
   var pw;
   var keys = new Object();
 
   //cookieから、パスワードが入力されたかの情報を取り出す
-  var elements = document.cookie.split(";");
+  var elements = document.cookie.split("; ");
+  console.log(document.cookie);
   for ( var element of elements){
     var val = element.split("=");
     keys[val[0]] = val[1];
   }
 
-  if(keys[" key"] == "open"){
+  if(keys["key"] == "open" ){
     $(".filter").fadeOut();
   }else{
     pw = prompt("このページは工事中です パスワードを入れて下さい"  ,"");
@@ -42,6 +44,7 @@ $(window).load(function () { //全ての読み込みが完了したら実行
       alert("パスワードが違います！");
     }
   }
+  */
   //ここまでパスワード関連--------------------------------------------------------------------------------------
   var open = false;
   var animateTime = 2000;
@@ -62,7 +65,6 @@ $(window).load(function () { //全ての読み込みが完了したら実行
     }
     
 });
-    
     
 
 
