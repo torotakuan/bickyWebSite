@@ -2,8 +2,15 @@
 *{
     box-sizing:border-box;
 }
+@media all and (max-width:500px){
+  #name{
+    font-size:70px;
+    
+   }
 
+}
 @media (max-width:770px){
+    
     .contents{
         width:50%;
     }
@@ -157,6 +164,11 @@
         font-size:6vw;
     
         
+    }
+    #name{
+        font-size: 63px;
+        font-weight: 600;
+        font-family:"Noto Serif JP";
     }
     .bicky-left-wrapper-contents a{
         /*position:absolute;
