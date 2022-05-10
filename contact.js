@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-window.contact = window.contact || {};
-window.contact.checkValidation = function () {
-    
-    if(!$('input[id="name"]').val() || !$('input[id="email"]').val() || !$('input[id="age"]').val() ||!$('input[id="male"]').val() ||!$('input[id="female"]').val() ||!$('select[id="conduct-contents"]').val() ||!$('textarea[id="message"]').val()){
-        $('input[id=submit]').attr('disabled', 'disabled');
-        
-=======
 const error = {
     empty : false,//空欄の有る無し
     email : false//メールが使用可能なものか
@@ -48,7 +40,6 @@ window.contact.checkValidation = function(){
     }
 
     if(error.empty || error.email){//エラーが１つでもあるならばfalseを返してここより下の処理は行わない
->>>>>>> c17d2e9965f0a7da7c9638b411fa5b2c4ba16c89
         return false;
     } 
 
