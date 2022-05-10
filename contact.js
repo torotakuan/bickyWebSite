@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+window.contact = window.contact || {};
+window.contact.checkValidation = function () {
+    
+    if(!$('input[id="name"]').val() || !$('input[id="email"]').val() || !$('input[id="age"]').val() ||!$('input[id="male"]').val() ||!$('input[id="female"]').val() ||!$('select[id="conduct-contents"]').val() ||!$('textarea[id="message"]').val()){
+        $('input[id=submit]').attr('disabled', 'disabled');
+        
+=======
 const error = {
     empty : false,//空欄の有る無し
     email : false//メールが使用可能なものか
@@ -40,8 +48,9 @@ window.contact.checkValidation = function(){
     }
 
     if(error.empty || error.email){//エラーが１つでもあるならばfalseを返してここより下の処理は行わない
+>>>>>>> c17d2e9965f0a7da7c9638b411fa5b2c4ba16c89
         return false;
-    }
+    } 
 
     $('input[id="submit"]').removeClass('disabled');
     return true;
@@ -66,6 +75,7 @@ $(document).on('click', '.submit',function(){
     var gender = $('input:radio[name="gender"]:checked').val();
     var contact=$('select[id="contact-contents"]').val() 
     var message = $('textarea[id="message"]').val()
+    
     data = {
         name: name,
         email: email,
@@ -80,6 +90,7 @@ $(document).on('click', '.submit',function(){
     $('.check').css('display','none');
 
 });
+
 
 window.contact.ajax = function(data){
     var url = 'https://script.google.com/macros/s/AKfycbx4SaEEjnNtUKUgbyCY3XxPoq0fpBhOxhOm-4bI8ANBeHeaqi1r_tuVC0f0ER8HR2_a/exec'; // Change here: Your GAS URL here
