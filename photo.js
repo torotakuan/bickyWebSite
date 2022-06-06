@@ -1,8 +1,13 @@
 
+
+var photoUrlsLoaded = false;
 window.onload = function(){
   console.log('loaded');
-  $('.spinner').css('display','none');
+  if(photoUrlsLoaded || window.performance.navigation.type == 1){
+    $('.spinner').css('display','none');
+  }
 }
+
 var urls = [];
 var accessToken ;
 $(function(){
@@ -90,6 +95,7 @@ function getFunc(myData){
   for(let i = 0; i < urls.length; ++i){
     displayImage(urls[i]);
   }
+  photoUrlsLoaded = true;
 };
 
 

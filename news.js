@@ -1,8 +1,5 @@
 
-window.onload = function(){
-  console.log('loaded');
-  $('.spinner').css('display','none');
-}
+
 $(function(){
 
   //こっからメニューボタン関連--------------------------------------------------------------------------------------

@@ -17,6 +17,8 @@ i.spinner{
     left:48vw;
     color:rgba(34, 49, 52, 1);
     font-size:4vw;
+    z-index:-1;
+    
 }
 .timeline-box {
     margin:93px auto;
