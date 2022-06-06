@@ -3,7 +3,7 @@
 var photoUrlsLoaded = false;
 window.onload = function(){
   console.log('loaded');
-  if(photoUrlsLoaded || window.performance.navigation.type == 1){
+  if(photoUrlsLoaded || $("imgBox").length){
     $('.spinner').css('display','none');
   }
 }
