@@ -4,10 +4,13 @@ const error = {
 };
 var submited = false;
 var loading = false;
+
+
+
 window.contact = window.contact || {};//グローバルのオブジェクトとしてcontactを宣言し、contactの中身が空の場合は中身を空のオブジェクトにしておく
 window.contact.checkValidation = function(){
     //未記入のinput要素に対してemptyクラスを付与&削除　、１つでも未記入ならerror.emptyをtrueに
-    var $inputs = [$('input[id="name"]'),$('input[id="email"]'),$('textarea[id="message"]')];
+    var $inputs = [$('input[id="name"]'),$('input[id="email"]'),$('textarea[id="message"]'),$('input[id="age"]'),$('input:radio[name="gender"]:checked')];
 
     error.empty = false;
     $(".empty-error").html("");
@@ -19,9 +22,16 @@ window.contact.checkValidation = function(){
             if(submited){
                 elem.addClass('error');
                 $(".empty-error").html("未記入の必須項目があります");
+                if(elem.length == 0){//ボタン選択式の場合
+                    $("label.label").addClass('error');
+                }
             }
         }else{
             elem.removeClass('error');
+            if(elem.attr('type') == 'radio'){
+                $("label.label").removeClass('error');
+            }
+
         }
     });
 
@@ -51,7 +61,6 @@ window.contact.checkValidation = function(){
 $(document).on('click', '.submit',function(){
     window.contact.checkValidation();
     if(error.empty || error.email){
-        console.error('error');
         submited = true;
         window.contact.checkValidation();
         return;

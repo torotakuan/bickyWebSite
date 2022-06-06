@@ -325,6 +325,9 @@ input.error{
 textarea.error{
     border:1.5px solid red;
 }
+label.error{
+    border:1.5px solid red;
+}
 .input input[type = radio]{
     display:none;
 }

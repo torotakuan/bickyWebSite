@@ -94,10 +94,11 @@
                         </div>
                     </div>
                     <div class="input-box">
+                        <div class="required">必須</div>
                         <div class="input gender">
                             <p>性別</p>
                             <div class="radio-box male">
-                                <input name="gender" value="男性" type="radio" id="male" onkeyup="window.contact.checkValidation()">
+                                <input name="gender" value="男性" type="radio" id="male" onchange="window.contact.checkValidation()">
                                 <label for="male" class="label">
                                     <div class="check-circle">
                                         <div class="center-dot"></div>
@@ -106,7 +107,7 @@
                                 </label>
                             </div>
                             <div class="radio-box female">
-                                <input name="gender" value="女性" type="radio" id ="female" onkeyup="window.contact.checkValidation()">
+                                <input name="gender" value="女性" type="radio" id ="female" onchange="window.contact.checkValidation()">
                                 <label for="female" class="label">
                                     <div class="check-circle">
                                         <div class="center-dot"></div>
@@ -118,6 +119,7 @@
                         </div>
                     </div>
                     <div class="input-box">
+                        <div class="required">必須</div>
                         <div class="input age">
                             <p>年齢</p>
                             <input name="age" id="age" type="tel"  onkeyup="window.contact.checkValidation()" >    
