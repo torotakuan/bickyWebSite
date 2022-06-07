@@ -3,9 +3,9 @@
 var photoUrlsLoaded = false;
 window.onload = function(){
   console.log('loaded');
-  if(photoUrlsLoaded || $("imgBox").length){
+  //if(photoUrlsLoaded || $("imgBox").length){
     $('.spinner').css('display','none');
-  }
+  //}
 }
 
 var urls = [];
