@@ -134,7 +134,7 @@ width: 100%;
 .photo{
   position: absolute;
   min-width: 375px;
-  
+  display:block;
   width: 50%;
   height: 800px;
   background-image: url("profile_photo.png");
@@ -152,9 +152,9 @@ width: 100%;
   opacity: 0.8;  
 }
 .add-contents{
- background-color: white;
+  display:block;
+  background-color: white;
   padding:30px 50px;
-  position:relative;
   font-size:0px;
   border-top: 1px solid gray;
 } 
