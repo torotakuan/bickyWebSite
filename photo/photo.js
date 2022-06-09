@@ -2,7 +2,7 @@
 
 var photoUrlsLoaded = false;
 window.onload = function(){
-  console.log('loaded');
+  // console.log('loaded');
   //if(photoUrlsLoaded || $("imgBox").length){
     $('.spinner').css('display','none');
   //}
@@ -95,7 +95,7 @@ function getFunc(myData){
   for(let i = 0; i < urls.length; ++i){
     displayImage(urls[i]);
   }
-  photoUrlsLoaded = true;
+  // photoUrlsLoaded = true;
 };
 
 
