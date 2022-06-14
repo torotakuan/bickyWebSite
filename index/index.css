@@ -200,13 +200,13 @@ html{
 .menu-box{
     display:inline-block;
     width:100%;
-    max-width:1000px;
+    max-width:830px;
     text-align:center;
     font-size:0px;
 }
 .menu a{
     display:inline-block;
-    width:16.6%;
+    width:20%;
     padding:8px 0px;
     float:left;
     font-size: 20px;
@@ -246,13 +246,16 @@ html{
     padding:30px 50px;
     position:relative;
     font-size:0px;
+    text-align: center;
 } 
 .contents{
     padding:0px 10px;
-    width:25%;
+    width:33%;
+    max-width: 290px;
 }
 .contents-box{
-    width:100%;
+    display:inline-block;
+    /* width:100%; */
 }
 .contents-box a{
     box-sizing:border-box;
