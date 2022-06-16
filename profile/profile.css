@@ -61,7 +61,7 @@ body{
 
 .now {
   color:whitesmoke !important;
-  padding-bottom: 0px!important;
+  padding-bottom: 0px;
   border-bottom: solid 2px white;
 }
 .now :hover{
