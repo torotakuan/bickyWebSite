@@ -348,5 +348,9 @@
         top:calc(5vw * var(--menu-icon-size));
         left:calc(4vw * var(--menu-icon-size));
     }
+    
+    footer p{
+        padding:5px;
+    }
 
 }
