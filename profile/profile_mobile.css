@@ -66,14 +66,16 @@
        .side-menu a{
            display:block;
            width:150px;
-           padding:10px 0px;
-           margin:10px 0px;
+           padding:15px 0px;
            font-size: 20px;
            color:rgba(34, 49, 52, 0.7);
            text-decoration: none;
            font-family:Helvetica;
            text-align:center;
            border-bottom:solid 1px rgb(206, 206, 206);
+       }
+       .now{
+           padding: bottom 15px !important;
        }
    
       
@@ -223,8 +225,8 @@
          font-size: 10px;
        
           top: 470px;
-          margin-left: 6%;
-         margin-right: 2%;
+          margin-left: 5%;
+         margin-right: 5%;
       }
       .detail-section{
         position: absolute;
@@ -233,8 +235,8 @@
         
           top: 470px;
           font-size: 10px;
-         margin-left: 6%;
-         margin-right: 2%;
+         margin-left: 5%;
+         margin-right: 5%;
       }
 
       .photo{
