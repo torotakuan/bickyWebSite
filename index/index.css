@@ -81,8 +81,8 @@ html{
     height:100%;
     background-image:url("top_photo.JPG") ;
     background-size:80%,80%;
- background-repeat:no-repeat; 
-　　background-position:center top;
+    background-repeat:no-repeat; 
+    background-position:center top;
     float:left;
 }
 .bicky-left-wrapper-contents{
