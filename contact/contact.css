@@ -75,13 +75,13 @@ span#bar-icon2 {
 .menu-box{
     display:inline-block;
     width:100%;
-    max-width:1000px;
+    max-width:830px;
     text-align:center;
     font-size:0px;
 }
 .menu a{
     display:inline-block;
-    width:16.6%;
+    width:20%;
     padding:8px 0px;
     float:left;
     color:rgba(34, 49, 52, 0.7);
@@ -124,7 +124,7 @@ span#bar-icon2 {
     display:inline-block;
     background-color: white;
     margin: 30px auto;
-    max-width:1000px;
+    max-width:830px;
     width:100%;
     text-align:center;
     font-size:0px;

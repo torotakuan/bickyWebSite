@@ -81,8 +81,8 @@ html{
     height:100%;
     background-image:url("top_photo.JPG") ;
     background-size:80%,80%;
- background-repeat:no-repeat; 
-　　background-position:center top;
+    background-repeat:no-repeat; 
+    background-position:center top;
     float:left;
 }
 .bicky-left-wrapper-contents{
@@ -259,6 +259,21 @@ html{
 }
 .contents-box a{
     box-sizing:border-box;
+}
+footer{
+    padding:30px;
+    overflow: hidden;
+    width:100%;
+    background-color: #222222;
+}
+footer p{
+    color: #cccccc;
+    font-size:10px;
+    float:right;
+    padding:5px;
+}
+.copyright{
+    float:left;
 }
 
 

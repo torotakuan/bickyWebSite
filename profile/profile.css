@@ -31,13 +31,13 @@ body{
   display:inline-block;
   width:100%;
   height: 100%;
-  max-width:1000px;
+  max-width:830px;
   text-align:center;
   font-size:0px;
 }
 .menu a{
   display:inline-block;
-  width:12%;
+  width:14.4%;
   margin-left: 4%;
   height: 100%;
   padding-top:0.1%;
@@ -61,7 +61,7 @@ body{
 
 .now {
   color:whitesmoke !important;
-  padding-bottom: 0px!important;
+  padding-bottom: 0px;
   border-bottom: solid 2px white;
 }
 .now :hover{
@@ -79,7 +79,7 @@ width: 100%;
 }
 .detail{
   width: 80%;
-  height: 1000px;
+  height: 1200px;
   position: relative;
   display: flex;
   margin-top: 0px;
@@ -91,8 +91,8 @@ width: 100%;
   width: 50%;
 }
 .profile{
-  width: 50%;
-  position: absolute;
+  width: 100%;
+  /* position: absolute; */
   
   font-size: 20px;
  
@@ -157,13 +157,16 @@ width: 100%;
   padding:30px 50px;
   font-size:0px;
   border-top: 1px solid gray;
+  text-align:center;
 } 
 .contents{
   padding:0px 10px;
-  width:25%;
+  width:33%;
+  max-width:290px;
 }
 .contents-box{
-  width:100%;
+  /* width:100%; */
+  display:inline-block;
 }
 .contents-box a{
   box-sizing:border-box;

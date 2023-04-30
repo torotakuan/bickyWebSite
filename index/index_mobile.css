@@ -118,7 +118,7 @@
         width:100%;
         background-image:url("top_photo_mobile.png");
         background-position-x:center;
-        background-size: 90%,90%;
+        background-size: 100%,100%;
        
    }
    .bicky-left-wrapper-contents{
@@ -166,7 +166,7 @@
         
     }
     #name{
-        font-size: 12.9vw;
+        font-size: 12.6vw;
         font-weight: 600;
         font-family:"Noto Serif JP";
     }
@@ -347,6 +347,10 @@
         transform: translateY(0) rotate(-45deg);
         top:calc(5vw * var(--menu-icon-size));
         left:calc(4vw * var(--menu-icon-size));
+    }
+    
+    footer p{
+        padding:5px;
     }
 
 }
