@@ -1,12 +1,10 @@
 
+const img = new Image();
+img.addEventListener('load', () => {
+  $('.spinner').css('display','none');
+});
 
-var photoUrlsLoaded = false;
-window.onload = function(){
-  // console.log('loaded');
-  //if(photoUrlsLoaded || $("imgBox").length){
-    $('.spinner').css('display','none');
-  //}
-}
+
 
 var urls = [];
 var accessToken ;
@@ -55,22 +53,22 @@ $(function(){
 });
 
 var accessToken = "IGQVJWbTRJZAl9XN0p1ZAmR2V1NCR3lmSHk2VUozV0ZAVZAEY0LTBkcjhsZAjRSUy1mb2FUakttYWFLaS1NbDJfWkdadThYVlRoOWFZAVWN5UlJsblR3WWR3M2o5SGw1bG5xQVhZAaklaY3dn";
-//instagram上の全メディアのid,url,media_typeなどを貰ってくる
+//ビッキーのinstagramに投稿された全メディアのid,url,media_typeなどを貰ってくる
 $.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url&access_token=' + accessToken, getFunc);
 //GETリクエストが成功したら下の関数getFuncが実行される（貰ってきたデータは変数myDataに格納されてる）
 function getFunc(myData){
   //jsonデータは配列として扱えるので、普段通り配列の要素を一つ一ついじっていく
   for (let i = 0; i < myData.data.length; ++i) {
 
-    //メディアが写真の時の処理 :jsonからmedia_url（写真のURL）を抜き出してurls(画像のURLをまとめておく配列)に入れる
+    //もしメディアが写真の時の処理 :jsonからmedia_url（写真のURL）を抜き出してurls(画像のURLをまとめておく配列)に入れる
     if(myData.data[i].media_type == 'IMAGE'){
       urls.push(myData.data[i].media_url);
 
-    //メディアがビデオの時の処理 :jsonからthumbnail_url（ビデオのサムネ画像のURL）を抜き出してurls(画像のurlをまとめておく配列)に入れる
+    //もしメディアがビデオの時の処理 :jsonからthumbnail_url（ビデオのサムネ画像のURL）を抜き出してurls(画像のurlをまとめておく配列)に入れる
     }else if(myData.data[i].media_type == 'VIDEO'){
       urls.push(myData.data[i].thumbnail_url);
 
-    //メディアがアルバムの時の処理　:アルバムは追加でidとURLを貰う必要があるので追加でGET、非同期通信だと実行順がややこしいからこっちは同期通信。
+    //もしメディアがアルバムの時の処理　:アルバムは追加でidとURLを貰う必要があるので追加でGET、非同期通信だと実行順がややこしいからこっちは同期通信。
     }else if(myData.data[i].media_type == 'CAROUSEL_ALBUM'){
 
       //ここからinstagramAPIからアルバム内の写真達のidを貰ってくるおまじない〜
@@ -120,5 +118,6 @@ function getUrl(id){
 function displayImage(url){
   var htmlText = '<div class="imgBox"><img src=" ' + url + ' "></div>'
   $('.instagram').append(htmlText);
+  img.src = url;
 }
 
