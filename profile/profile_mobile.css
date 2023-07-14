@@ -328,7 +328,7 @@
         line-height: 2em; 
     }
     .detail-section a{
-        font-size:3.2vw;
+        font-size:3.7vw;
         text-shadow: 2px 2px 4px #000;
         color:#56B5EA;
         line-height: 2em; 
@@ -337,6 +337,9 @@
       /* margin-top:30px; */
       font-size: 7vw;
       font-family: 'Allison', cursive;
+    }
+    .contents{
+        width:100%;
     }
 
 }
