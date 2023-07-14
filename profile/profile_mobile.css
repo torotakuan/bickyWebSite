@@ -2,18 +2,7 @@
 *{
     box-sizing:border-box;
 }
-@media all and (max-width:500px){
-  /* #name{
-    font-size:70px;
-    
-   } */
 
-}
-@media (max-width:770px){
-    
-    .contents{
-        width:50%;
-    }
 @media all and (max-width: 1000px){
     :root{
         --menu-icon-size:0.3;
@@ -24,6 +13,7 @@
         padding:0px;
         box-sizing:border-box;
     }
+    /* ここからメニュー関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
 
     .btn-wrapper{
         position:absolute;
@@ -41,24 +31,21 @@
         font-size:18px;
         width:25%;
     }
-
-
-
     
     .menu{
        display:none;
-   }
-   .side-menu {
-    display:none;
-    background-color: white;
-    width:155px;
-    height:100%;
-    position:fixed;
-    top:0px;
-    right:0px;
-    text-align: center;
-    box-shadow: -1vw -1vw 2vw hsl(0deg 0% 0% /0.25);
-    z-index:2;
+    }
+    .side-menu {
+        display:none;
+        background-color: white;
+        width:155px;
+        height:100%;
+        position:fixed;
+        top:0px;
+        right:0px;
+        text-align: center;
+        box-shadow: -1vw -1vw 2vw hsl(0deg 0% 0% /0.25);
+        z-index:2;
     }
     .side-menu-top{
         height:20vw;
@@ -110,85 +97,10 @@
     .now.side :hover{
         color:rgba(34, 49, 52, 0.9) !important;
     }
-    
-
-  
-
-    .bicky-left-wrapper{
-        width:100%;
-        background-image:url("top_photo_mobile.png");
-        background-position-x:center;
-        background-size: 100%,100%;
-       
-   }
-   .bicky-left-wrapper-contents{
-       width: 60%;
-   }
-
-   .texts{
-       margin:0vw 10vw;
-   }
-   .texts h1{
-    font-size: 70px;
-   }
-   .texts p{
-       
-}
-   .texts a{
-
-   }
-
-   .bicky-left-wrapper-contents{
-    /*color: #999;*/
-    position:absolute;
-    bottom:15%;
-    right:0%;
-    color:white;
-    display:block;
-    text-align:center;
+    .lines-box hr{
+        display:none;
     }
-    .bicky-left-wrapper-contents h1{
-        /*position:absolute;
-        top:470px;
-        left:240px;
-        font-size:60px;*/
-        display:inline-block;
-        font-size:13vw;
-
-    }
-    .bicky-left-wrapper-contents p{
-        /*position:absolute;
-        top:560px;
-        left:250px;
-        font-size:25px;*/
-        font-size:6vw;
-    
-        
-    }
-    #name{
-        font-size: 12.6vw;
-        font-weight: 600;
-        font-family:"Noto Serif JP";
-    }
-    .bicky-left-wrapper-contents a{
-        /*position:absolute;
-        top:600px;
-        left:250px;
-        font-size:25px;*/
-        right:10.5vw;
-        position: absolute;
-
-        font-size:4vw;
-    
-        
-        
-        
-    }
-    
-   .lines-box hr{
-       display:none;
-   }
-   .lines-box-mobile {
+    .lines-box-mobile {
         margin-top:3vw;
         display:block;
         right:0vw;
@@ -222,11 +134,57 @@
         
     }
     
+    /* ここまでメニュー関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
     
+    /* ここからプロフィール関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+    .detail{
+        background-image: none;
+    }
+    .detail-section h4{
+        letter-spacing: 0.1vw;
+        padding-top:3vw;
+        padding-bottom:2.5vw;
+        text-align: left;
+        font-size:4.5vw;
+        color:white;
+    }
+    .detail-section p{
+        color:rgb(192, 192, 192)
+    }
+    .profile{
+        padding-top:0px;
+        text-align: left;
+    }
+    .profile-photo{
+        display:inline-block;
+        width:100%;
+        height:60vw;
+        object-fit: cover;
+        object-position: 0 0%;
+        border: 1px solid rgb(23, 23, 23);
+    }
+    .profile-section{
+        color:white;
+        width: 90%;
+        text-align: center;
+        margin:auto;
+        z-index:1;
     
-    
-       
-    
+    }
+    .profile h1{
+        padding-top:2%;
+        padding-left:3%;
+    }
+    .profile h6{
+        color: rgb(203, 203, 203);
+        font-size: 3vw;
+        padding-left:3%;
+        padding-bottom:5%;
+    }
+    /* ここまでプロフィール関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+
+    /* ここからコンテンツ関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+
     .add-contents{
        
         padding:30px 50px;
@@ -243,8 +201,7 @@
     }
     
     .bicly-right-wrapper{
-
-    display:none;
+        display:none;
     }
     .btn-wrapper{
         display:block;
@@ -256,10 +213,8 @@
     .add-contents{
        position:relative;
     }
-    .contents-box{
-        
-      
-    }
+    /* ここまでコンテンツ関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+
     .bar-icon2{
      font-size:30px;
     }
@@ -267,10 +222,9 @@
     
 
     /*==================================================
-    　5-2-4 MENUがCLOSEに
+    　ハンバーガーメニュー用
     ===================================*/
 
-    /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
     .openbtn{
         /*ボタン内側の基点となるためrelativeを指定。
     追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
@@ -354,3 +308,36 @@
     }
 
 }
+/* タブレット */
+@media all and (max-width:770px){
+
+    .contents{
+        width:50%;
+    }
+    
+}
+/* スマートフォン */
+@media all and (max-width:500px){
+    .profile-section{
+        width: 90%;
+    }
+
+    .detail-section p{
+        font-size:3.7vw;
+        text-shadow: 2px 2px 4px #000;
+        line-height: 2em; 
+    }
+    .detail-section a{
+        font-size:3.2vw;
+        text-shadow: 2px 2px 4px #000;
+        color:#56B5EA;
+        line-height: 2em; 
+    }
+    .profile{
+      /* margin-top:30px; */
+      font-size: 7vw;
+      font-family: 'Allison', cursive;
+    }
+
+}
+

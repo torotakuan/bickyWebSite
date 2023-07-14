@@ -1,19 +1,10 @@
+/* こっからテンプレ　　　　　　ーーーーーーーーーーーーーーーーーー */
 *{
   margin:0px;
   padding:0px;
   box-sizing:border-box;
 }
 
-.filter{
-  display:none;
-  background-color:#9f9f9f;
-  width:100%;
-  height:100%;
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:99;
-}
 #loader-bg {
   display: none;
   position: fixed;
@@ -38,20 +29,11 @@
   z-index: 4;
 }
 
-.filter{
-  background-color:#9f9f9f;
-  width:100%;
-  height:100%;
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:99;
-}
-
 html,body{
   height:100%;
 }
 html{
+  background-color: #000;
   font-size:100%;
 }
 .wrap{
@@ -62,46 +44,12 @@ html{
   clear:left;
   clear:right;
 }
-.top-wrapper{
-  background-color:black;
-  height:100%;
-}
-.top-wrapper-box{
-  margin:0 auto;
-  
-  height:100%;
-}
-
 #center{
   background-position-x:center;
 }
-.bicky-left-wrapper {
-  display:inline-block;
-  width: 50%;
-  height:100%;
-  background-image:url("top_photo.JPG") ;
-  background-size:80%,80%;
-  background-repeat:no-repeat; 
-  background-position:center top;
-  float:left;
-}
-.bicky-left-wrapper-contents{
-  display:none;
-}
+/* ここまでテンプレ　　　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
 
-.bicly-right-wrapper{
-  display:inline-block;
-  width:50%;
-  height:100%;
-  background-color:black;
-  float:left;
-  
-  display: flex;
-  justify-content: center; /*左右中央揃え*/
-  align-items: center;     /*上下中央揃え*/
-
-}
-
+/* ここからメニュー関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
 .btn{
   display:inline-block;
   color:white;
@@ -126,10 +74,6 @@ html{
   background-color:transparent;
   
 }
-/*
-.youtube{
-  font-size:14.5px;
-}*/
 .lines-box-mobile {
   display:none;
 }
@@ -167,35 +111,13 @@ html{
   
 }
 
-
-.container{
-  text-align:center;
-  display:none;
-  color:white;
-}
-.container h1{
-  font-family:"Noto Serif JP";
-  font-size:7vw;
-  
-}
-.container p{
-  font-size:  3.2vw; 
-  padding-top:1vw;
-}
-.container a{
-  font-size:2vw;
-}
-
-
-
-
-
 .menu{
   display:inline-block;
     width:100%;
   text-align:center;
   font-size:0px;
-  box-shadow: 0 0.2vw 0.2vw hsl(0deg 0% 0% /0.25);
+  box-shadow: 0 0.2vw 0.2vw hsla(0, 0%, 35%, 0.25);
+  background-color: black
 }
 .menu-box{
   display:inline-block;
@@ -210,7 +132,7 @@ html{
   padding:8px 0px;
   float:left;
   font-size: 20px;
-  color:rgba(34, 49, 52, 0.7);
+  color:rgb(255, 255, 255);
   text-decoration: none;
   font-family:Helvetica;
   text-align:center;
@@ -224,8 +146,8 @@ html{
 }
 
 .now {
-  color:rgba(34, 49, 52, 0.9) !important;
-  border-bottom: solid 3px rgba(34, 49, 52, 0.9);
+  color:rgba(122, 130, 132, 0.9) !important;
+  border-bottom: solid 3px rgb(158, 158, 158);
 }
 .now :hover{
   color:rgba(34, 49, 52, 0.9) !important;
@@ -238,8 +160,58 @@ html{
   display:none;
 }
 
-
+/* ここまでメニュー関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
  
+/* ここからプロフィール関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+.detail{
+  font-size:0px;
+  background-color: #000;
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("profile_photo.png");
+  position: relative;
+  background-size: cover; /*--背景画像のサイズ--*/
+  background-attachment: fixed; /*--背景画像の固定--*/
+  background-repeat: no-repeat; /*--背景画像の繰り返し--*/
+  background-position: center center; /*--背景画像の位置--*/
+  z-index:1;
+}
+
+.profile{
+  /* margin-top:30px; */
+  font-size: 50px;
+  font-family: 'Allison', cursive;
+  padding-top:30px;
+}
+.profile-photo{
+  display:none;
+}
+
+.profile-section{
+  color:white;
+  width: 100%;
+  max-width: 830px;
+  text-align: center;
+  margin:auto;
+  padding-bottom:30px;
+}
+.detail-section p{
+  font-size:16px;
+  text-shadow: 2px 2px 4px #000;
+  text-align: left;
+  line-height: 2em; 
+}
+.detail-section a{
+  font-size:16px;
+  text-shadow: 2px 2px 4px #000;
+  color:#56B5EA;
+  text-align: left;
+  padding:30px 0px;
+  line-height: 2em; 
+}
+/* ここまでプロフィール関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+
+
+
+/* ここからコンテンツ関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
 
 .add-contents{
  
@@ -247,6 +219,7 @@ html{
   position:relative;
   font-size:0px;
   text-align: center;
+  background-color: white;
 } 
 .contents{
   padding:0px 10px;
@@ -276,6 +249,7 @@ footer p{
   float:left;
 }
 
+/* ここまでコンテンツ関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
 
 
 
