@@ -181,6 +181,11 @@ html{
   font-family: 'Allison', cursive;
   padding-top:30px;
 }
+.profile h6{
+    color: rgb(203, 203, 203);
+    font-size: 20px;
+    padding-bottom:5%;
+}
 .profile-photo{
   display:none;
 }
