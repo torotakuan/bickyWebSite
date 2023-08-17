@@ -52,7 +52,7 @@ $(function(){
   
 });
 
-var accessToken = "IGQVJXeUdTTmhfUVJDd3F1NUgyMU5iZAzdfOHhBTWtzejhUajFzQVlnUlVTTTliYlVhN3Jyc3E0TUZAmYktyUUVGMHZADaGphcjNiSXF0VnkyQUotSXRMQTBSemIzZAThLS0p2SUoxdVR3";
+var accessToken = "IGQVJXa0RXam9oQmlyNUtpdUdzNHg1NEJmbmVTM285ZAC1sc0xLdGRoNnNsV096LTAzSFo0YUxBbzVCOVRwOWlTdEVpbDBiLTdXd1B1Y3o4V21ZAZAmE3WjRic0EzZAGYzZADcxQTdwWDJ3";
 //ビッキーのinstagramに投稿された全メディアのid,url,media_typeなどを貰ってくる
 $.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url&access_token=' + accessToken, getFunc);
 //GETリクエストが成功したら下の関数getFuncが実行される（貰ってきたデータは変数myDataに格納されてる）

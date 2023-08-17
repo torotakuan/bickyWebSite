@@ -15,8 +15,18 @@ i.spinner{
     position:fixed;
     top:45vh;
     left:48vw;
-    color:rgba(34, 49, 52, 1);
+    color:rgba(34, 49, 52, 0.7);
     font-size:4vw;
+    z-index:-1;
+    
+}
+p.spinner{
+    position:fixed;
+    top:54vh;
+    left:46.5vw;
+    color:rgba(34, 49, 52, 0.7);
+    font-size:1.5vw;
+    font-weight: bold;
     z-index:-1;
     
 }
