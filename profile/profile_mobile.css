@@ -1,262 +1,346 @@
 
-      @media all and (max-width: 1150px){  
-        .detail{
-          height: 1600px;
-        } 
-        /*.detail-section{
-         margin-left: 3%;
-        }
-        .photo{
-          margin-right: 5%;
-          width:750px ;
-        }*/
-               
-        }
+*{
+    box-sizing:border-box;
+}
 
-    @media all and (max-width: 750px){
-      :root{
-          --menu-icon-size:0.3;
-      }
-      *{
-          margin:0px;
-          padding:0px;
-          box-sizing:border-box;
-      }
-    
-  
-  
-      /*こっからmenu*/
-      .menu{
-          display:none;
-      }
-      .side-menu {
-       display:none;
-       background-color: white;
-       width:155px;
-       height:100%;
-       position: fixed;
-       top:0px;
-       right:0px!important;
-       text-align: center;
-       box-shadow: -1vw -1vw 2vw hsl(0deg 0% 0% /0.25);
-       z-index:2;
-       }
-       .side-menu-top{
-           height:20vw;
-           width:100%;
-           box-shadow: 0.5vw 0.5vw 1vw hsl(0deg 0% 0% /0.25);
-   
-   
-       }
-       .side-menu-box{
-           display:inline-block;
-       }
-       .close-icon{
-           
-           font-size: 20px;
-       }
-       .side-menu-box p:hover{
-           color:rgba(34, 49, 52, 0.9) !important;
-       }
-       .side-menu-box a:hover{
-           color:rgba(34, 49, 52, 0.9) !important;
-       }
-   
-   
-       .side-menu a{
-           display:block;
-           width:150px;
-           padding:15px 0px;
-           font-size: 20px;
-           color:rgba(34, 49, 52, 0.7);
-           text-decoration: none;
-           font-family:Helvetica;
-           text-align:center;
-           border-bottom:solid 1px rgb(206, 206, 206);
-       }
-       .now{
-           padding: bottom 15px !important;
-       }
-   
-      
-       .side-menu p :hover {
-           color:rgba(34, 49, 52, 0.9) !important;
-       }
-   
-   
-       .now.side{
-           color:rgba(34, 49, 52, 0.9) !important;
-           border-left: solid 5px rgba(34, 49, 52, 0.9) !important;
-           border-bottom:solid 1px rgb(206, 206, 206);
-           margin-left:-3px;
-       }
-       .now.side :hover{
-           color:rgba(34, 49, 52, 0.9) !important;
-       }
-       /*ここまでmenu*/
-  
-  
-       /*==================================================
-      　5-2-4 MENUがCLOSEに
-      ===================================*/
-  
-      /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
-      .openbtn{
-          /*ボタン内側の基点となるためrelativeを指定。
-      追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
-          position: fixed;
-          top: calc(10vw * var(--menu-icon-size));
-          right:calc(10vw * var(--menu-icon-size));
-          background:none;
-          cursor: pointer;
-          width: calc(50vw * var(--menu-icon-size));
-          height:calc(50vw * var(--menu-icon-size));
-          border-radius: calc(5vw * var(--menu-icon-size));
-          z-index:3;
-      }
-  
-      /*ボタン内側*/
-      .openbtn span{
-          display: inline-block;
-          transition: all .4s;/*アニメーションの設定*/
-          
-          position: absolute;
-          left: calc(5vw * var(--menu-icon-size));
-          height: calc(3vw * var(--menu-icon-size));
-          background: #FFF;
-          width: 70%;
-      }
-  
-  
-      .openbtn span:nth-of-type(1) {
-          top:calc(13vw * var(--menu-icon-size));
-      }
-  
-      .openbtn span:nth-of-type(2) {
-          top:calc(25vw * var(--menu-icon-size));
-      }
-  
-      .openbtn span:nth-of-type(3) {
-          top:calc(37vw * var(--menu-icon-size));
-      }
-  
-      .openbtn span:nth-of-type(3)::after {
-          /*content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
-          position: absolute;
-          top:calc(5vw * var(--menu-icon-size));
-          left:calc(-2vw * var(--menu-icon-size));
-          color: #fff;
-          font-size: calc(0.6rem * var(--menu-icon-size));
-          text-transform: uppercase;
-      }
-  
-      /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
-  
-      .openbtn.active span:nth-of-type(1) {
-          top: calc(16vw * var(--menu-icon-size));
-          left: calc(11vw * var(--menu-icon-size));
-          transform: translateY(calc(6vw * var(--menu-icon-size))) rotate(-45deg);
-          width: 60%;
-          background-color:black;
-      }
-  
-      .openbtn.active span:nth-of-type(2) {
-          opacity: 0;
-      }
-  
-      .openbtn.active span:nth-of-type(3){
-          top: calc(28vw * var(--menu-icon-size));
-          left: calc(11vw * var(--menu-icon-size));
-          transform: translateY(calc(-6vw * var(--menu-icon-size))) rotate(45deg);
-          width: 60%;
-          background-color:black;
-      }
-  
-      .openbtn.active span:nth-of-type(3)::after {
-          /*content:"Close";/*3つ目の要素のafterにClose表示を指定*/
-          transform: translateY(0) rotate(-45deg);
-          top:calc(5vw * var(--menu-icon-size));
-          left:calc(4vw * var(--menu-icon-size));
-      }
-      .detail{
-          display: block;
-          height: 1300px;
-          position: relative;
-          padding: 0px;
-          width: 100%;
-         
-        }
-      .profile{
-          width: 100%;
-          position: relative;
-      }
-      .profile-header h1{
-          display: flex;
-          font-size: 50px;
-      }
-      .profile-header{
-          width: 60%;
-      }
-      .menu-icon{
-         position: absolute;
-         top: 10px;
-         right: 30px;
-        
-      }
-     
-      .profile-photo { 
-        position: absolute;  
-        display:block;
-        width: 100%;
-        height: 370px;
-       
-    } 
-    .profile-photo img{
-        object-fit: cover;
-        height: 370px;
-        width: 100%;
-    } 
-      .profile-section{
-          width: 100%;
-      }  
-      .main-sentence{
-          position: absolute;
-          width: 90%;
-         font-size: 10px;
-       
-          top: 470px;
-          margin-left: 5%;
-         margin-right: 5%;
-      }
-      .detail-section{
-        position: absolute;
-          width: 90%;
-         padding-top: 0px;
-        
-          top: 470px;
-          font-size: 10px;
-         margin-left: 5%;
-         margin-right: 5%;
-      }
+@media all and (max-width: 1000px){
+    :root{
+        --menu-icon-size:0.3;
+    }
 
-      .photo{
-          display: none;
-      }  
-      .add-contents{
-   
-        padding:30px 50px;
-        position:relative;
-        font-size:0px;
-    } 
-    .contents{
-        padding:10px 10px;
-        width:100%;
-    }
-    .contents-box{
-        width:100%;
-    }
-    .contents-box a{
+    *{
+        margin:0px;
+        padding:0px;
         box-sizing:border-box;
     }
-   }
-     
+    /* ここからメニュー関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+
+    .btn-wrapper{
+        position:absolute;
+        top:87%;
+        right:0%;
+        width:90%;
+        margin:0px 5%;
+        background-color:transparent;
+        text-align:center;
+       
+    }
+    .btn{
+        display:inline-block;
+        color:white;
+        font-size:18px;
+        width:25%;
+    }
+    
+    .menu{
+       display:none;
+    }
+    .side-menu {
+        display:none;
+        background-color: white;
+        width:155px;
+        height:100%;
+        position:fixed;
+        top:0px;
+        right:0px;
+        text-align: center;
+        box-shadow: -1vw -1vw 2vw hsl(0deg 0% 0% /0.25);
+        z-index:2;
+    }
+    .side-menu-top{
+        height:20vw;
+        width:100%;
+        box-shadow: 0.5vw 0.5vw 1vw hsl(0deg 0% 0% /0.25);
+
+
+    }
+    .side-menu-box{
+        display:inline-block;
+    }
+    .close-icon{
+        
+        font-size: 20px;
+    }
+    .side-menu-box p:hover{
+        color:rgba(34, 49, 52, 0.9) !important;
+    }
+    .side-menu-box a:hover{
+        color:rgba(34, 49, 52, 0.9) !important;
+    }
+
+
+    .side-menu a{
+        display:block;
+        width:150px;
+        padding:10px 0px;
+        margin:10px 0px;
+        font-size: 20px;
+        color:rgba(34, 49, 52, 0.7);
+        text-decoration: none;
+        font-family:Helvetica;
+        text-align:center;
+        border-bottom:solid 1px rgb(206, 206, 206);
+    }
+
+    
+    .side-menu p :hover {
+        color:rgba(34, 49, 52, 0.9) !important;
+    }
+
+
+    .now.side{
+        color:rgba(34, 49, 52, 0.9) !important;
+        border-left: solid 5px rgba(34, 49, 52, 0.9) !important;
+        border-bottom:solid 1px rgb(206, 206, 206);
+        margin-left:-3px;
+    }
+    .now.side :hover{
+        color:rgba(34, 49, 52, 0.9) !important;
+    }
+    .lines-box hr{
+        display:none;
+    }
+    .lines-box-mobile {
+        margin-top:3vw;
+        display:block;
+        right:0vw;
+        width:100%;
+        text-align:right;
+        font-size:0px;
+    }
+    .lines-box-mobile hr{
+        display:inline-block;
+        margin-top:1.9vw;
+        height:0.4vw;
+        background-color:white;
+    }
+    #firstLine hr{
+        width:0%;
+    }
+    #secondLine hr{
+        width:0%;
+        
+    }
+    #thirdLine hr{
+        width:0%;
+        
+    }
+    #fourthLine hr{
+        width:0%;
+        
+    }
+    #fifthLine hr{
+        width:0%;
+        
+    }
+    
+    /* ここまでメニュー関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+    
+    /* ここからプロフィール関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+    .detail{
+        background-image: none;
+    }
+    .detail-section h4{
+        letter-spacing: 0.1vw;
+        padding-top:3vw;
+        padding-bottom:2.5vw;
+        text-align: left;
+        font-size:4.5vw;
+        color:white;
+    }
+    .detail-section p{
+        color:rgb(192, 192, 192)
+    }
+    .profile{
+        padding-top:0px;
+        text-align: left;
+    }
+    .profile-photo{
+        display:inline-block;
+        width:100%;
+        height:60vw;
+        object-fit: cover;
+        object-position: 0 0%;
+        border: 1px solid rgb(23, 23, 23);
+    }
+    .profile-section{
+        color:white;
+        width: 90%;
+        text-align: center;
+        margin:auto;
+        z-index:1;
+    
+    }
+    .profile h1{
+        padding-top:2%;
+        padding-left:3%;
+    }
+    .profile h6{
+        color: rgb(203, 203, 203);
+        font-size: 3vw;
+        padding-left:3%;
+        padding-bottom:5%;
+    }
+    /* ここまでプロフィール関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+
+    /* ここからコンテンツ関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+
+    .add-contents{
+       
+        padding:30px 50px;
+       
+    } 
+    .contents{
+        padding:20px 10px;
+        width:100%
+        
+    }
+    .contents-box a{
+        width:25%;
+        box-sizing:border-box;
+    }
+    
+    .bicly-right-wrapper{
+        display:none;
+    }
+    .btn-wrapper{
+        display:block;
+        z-index:2;
+    }
+   
+    
+
+    .add-contents{
+       position:relative;
+    }
+    /* ここまでコンテンツ関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+
+    .bar-icon2{
+     font-size:30px;
+    }
+   
+    
+
+    /*==================================================
+    　ハンバーガーメニュー用
+    ===================================*/
+
+    .openbtn{
+        /*ボタン内側の基点となるためrelativeを指定。
+    追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+        position: fixed;
+        top: calc(10vw * var(--menu-icon-size));
+        right:calc(10vw * var(--menu-icon-size));
+        background:none;
+        cursor: pointer;
+        width: calc(50vw * var(--menu-icon-size));
+        height:calc(50vw * var(--menu-icon-size));
+        border-radius: calc(5vw * var(--menu-icon-size));
+        z-index:3;
+    }
+
+    /*ボタン内側*/
+    .openbtn span{
+        display: inline-block;
+        transition: all .4s;/*アニメーションの設定*/
+        
+        position: absolute;
+        left: calc(5vw * var(--menu-icon-size));
+        height: calc(3vw * var(--menu-icon-size));
+        background: #fff;
+        width: 70%;
+    }
+
+
+    .openbtn span:nth-of-type(1) {
+        top:calc(13vw * var(--menu-icon-size));
+    }
+
+    .openbtn span:nth-of-type(2) {
+        top:calc(25vw * var(--menu-icon-size));
+    }
+
+    .openbtn span:nth-of-type(3) {
+        top:calc(37vw * var(--menu-icon-size));
+    }
+
+    .openbtn span:nth-of-type(3)::after {
+        /*content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
+        position: absolute;
+        top:calc(5vw * var(--menu-icon-size));
+        left:calc(-2vw * var(--menu-icon-size));
+        color: #fff;
+        font-size: calc(0.6rem * var(--menu-icon-size));
+        text-transform: uppercase;
+    }
+
+    /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+
+    .openbtn.active span:nth-of-type(1) {
+        top: calc(16vw * var(--menu-icon-size));
+        left: calc(11vw * var(--menu-icon-size));
+        transform: translateY(calc(6vw * var(--menu-icon-size))) rotate(-45deg);
+        width: 60%;
+        background-color:black;
+    }
+
+    .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .openbtn.active span:nth-of-type(3){
+        top: calc(28vw * var(--menu-icon-size));
+        left: calc(11vw * var(--menu-icon-size));
+        transform: translateY(calc(-6vw * var(--menu-icon-size))) rotate(45deg);
+        width: 60%;
+        background-color:black;
+    }
+
+    .openbtn.active span:nth-of-type(3)::after {
+        /*content:"Close";/*3つ目の要素のafterにClose表示を指定*/
+        transform: translateY(0) rotate(-45deg);
+        top:calc(5vw * var(--menu-icon-size));
+        left:calc(4vw * var(--menu-icon-size));
+    }
+    
+    footer p{
+        padding:5px;
+    }
+
+}
+/* タブレット */
+@media all and (max-width:770px){
+
+    .contents{
+        width:50%;
+    }
+    
+}
+/* スマートフォン */
+@media all and (max-width:500px){
+    .profile-section{
+        width: 90%;
+    }
+
+    .detail-section p{
+        font-size:3.7vw;
+        text-shadow: 2px 2px 4px #000;
+        line-height: 2em; 
+    }
+    .detail-section a{
+        font-size:3.7vw;
+        text-shadow: 2px 2px 4px #000;
+        color:#56B5EA;
+        line-height: 2em; 
+    }
+    .profile{
+      /* margin-top:30px; */
+      font-size: 7vw;
+      font-family: 'Allison', cursive;
+    }
+    .contents{
+        width:100%;
+    }
+
+}
+

@@ -1,175 +1,267 @@
+/* こっからテンプレ　　　　　　ーーーーーーーーーーーーーーーーーー */
 *{
-  padding: 0px;
-  margin: 0px;
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
 }
 
-body{
-  width: 100vw;
-  height: 100vh;
-  color: white;
-  background-color: black;
- font-family: Serif、Script;
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 3;
 }
-.side-menu {
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+  color: #fff;
+  z-index: 4;
+}
+
+html,body{
+  height:100%;
+}
+html{
+  background-color: #000;
+  font-size:100%;
+}
+.wrap{
+  height:100%;
+  font-size:100%;
+}
+.clear{
+  clear:left;
+  clear:right;
+}
+#center{
+  background-position-x:center;
+}
+/* ここまでテンプレ　　　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+
+/* ここからメニュー関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+.btn{
+  display:inline-block;
+  color:white;
+  float:right;
+  width:25%;
+}
+.btn :hover{
+  color:grey;
+}
+.btn-wrapper{
+  position:absolute;
+  top:3vw;
+  right:3vw;
+  float:right;
+  font-size:15px;
+  width:21vw;
+  background-color:transparent;
+ 
+}
+
+.btn-wrapper a{
+  background-color:transparent;
+  
+}
+.lines-box-mobile {
   display:none;
+}
+.lines-box {
+  position:absolute;
+  top:76%;
+  right:0vw;
+  width:50%;
+  text-align:right;
+  font-size:0px;
+}
+.lines-box hr{
+  display:inline-block;
+  margin-top:1.2vw;
+  height:0.15vw;
+  background-color:white;
+}
+#firstLine hr{
+  width:0%;
+}
+#secondLine hr{
+  width:0%;
+  
+}
+#thirdLine hr{
+  width:0%;
+  
+}
+#fourthLine hr{
+  width:0%;
+  
+}
+#fifthLine hr{
+  width:0%;
   
 }
 
-
 .menu{
   display:inline-block;
-  background-color: black;
-  width:100%;
-  height: 8%;
-  min-height: 76px;
+    width:100%;
   text-align:center;
   font-size:0px;
-  border-bottom: solid 3px white;
-  overflow: hidden;
+  box-shadow: 0 0.2vw 0.2vw hsla(0, 0%, 35%, 0.25);
+  background-color: black
 }
 .menu-box{
   display:inline-block;
   width:100%;
-  height: 100%;
   max-width:830px;
   text-align:center;
   font-size:0px;
 }
 .menu a{
   display:inline-block;
-  width:14.4%;
-  margin-left: 4%;
-  height: 100%;
-  padding-top:0.1%;
+  width:20%;
+  padding:8px 0px;
   float:left;
   font-size: 20px;
-  color:rgba(255, 255, 255, 0.61);
+  color:rgb(255, 255, 255);
   text-decoration: none;
   font-family:Helvetica;
   text-align:center;
   box-sizing: border-box;
-  
 }
 .menu p{
-  font-size: 15px;
-  margin-top:13%;
- 
+  margin:10px 0px;
 }
 .icon{
-  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .now {
-  color:whitesmoke !important;
-  padding-bottom: 0px;
-  border-bottom: solid 2px white;
+  color:rgba(122, 130, 132, 0.9) !important;
+  border-bottom: solid 3px rgb(158, 158, 158);
 }
 .now :hover{
-  color:white !important;
+  color:rgba(34, 49, 52, 0.9) !important;
 }
 .menu :hover{
-  color:white ;
+  color:rgba(34, 49, 52, 0.5);
 }
-.menu-icon{
-  display: none;
-}
-hr{
-width: 100%;
 
+.side-menu {
+  display:none;
 }
-.detail{
-  width: 80%;
-  height: 1200px;
-  position: relative;
-  display: flex;
-  margin-top: 0px;
-  background-color: black;
-  padding-right: 10%;
-  padding-left: 10%;
-}
-.profile-section{
-  width: 50%;
-}
-.profile{
-  width: 100%;
-  /* position: absolute; */
-  
-  font-size: 20px;
+
+/* ここまでメニュー関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
  
+/* ここからプロフィール関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+.detail{
+  font-size:0px;
+  background-color: #000;
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("profile_photo.png");
+  position: relative;
+  background-size: cover; /*--背景画像のサイズ--*/
+  background-attachment: fixed; /*--背景画像の固定--*/
+  background-repeat: no-repeat; /*--背景画像の繰り返し--*/
+  background-position: center center; /*--背景画像の位置--*/
+  z-index:1;
 }
-.profile h1{
-  padding-left:20px;
-  padding-top:10px;
-  padding-bottom:10px;
-  font-size: 80px;
+
+.profile{
+  /* margin-top:30px; */
+  font-size: 50px;
   font-family: 'Allison', cursive;
+  padding-top:30px;
+}
+.profile h6{
+    color: rgb(203, 203, 203);
+    font-size: 20px;
+    padding-bottom:5%;
 }
 .profile-photo{
   display:none;
 }
-.main-sentence{
-  width: 40%;
-  position: absolute;
-  top: 200px;
-  font-size: 17px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  
+
+.profile-section{
+  color:white;
+  width: 100%;
+  max-width: 830px;
+  text-align: center;
+  margin:auto;
+  padding-bottom:30px;
 }
-.detail-section{
-  min-width: 375px;
-  width: 40%;
-  /* display: none; */
-  position: absolute;
-  font-size: 17px;
-  line-height: 25px;
-  top: 123px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
- 
+
+.detail-section {
+  font-family: sans-serif;
 }
-#piascore{
-  color: silver;
+.detail-section p{
+  font-size:16px;
+  text-shadow: 2px 2px 4px #000;
+  text-align: left;
+  line-height: 2em; 
 }
-.photo{
-  position: absolute;
-  min-width: 375px;
-  display:block;
-  width: 50%;
-  height: 800px;
-  background-image: url("profile_photo.png");
-  background-size: 80%,80%;
-  background-repeat: no-repeat;
-  right: 0%;
+.detail-section a{
+  font-size:16px;
+  text-shadow: 2px 2px 4px #000;
+  color:#56B5EA;
+  text-align: left;
+  padding:30px 0px;
+  line-height: 2em; 
 }
-.bokashi{
-  opacity: 0.3;
-}
-.detail-close-btn{
-  opacity: 0.8;
-}
-.detail-open-btn{
-  opacity: 0.8;  
-}
+/* ここまでプロフィール関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+
+
+
+/* ここからコンテンツ関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+
 .add-contents{
-  display:block;
-  background-color: white;
+ 
   padding:30px 50px;
+  position:relative;
   font-size:0px;
-  border-top: 1px solid gray;
-  text-align:center;
+  text-align: center;
+  background-color: white;
 } 
 .contents{
   padding:0px 10px;
   width:33%;
-  max-width:290px;
+  max-width: 290px;
 }
 .contents-box{
-  /* width:100%; */
   display:inline-block;
+  /* width:100%; */
 }
 .contents-box a{
   box-sizing:border-box;
 }
+footer{
+  padding:30px;
+  overflow: hidden;
+  width:100%;
+  background-color: #222222;
+}
+footer p{
+  color: #cccccc;
+  font-size:10px;
+  float:right;
+  padding:5px;
+}
+.copyright{
+  float:left;
+}
 
+/* ここまでコンテンツ関連　　　　　　　　　　　ーーーーーーーーーーーーーーーーーー */
+
+
+
+
+  
 
